@@ -6,6 +6,7 @@ import { Link } from 'react-scroll';
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -13,6 +14,10 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Calculate how far the user has scrolled down as a percentage (max 20%)
+      const scrollPercentage = Math.min((window.scrollY / 300) * 100, 20);
+      setScrollProgress(scrollPercentage);
+      
       if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
@@ -35,13 +40,17 @@ const Header = () => {
     { name: 'יצירת קשר', link: 'contact' },
   ];
 
+  // Calculate background opacity based on scroll
+  const headerOpacity = isScrolled ? 0.8 - (scrollProgress / 100) : 0.95;
+
   return (
     <header 
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 backdrop-blur-sm shadow-sm' 
-          : 'bg-white/95 shadow-sm'
+          ? 'backdrop-blur-sm shadow-sm' 
+          : 'shadow-sm'
       }`}
+      style={{ backgroundColor: `rgba(255, 255, 255, ${headerOpacity})` }}
     >
       <div className="container mx-auto py-3 px-4 md:px-6">
         <div className="flex justify-between items-center">
@@ -49,7 +58,7 @@ const Header = () => {
             <img
               src="/images/greece-flag.svg"
               alt="Greek Flag"
-              className="h-8 w-12 mr-2"
+              className="h-8 w-12 mr-2 animate-pulse"
             />
             <h1 className="text-xl md:text-2xl font-serif font-bold text-greek-blue">
               יוונית <span className="text-greek-gold">לכל</span>
@@ -66,9 +75,10 @@ const Header = () => {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className="text-gray-700 hover:text-greek-blue font-medium cursor-pointer transition-colors"
+                    className="text-gray-700 hover:text-greek-blue font-medium cursor-pointer transition-colors relative group"
                   >
                     {item.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-greek-blue transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
               ))}

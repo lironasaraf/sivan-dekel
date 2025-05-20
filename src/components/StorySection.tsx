@@ -41,38 +41,55 @@ const StorySection = () => {
         </div>
         
         <div className="flex flex-col md:flex-row gap-10 items-center">
-          <div className={`w-full md:w-2/5 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
-            <div className="relative">
-              <div className="absolute -left-4 -bottom-4 w-full h-full border-2 border-greek-turquoise rounded-lg"></div>
-              <div className="rounded-lg overflow-hidden hover:scale-105 transition-all duration-500">
-                <AspectRatio ratio={4/3}>
-                  <img
-                    src="/lovable-uploads/37bc9bec-1f13-4ff0-be3a-1951a4e75370.png"
-                    alt="Greek flag elements"
-                    className="object-cover w-full h-full"
-                  />
-                </AspectRatio>
+          <div className={`w-full md:w-1/2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="relative hover:scale-105 transition-all duration-500">
+                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-turquoise rounded-lg"></div>
+                <img
+                  src="/lovable-uploads/e0ec374e-37ef-425c-8cef-64dcf4978cc9.png"
+                  alt="Woman in a red dress in Greece"
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="relative hover:scale-105 transition-all duration-500 mt-8 md:mt-16">
+                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-gold rounded-lg"></div>
+                <img
+                  src="/lovable-uploads/97e7b8d5-ac42-4faa-9bb8-2683ff84239b.png"
+                  alt="Childhood with headphones"
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
               </div>
             </div>
           </div>
           
-          <div className={`w-full md:w-3/5 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
+          <div className={`w-full md:w-1/2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card text-right hover:shadow-xl transition-all duration-300">
               <div className="flex justify-end items-center gap-3 mb-4">
-                <h3 className="text-2xl font-serif text-greek-blue">הסיפור שלי עם יוון</h3>
+                <h3 className="text-2xl font-serif text-greek-blue">איך הכל התחיל?</h3>
                 <Book className="h-6 w-6 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
               </div>
               
               <p className="text-lg text-gray-700 mb-4">
-                הסיפור שלי עם יוון החל לפני שנים רבות כשביקרתי באתונה לראשונה. התאהבתי מיד בתרבות, באנשים ובשפה היוונית. החלטתי ללמוד את השפה באופן רציני.
+                הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.
               </p>
               
               <p className="text-lg text-gray-700 mb-4">
-                לאחר מספר שנים של לימודים אינטנסיביים באוניברסיטת אתונה והתגוררות ביוון, הפכתי למורה ליוונית. הבנתי שיש חסר במורים דוברי עברית שיכולים להנגיש את השפה היוונית לישראלים בצורה יעילה ומותאמת.
+                כשגדלתי טיילתי ביוון, התאהבתי בפשטות, בקסם, באווירה השמחה והנעימה, ובעיקר באנשים ובשפה.
+                לאחר הלימודים האקדמיים החלטתי להתגורר באתונה, לספוג את האווירה מזווית נוספת, מקומית יותר.
+              </p>
+              
+              <p className="text-lg text-gray-700 mb-4">
+                כשהתחלתי להבין יוונית ולשוחח עימם, הקסם קרה. ידיעת השפה יצרה אינטימיות, קרבה וחיבור עם מקומיים והחוויה שלי ביוון הפכה לתוססת, קסומה ומעניינת הרבה יותר.
+                הבנתי שהדבר האמיתי שאני רוצה לעשות זה להעביר את התחושה הזו הלאה.
+              </p>
+              
+              <p className="text-lg text-gray-700 mb-4">
+                ליצור מרחב קהילתי מאחד וחם שבו אנשים ילמדו יוונית, ויתאהבו בה – דרך צחוק, אוכל, שירים ותרבות.
+                ואכן, הקסם קרה. אנשים הגיעו אלי מפה לאוזן, ונוצרו להן קהילות לימודיות אינטימיות המשלבות לימוד מקצועי, חברויות חדשות ובעיקר כיף אמיתי.
               </p>
               
               <p className="text-lg text-gray-700">
-                החלטתי לפתח שיטת לימוד ייחודית המותאמת במיוחד לדוברי עברית, תוך שימת דגש על הדמיון והשוני בין השפות, מה שהופך את תהליך הלמידה למהיר ואפקטיבי יותר עבור ישראלים.
+                היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר והשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.
               </p>
             </div>
           </div>
