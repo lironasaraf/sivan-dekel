@@ -17,21 +17,21 @@ const Hero = () => {
             </p>
             <div className="flex gap-4 justify-end animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <Link to="contact" smooth={true} duration={500} offset={-80}>
-                <Button className="greek-button">צרו קשר</Button>
+                <Button className="greek-button hover:scale-105 transition-transform">צרו קשר</Button>
               </Link>
               <Link to="course" smooth={true} duration={500} offset={-80}>
-                <Button className="greek-button-secondary">תכני הקורס</Button>
+                <Button className="greek-button-secondary hover:scale-105 transition-transform">תכני הקורס</Button>
               </Link>
             </div>
           </div>
           
           <div className="w-full md:w-1/2 flex justify-center md:justify-end animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="relative">
-              <div className="absolute -right-4 -top-4 w-full h-full border-2 border-greek-gold rounded-lg"></div>
+              <div className="absolute -right-4 -top-4 w-full h-full border-2 border-greek-gold rounded-lg animate-pulse"></div>
               <img
                 src="/lovable-uploads/e22e17ac-b1f5-4740-a8c7-07c311dbc0a6.png"
                 alt="Woman in Greece"
-                className="w-full max-w-md rounded-lg shadow-lg object-cover"
+                className="w-full max-w-md rounded-lg shadow-lg object-cover hover:shadow-xl transition-all duration-500"
               />
             </div>
           </div>
