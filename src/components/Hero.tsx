@@ -29,9 +29,9 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -right-4 -top-4 w-full h-full border-2 border-greek-gold rounded-lg"></div>
               <img
-                src="/lovable-uploads/fc55be2f-513e-47d6-845e-546f37d4b749.png"
-                alt="Greek Flag"
-                className="w-full max-w-md rounded-lg shadow-lg"
+                src="/lovable-uploads/e22e17ac-b1f5-4740-a8c7-07c311dbc0a6.png"
+                alt="Woman in Greece"
+                className="w-full max-w-md rounded-lg shadow-lg object-cover"
               />
             </div>
           </div>

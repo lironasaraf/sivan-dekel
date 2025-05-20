@@ -30,11 +30,26 @@ const CourseSection = () => {
   return (
     <section id="course" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="section-heading">תכני הקורס</h2>
-          <p className="text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
-            תכנית הלימודים שלי מקיפה את כל ההיבטים של השפה היוונית, החל מרמת המתחילים ועד לרמת שיחה שוטפת
-          </p>
+        <div className="flex flex-col md:flex-row items-center gap-10 mb-12">
+          <div className="w-full md:w-1/2">
+            <div className="text-right">
+              <h2 className="section-heading">תכני הקורס</h2>
+              <p className="text-lg text-gray-700 mt-4">
+                תכנית הלימודים שלי מקיפה את כל ההיבטים של השפה היוונית, החל מרמת המתחילים ועד לרמת שיחה שוטפת
+              </p>
+            </div>
+          </div>
+          
+          <div className="w-full md:w-1/2">
+            <div className="relative rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/794be679-1549-4b33-b3f6-b27e093397c9.png"
+                alt="Online Greek learning"
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-greek-blue/20"></div>
+            </div>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
