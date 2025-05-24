@@ -43,12 +43,12 @@ const Hero = () => {
             <p className={`text-lg md:text-xl text-gray-700 mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '200ms' }}>
               למדו את השפה היוונית בצורה מהנה, אפקטיבית ומותאמת אישית עם מורה ישראלית בעלת ניסיון
             </p>
-            <div className={`flex gap-4 justify-end transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '400ms' }}>
+            <div className={`flex gap-6 justify-end mr-0 md:mr-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '400ms' }}>
               <Link to="contact" smooth={true} duration={500} offset={-80}>
-                <Button className="greek-button hover:scale-105 transition-transform">צרו קשר</Button>
+                <Button className="greek-button hover:scale-110 transition-all duration-300 text-lg px-8 py-4 h-auto shadow-xl hover:shadow-2xl font-semibold">צרו קשר</Button>
               </Link>
               <Link to="course" smooth={true} duration={500} offset={-80}>
-                <Button className="greek-button-secondary hover:scale-105 transition-transform">תכני הקורס</Button>
+                <Button className="greek-button-secondary hover:scale-110 transition-all duration-300 text-lg px-8 py-4 h-auto shadow-xl hover:shadow-2xl font-semibold">תכני הקורס</Button>
               </Link>
             </div>
           </div>
