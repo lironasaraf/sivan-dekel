@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -50,6 +51,12 @@ const TestimonialsSection = () => {
       name: "אלינור פרוימוביץ'",
       text: "מעבר למורה סבלנית, מקצועית, מסורה ובאמת מחוברת לשפה היוונית…תמצאו אישה חמה, נעימה, אותנטית ועם רצון גדול שתצליחו! מי שמחליט להירשם פשוט זוכה👑",
       image: "/lovable-uploads/74bc9f63-e4c8-450d-a80c-1cf1cad51135.png",
+      rating: 5
+    },
+    {
+      name: "קסם שער",
+      text: "מומלצת ביותר ! מקצועית סבלנית תמיד פנויה לעזור למי שלא מבין או למי שפספס תשיעור ממש לא מובן מאליו האכפתיות שלה גם בשעות לא שעות תמיד נותנת את עצמה , אני ממליצה עליה לכל מי שרוצה ללמוד את השפה בצורה הטובה ביותר סיוון את פשוט תותחית תודה על הכל . 🇬🇷🙏🏽❤️",
+      image: "/lovable-uploads/173c166d-33c2-4e36-a354-27281ca37315.png",
       rating: 5
     },
     {
