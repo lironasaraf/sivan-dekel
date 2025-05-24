@@ -12,10 +12,9 @@ const AthensConsultationSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2, rootMargin: '30px' }
     );
 
     if (sectionRef.current) {
@@ -45,16 +44,16 @@ const AthensConsultationSection = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className={`section-heading transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className={`section-heading transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             חבילת ייעוץ לאתונה
           </h2>
-          <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto transition-all duration-700 ease-out delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '100ms' }}>
             הכנה מושלמת לטיול באתונה עם ייעוץ מקצועי ומותאם אישית
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className={`greek-card transition-all duration-700 ease-out delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`greek-card transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* Image */}
               <div className="w-full md:w-1/3">

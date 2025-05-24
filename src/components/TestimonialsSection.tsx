@@ -12,10 +12,9 @@ const TestimonialsSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2, rootMargin: '30px' }
     );
 
     if (sectionRef.current) {
@@ -79,15 +78,15 @@ const TestimonialsSection = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className={`section-heading transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className={`section-heading transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             חוות דעת של תלמידים מרוצים
           </h2>
-          <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto transition-all duration-700 ease-out delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '100ms' }}>
             מה אומרים התלמידים שלי על החוויה
           </p>
         </div>
 
-        <div className={`max-w-6xl mx-auto transition-all duration-700 ease-out delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`max-w-6xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
           <Carousel className="w-full" opts={{ align: "start", loop: true }}>
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (

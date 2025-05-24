@@ -11,10 +11,9 @@ const TeachingMethodSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.15, rootMargin: '50px' }
     );
 
     if (sectionRef.current) {
@@ -69,17 +68,17 @@ const TeachingMethodSection = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className={`section-heading ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+          <h2 className={`section-heading transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             שיטת הלימוד שלי
           </h2>
-          <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
+          <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '100ms' }}>
             מודל לימוד ייחודי ומותאם במיוחד לישראלים
           </p>
         </div>
 
         <div className="flex flex-row gap-4 md:gap-8 mb-16">
           {/* Computer Image */}
-          <div className={`w-1/3 md:w-1/2 order-2 lg:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.3s" }}>
+          <div className={`w-1/3 md:w-1/2 order-2 lg:order-1 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
             <div className="relative">
               <div className="absolute -left-2 md:-left-4 -bottom-2 md:-bottom-4 w-full h-full border-2 border-greek-blue rounded-lg"></div>
               <img
@@ -91,7 +90,7 @@ const TeachingMethodSection = () => {
           </div>
 
           {/* Method Description - Shortened */}
-          <div className={`w-2/3 md:w-1/2 order-1 lg:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
+          <div className={`w-2/3 md:w-1/2 order-1 lg:order-2 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '300ms' }}>
             <div className="greek-card h-full">
               <div className="flex justify-end items-center gap-2 md:gap-3 mb-4 md:mb-6">
                 <h3 className="text-lg md:text-2xl font-heading text-greek-blue">הגישה שלי</h3>
@@ -116,7 +115,7 @@ const TeachingMethodSection = () => {
         </div>
 
         {/* Pre-lesson preparation */}
-        <div className={`mb-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.5s" }}>
+        <div className={`mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '400ms' }}>
           <div className="greek-card max-w-4xl mx-auto">
             <div className="flex justify-center items-center gap-3 mb-6">
               <h3 className="text-2xl font-heading text-greek-blue">הכנה לפני השיעור</h3>
@@ -129,7 +128,7 @@ const TeachingMethodSection = () => {
         </div>
 
         {/* Lesson Structure */}
-        <div className={`mb-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.6s" }}>
+        <div className={`mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '500ms' }}>
           <div className="text-center mb-8">
             <h3 className="text-2xl font-heading text-greek-blue mb-4">מבנה השיעור - שלושה חלקים</h3>
           </div>
@@ -138,7 +137,7 @@ const TeachingMethodSection = () => {
             {lessonStructure.map((part, index) => {
               const IconComponent = part.icon;
               return (
-                <div key={index} className="greek-card text-center">
+                <div key={index} className={`greek-card text-center transition-all duration-800 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${600 + index * 100}ms` }}>
                   <div className="flex justify-center mb-4">
                     <div className="p-3 bg-greek-gold/10 rounded-lg">
                       <IconComponent className="h-8 w-8 text-greek-gold" />
@@ -156,7 +155,7 @@ const TeachingMethodSection = () => {
         </div>
 
         {/* Post-lesson materials */}
-        <div className={`mb-12 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.7s" }}>
+        <div className={`mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '800ms' }}>
           <div className="text-center mb-8">
             <h3 className="text-2xl font-heading text-greek-blue mb-4">לאחר כל שיעור תקבלו</h3>
           </div>
@@ -165,7 +164,7 @@ const TeachingMethodSection = () => {
             {postLessonMaterials.map((material, index) => {
               const IconComponent = material.icon;
               return (
-                <div key={index} className="greek-card text-center">
+                <div key={index} className={`greek-card text-center transition-all duration-800 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${900 + index * 100}ms` }}>
                   <div className="flex justify-center mb-4">
                     <div className="p-3 bg-greek-turquoise/10 rounded-lg">
                       <IconComponent className="h-8 w-8 text-greek-turquoise" />
@@ -182,7 +181,7 @@ const TeachingMethodSection = () => {
         </div>
 
         {/* Personal support */}
-        <div className={`text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.8s" }}>
+        <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '1000ms' }}>
           <div className="greek-card max-w-3xl mx-auto bg-gradient-to-r from-greek-blue/5 to-greek-turquoise/5">
             <div className="flex justify-center items-center gap-3 mb-4">
               <h3 className="text-2xl font-heading text-greek-blue">ליווי אישי</h3>
