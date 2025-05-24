@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 text-right">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-greek-blue to-greek-turquoise bg-clip-text text-transparent drop-shadow-lg transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-playfair font-bold leading-tight mb-4 bg-gradient-to-r from-greek-blue to-greek-turquoise bg-clip-text text-transparent drop-shadow-lg transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
               לימוד יוונית בדרך ישראלית
             </h1>
             <p className={`text-lg md:text-xl text-gray-700 mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '200ms' }}>
