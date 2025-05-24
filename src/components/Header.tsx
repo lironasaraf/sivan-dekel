@@ -34,8 +34,10 @@ const Header = () => {
   const menuItems = [
     { name: 'מי אני', link: 'about' },
     { name: 'איך הכל התחיל', link: 'story' },
+    { name: 'שיטת הלימוד שלי', link: 'teaching-method' },
     { name: 'מה אני מציעה', link: 'offer' },
     { name: 'תכני הקורס', link: 'course' },
+    { name: 'יוונית בסלון', link: 'greek-living-room' },
     { name: 'הספר שלי', link: 'book' },
     { name: 'יצירת קשר', link: 'contact' },
   ];
