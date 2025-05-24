@@ -126,7 +126,7 @@ const TestimonialsSection = () => {
           <Carousel className="w-full" opts={{ align: "start", loop: true }}>
             <CarouselContent className="ml-0">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-2 md:basis-1/2 lg:basis-1/3">
                   <div className="greek-card text-center h-full">
                     <div className="relative mb-4">
                       <img
