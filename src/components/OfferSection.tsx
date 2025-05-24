@@ -1,5 +1,5 @@
 
-import { CheckCircle, Clock, Users, MapPin, BookOpen, Video, Calendar } from 'lucide-react';
+import { CheckCircle, Clock, Users, MapPin, BookOpen, Video, Calendar, Plane } from 'lucide-react';
 
 const OfferSection = () => {
   const offerings = [
@@ -40,15 +40,17 @@ const OfferSection = () => {
       ]
     },
     {
-      title: "ייעוץ לטיול באתונה",
-      description: "הכנה מושלמת לטיול ביוון, כולל טיפים מקומיים והמלצות על מקומות מיוחדים",
-      icon: MapPin,
+      title: "חבילת ייעוץ לאתונה",
+      description: "הכנה מושלמת לטיול באתונה עם ייעוץ מקצועי ומותאם אישית",
+      icon: Plane,
       image: "/lovable-uploads/5dce7c4a-a42e-4c3a-bc23-f76c2f6ef3c2.png",
+      price: "250 ₪",
       details: [
-        "ביטויים חיוניים לטיול",
-        "המלצות על מסעדות ואטרקציות",
-        "טיפים תרבותיים חשובים",
-        "מדריך אישי מותאם למסלול שלך"
+        "שיחת ייעוץ להבנת הצורך ולבניית טיול מותאם",
+        "המלצות למקומות: חופים, מסעדות פשוטות ויוקרתיות",
+        "המלצות לטברנות ליום וללילה, מועדונים, ברים",
+        "המלצות למוזאונים, גלריות וסיורי אוכל",
+        "סגירת מקומות לטברנות ולהופעות"
       ]
     },
     {
@@ -111,6 +113,12 @@ const OfferSection = () => {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4 leading-relaxed">{offering.description}</p>
+                
+                {offering.price && (
+                  <div className="text-center mb-4">
+                    <span className="text-xl font-bold text-greek-blue">{offering.price}</span>
+                  </div>
+                )}
                 
                 <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-greek-blue mb-2">כולל:</h4>

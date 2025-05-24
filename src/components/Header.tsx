@@ -61,7 +61,7 @@ const Header = () => {
               className="h-8 w-12 mr-2 animate-pulse"
             />
             <h1 className="text-xl md:text-2xl font-serif font-bold text-greek-blue">
-              יוונית <span className="text-greek-gold">לכל</span>
+              <span className="text-greek-gold">סיון דקל בצלאל</span>
             </h1>
           </div>
 

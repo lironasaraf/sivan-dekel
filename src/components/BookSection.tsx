@@ -1,15 +1,20 @@
 
-import { Book, CheckCircle } from 'lucide-react';
+import { Book, CheckCircle, CreditCard } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const BookSection = () => {
   const benefits = [
-    "שיטה ייחודית המותאמת במיוחד לדוברי עברית",
-    "טבלאות דקדוק שמבהירות את ההקבלה בין עברית ליוונית",
-    "אוצר מילים רלוונטי לישראלים המטיילים ביוון",
-    "תרגילים פרקטיים הרלוונטיים לחיי היומיום",
-    "הסברים בעברית שמקלים על תהליך הלמידה",
+    "הקניית בסיס חזק לניהול דיאלוגים וקריאת טקסטים",
+    "הסברים מפורטים",
+    "הנגשת הדקדוק לתלמיד הישראלי",
+    "אוצר מילים עשיר",
+    "הרכבת משפטים ועוד",
   ];
+
+  const handleBitPayment = () => {
+    // This would typically redirect to a Bit payment page
+    window.open('https://bit.ly/payment-link', '_blank');
+  };
 
   return (
     <section id="book" className="py-16 md:py-24 bg-gray-50">
@@ -18,11 +23,20 @@ const BookSection = () => {
           <div className="w-full md:w-2/5 order-2 md:order-1">
             <div className="bg-white rounded-lg shadow-lg p-8 border border-greek-sand">
               <div className="flex justify-end items-center gap-3 mb-6">
-                <h3 className="text-2xl font-serif text-greek-blue">היתרונות בלימוד עם מורה ישראלית</h3>
+                <h3 className="text-2xl font-serif text-greek-blue">ספר הלימוד שלי</h3>
                 <Book className="h-6 w-6 text-greek-gold" />
               </div>
               
-              <ul className="space-y-4 text-right">
+              <div className="text-center mb-6">
+                <h4 className="text-xl font-bold text-greek-blue mb-2">
+                  לומדים יוונית צעד אחר צעד
+                </h4>
+                <p className="text-gray-700 mb-4">
+                  ספר לימוד יסודות השפה היוונית המותאם לקורס א' וב'.
+                </p>
+              </div>
+
+              <ul className="space-y-4 text-right mb-6">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-center justify-end">
                     <span className="text-gray-700">{benefit}</span>
@@ -30,10 +44,18 @@ const BookSection = () => {
                   </li>
                 ))}
               </ul>
-              
-              <div className="mt-8 text-center">
-                <Button className="greek-button">
-                  לרכישת הספר
+
+              <div className="text-center border-t border-greek-sand pt-6">
+                <div className="mb-4">
+                  <span className="text-2xl font-bold text-greek-blue">350 ₪</span>
+                  <span className="text-gray-600 mr-2">כולל משלוח</span>
+                </div>
+                <Button 
+                  onClick={handleBitPayment}
+                  className="greek-button w-full"
+                >
+                  <CreditCard className="ml-2 h-4 w-4" />
+                  <span>רכישה באמצעות ביט</span>
                 </Button>
               </div>
             </div>
