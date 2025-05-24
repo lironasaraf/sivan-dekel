@@ -56,7 +56,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img
-              src="/images/greece-flag.svg"
+              src="/lovable-uploads/a0b5a0eb-a84f-42a0-8976-ec8879332858.png"
               alt="Greek Flag"
               className="h-8 w-12 mr-2 animate-pulse"
             />
