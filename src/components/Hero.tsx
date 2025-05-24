@@ -60,39 +60,11 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -right-4 -top-4 w-full h-full border-2 border-greek-gold rounded-lg animate-pulse"></div>
               <img
-                src="/lovable-uploads/5dce7c4a-a42e-4c3a-bc23-f76c2f6ef3c2.png"
-                alt="Santorini with blue domes"
+                src="/lovable-uploads/19cb92b5-51f8-4369-bedf-303197adffd8.png"
+                alt="סיון בצלאל בסביבה יוונית מסורתית"
                 className="w-full max-w-md rounded-lg shadow-lg object-cover hover:shadow-xl transition-all duration-500"
               />
             </div>
-          </div>
-        </div>
-        
-        {/* Greek atmosphere gallery */}
-        <div className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.6s" }}>
-          <div className="relative group">
-            <img
-              src="/lovable-uploads/98c608f6-6515-4d0c-b328-24a74bd94f92.png"
-              alt="Greek island luxury view"
-              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
-            />
-            <div className="absolute inset-0 bg-greek-blue/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div className="relative group">
-            <img
-              src="/lovable-uploads/b41335ae-78bf-49a1-a23f-688fdbeabb5e.png"
-              alt="Greek market street"
-              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
-            />
-            <div className="absolute inset-0 bg-greek-turquoise/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div className="relative group">
-            <img
-              src="/lovable-uploads/61fe26f2-2f4e-4689-ab54-55c82964ceba.png"
-              alt="Greek traditional dance"
-              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
-            />
-            <div className="absolute inset-0 bg-greek-gold/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
         </div>
       </div>

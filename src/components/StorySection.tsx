@@ -40,7 +40,7 @@ const StorySection = () => {
           <h2 className={`section-heading ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>איך הכל התחיל</h2>
         </div>
         
-        <div className="flex flex-col md:flex-row gap-10 items-center">
+        <div className="flex flex-col md:flex-row gap-10 items-center mb-12">
           <div className={`w-full md:w-1/2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative hover:scale-105 transition-all duration-500">
@@ -91,6 +91,43 @@ const StorySection = () => {
               <p className="text-lg text-gray-700">
                 היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר והשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Greek atmosphere gallery - moved from Hero */}
+        <div className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.6s" }}>
+          <div className="relative group">
+            <img
+              src="/lovable-uploads/98c608f6-6515-4d0c-b328-24a74bd94f92.png"
+              alt="Greek island luxury view"
+              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
+            />
+            <div className="absolute inset-0 bg-greek-blue/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-sm font-medium text-greek-blue">הים היווני הקסום</p>
+            </div>
+          </div>
+          <div className="relative group">
+            <img
+              src="/lovable-uploads/b41335ae-78bf-49a1-a23f-688fdbeabb5e.png"
+              alt="Greek market street"
+              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
+            />
+            <div className="absolute inset-0 bg-greek-turquoise/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-sm font-medium text-greek-blue">שווקים מקומיים אותנטיים</p>
+            </div>
+          </div>
+          <div className="relative group">
+            <img
+              src="/lovable-uploads/61fe26f2-2f4e-4689-ab54-55c82964ceba.png"
+              alt="Greek traditional dance"
+              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
+            />
+            <div className="absolute inset-0 bg-greek-gold/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-sm font-medium text-greek-blue">מסורת הריקוד היוונית</p>
             </div>
           </div>
         </div>
