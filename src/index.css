@@ -71,6 +71,7 @@
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
+    direction: rtl;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -102,6 +103,11 @@
 
   .greek-divider {
     @apply h-1 w-20 bg-greek-sand mx-auto my-8 rounded-full;
+  }
+
+  /* RTL specific utilities */
+  .rtl-flex-reverse {
+    @apply flex-row-reverse;
   }
 }
 

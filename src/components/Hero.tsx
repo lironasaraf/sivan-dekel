@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef}
-      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-r from-gray-50 to-greek-sand/20"
+      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-l from-gray-50 to-greek-sand/20"
     >
       <div className="absolute inset-0 bg-greek-pattern opacity-10"></div>
       <div className="container mx-auto px-4 md:px-6 z-10 relative">
@@ -53,9 +53,9 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className={`w-full md:w-1/2 flex justify-center md:justify-end transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '300ms' }}>
+          <div className={`w-full md:w-1/2 flex justify-center md:justify-start transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '300ms' }}>
             <div className="relative">
-              <div className="absolute -right-4 -top-4 w-full h-full border-2 border-greek-gold rounded-lg animate-pulse"></div>
+              <div className="absolute -left-4 -top-4 w-full h-full border-2 border-greek-gold rounded-lg animate-pulse"></div>
               <img
                 src="/lovable-uploads/19cb92b5-51f8-4369-bedf-303197adffd8.png"
                 alt="סיון בצלאל בסביבה יוונית מסורתית"

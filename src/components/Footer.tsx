@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="text-center md:text-right rtl">
+          <div className="text-center md:text-right">
             <p>&copy; {currentYear} כל הזכויות שמורות</p>
             <p className="text-sm text-gray-300 mt-1">לימוד יוונית בדרך ישראלית</p>
           </div>

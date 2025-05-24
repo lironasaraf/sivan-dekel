@@ -60,7 +60,7 @@ const Header = () => {
             <img
               src="/lovable-uploads/a0b5a0eb-a84f-42a0-8976-ec8879332858.png"
               alt="Greek Flag"
-              className="h-8 w-12 mr-2 animate-pulse"
+              className="h-8 w-12 ml-2 animate-pulse"
             />
             <h1 className="text-xl md:text-2xl font-serif font-bold text-greek-blue">
               <span className="text-greek-gold">סיון דקל בצלאל</span>
@@ -69,7 +69,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
-            <ul className="flex space-x-6 flex-row-reverse">
+            <ul className="flex space-x-6 space-x-reverse">
               {menuItems.map((item) => (
                 <li key={item.link}>
                   <Link
@@ -80,7 +80,7 @@ const Header = () => {
                     className="text-gray-700 hover:text-greek-blue font-medium cursor-pointer transition-colors relative group"
                   >
                     {item.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-greek-blue transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-greek-blue transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
               ))}
