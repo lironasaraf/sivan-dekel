@@ -95,11 +95,11 @@
   }
   
   .greek-button {
-    @apply bg-greek-blue text-white font-medium py-3 px-6 rounded-md hover:bg-greek-blue/90 transition-all duration-300 inline-flex items-center justify-center;
+    @apply bg-greek-blue text-white font-medium py-3 px-6 rounded-md hover:bg-greek-gold transition-all duration-300 inline-flex items-center justify-center;
   }
   
   .greek-button-secondary {
-    @apply bg-greek-turquoise text-white font-medium py-3 px-6 rounded-md hover:bg-greek-turquoise/90 transition-all duration-300 inline-flex items-center justify-center;
+    @apply bg-greek-turquoise text-white font-medium py-3 px-6 rounded-md hover:bg-greek-gold transition-all duration-300 inline-flex items-center justify-center;
   }
 
   .greek-divider {
