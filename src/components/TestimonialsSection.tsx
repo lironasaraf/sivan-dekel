@@ -123,10 +123,10 @@ const TestimonialsSection = () => {
         </div>
 
         <div className={`max-w-6xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
-          <Carousel className="w-full" opts={{ align: "start", loop: true }}>
-            <CarouselContent className="ml-0">
+          <Carousel className="w-full" opts={{ align: "start", loop: true, slidesToScroll: 1 }}>
+            <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-2 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="greek-card text-center h-full">
                     <div className="relative mb-4">
                       <img
