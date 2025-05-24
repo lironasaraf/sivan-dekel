@@ -77,11 +77,11 @@ const TeachingMethodSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="flex flex-row gap-4 md:gap-8 mb-16">
           {/* Computer Image - Now using the new image */}
-          <div className={`order-2 lg:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.3s" }}>
+          <div className={`w-1/3 md:w-1/2 order-2 lg:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.3s" }}>
             <div className="relative">
-              <div className="absolute -left-4 -bottom-4 w-full h-full border-2 border-greek-blue rounded-lg"></div>
+              <div className="absolute -left-2 md:-left-4 -bottom-2 md:-bottom-4 w-full h-full border-2 border-greek-blue rounded-lg"></div>
               <img
                 src="/lovable-uploads/6e1826c1-0392-4b1c-b4a5-94109ff0ef44.png"
                 alt="מחשב נייד עם קפה ופרחים - סביבת לימוד נעימה"
@@ -91,27 +91,27 @@ const TeachingMethodSection = () => {
           </div>
 
           {/* Method Description */}
-          <div className={`order-1 lg:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
+          <div className={`w-2/3 md:w-1/2 order-1 lg:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card h-full">
-              <div className="flex justify-end items-center gap-3 mb-6">
-                <h3 className="text-2xl font-heading text-greek-blue">הגישה שלי</h3>
-                <Computer className="h-8 w-8 text-greek-gold" />
+              <div className="flex justify-end items-center gap-2 md:gap-3 mb-4 md:mb-6">
+                <h3 className="text-lg md:text-2xl font-heading text-greek-blue">הגישה שלי</h3>
+                <Computer className="h-6 w-6 md:h-8 md:w-8 text-greek-gold" />
               </div>
               
-              <div className="space-y-4 text-right">
-                <p className="text-gray-700 leading-relaxed">
+              <div className="space-y-3 md:space-y-4 text-right">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   עם השנים הבנתי מה באמת עוזר לישראלים להתחבר ליוונית – מה גורם להם להרגיש בטוחים, מה נוגע ומה מרגש אותם.
                 </p>
                 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   השיטה שלי הדרגתית מאוד, מתבססת על סדר ודיוק, משלבת בין דידקטיות הכרחית ללימוד חווייתי הכולל משחקים, תחרויות ודיאלוגים תוססים לפי נושאים.
                 </p>
                 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   <span className="font-semibold text-greek-blue">מתחילים מן הבסיס, וסי גה סיגה מטפסים מעלה.</span>
                 </p>
                 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   בשיעורים הראשונים לומדים כיצד לקרוא ולהגות את המילים, לאחר מכן לומדים לזהות מגדרים, וצעד אחר צעד – לומדים להרכיב משפטים, לקרוא טקסטים ולנהל דיאלוגים.
                 </p>
               </div>
