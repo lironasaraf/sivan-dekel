@@ -1,6 +1,7 @@
 
 import { Plane, CheckCircle, MapPin, Star } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-scroll';
 
 const AthensConsultationSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,7 +15,7 @@ const AthensConsultationSection = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -44,16 +45,16 @@ const AthensConsultationSection = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className={`section-heading ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+          <h2 className={`section-heading transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             חבילת ייעוץ לאתונה
           </h2>
-          <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
+          <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto transition-all duration-700 ease-out delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             הכנה מושלמת לטיול באתונה עם ייעוץ מקצועי ומותאם אישית
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className={`greek-card ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.3s" }}>
+          <div className={`greek-card transition-all duration-700 ease-out delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* Image */}
               <div className="w-full md:w-1/3">
@@ -89,10 +90,12 @@ const AthensConsultationSection = () => {
                 </div>
 
                 <div className="mt-8 text-center">
-                  <button className="greek-button">
-                    <Star className="h-5 w-5 ml-2" />
-                    הזמן ייעוץ עכשיו
-                  </button>
+                  <Link to="contact" smooth={true} duration={500} offset={-80}>
+                    <button className="greek-button">
+                      <Star className="h-5 w-5 ml-2" />
+                      הזמן ייעוץ עכשיו
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

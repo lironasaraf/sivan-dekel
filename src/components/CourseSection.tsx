@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Link } from 'react-scroll';
 
 const CourseSection = () => {
   const courseAContent = [
@@ -96,10 +97,12 @@ const CourseSection = () => {
           <p className="text-lg text-gray-700 mb-4">
             כל הקורסים כוללים חומרי לימוד, תרגילים ותמיכה שוטפת לאורך כל תקופת הלימודים
           </p>
-          <Button className="greek-button mt-2">
-            <span>לפרטים נוספים</span>
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link to="contact" smooth={true} duration={500} offset={-80}>
+            <Button className="greek-button mt-2">
+              <span>לפרטים נוספים</span>
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
