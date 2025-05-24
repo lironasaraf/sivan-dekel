@@ -77,21 +77,21 @@ const TeachingMethodSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Computer Image */}
-          <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.3s" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Computer Image - Now using the new image */}
+          <div className={`order-2 lg:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.3s" }}>
             <div className="relative">
               <div className="absolute -left-4 -bottom-4 w-full h-full border-2 border-greek-blue rounded-lg"></div>
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="מחשב עם קוד על המסך - לימוד דיגיטלי"
+                src="/lovable-uploads/6e1826c1-0392-4b1c-b4a5-94109ff0ef44.png"
+                alt="מחשב נייד עם קפה ופרחים - סביבת לימוד נעימה"
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           {/* Method Description */}
-          <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
+          <div className={`order-1 lg:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card h-full">
               <div className="flex justify-end items-center gap-3 mb-6">
                 <h3 className="text-2xl font-heading text-greek-blue">הגישה שלי</h3>
@@ -138,7 +138,7 @@ const TeachingMethodSection = () => {
             <h3 className="text-2xl font-heading text-greek-blue mb-4">מבנה השיעור - שלושה חלקים</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {lessonStructure.map((part, index) => {
               const IconComponent = part.icon;
               return (
@@ -165,7 +165,7 @@ const TeachingMethodSection = () => {
             <h3 className="text-2xl font-heading text-greek-blue mb-4">לאחר כל שיעור תקבלו</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {postLessonMaterials.map((material, index) => {
               const IconComponent = material.icon;
               return (
