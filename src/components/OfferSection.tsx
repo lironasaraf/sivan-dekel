@@ -7,6 +7,7 @@ const OfferSection = () => {
       title: "קורסים אונליין",
       description: "קורסי זום אינטראקטיביים לכל הרמות, עם גמישות בבחירת שעות הלימוד",
       icon: Video,
+      image: "/lovable-uploads/98c608f6-6515-4d0c-b328-24a74bd94f92.png",
       details: [
         "שיעורים פרטיים או קבוצתיים",
         "חומרי לימוד דיגיטליים",
@@ -18,6 +19,7 @@ const OfferSection = () => {
       title: "שיעורים פרונטליים",
       description: "שיעורים פנים אל פנים לאלו המעדיפים אינטראקציה אישית ישירה",
       icon: Users,
+      image: "/lovable-uploads/b41335ae-78bf-49a1-a23f-688fdbeabb5e.png",
       details: [
         "מפגשים במרכז הארץ",
         "אווירה חמה ואישית",
@@ -29,6 +31,7 @@ const OfferSection = () => {
       title: "שיעורים פרטיים",
       description: "הוראה אישית מותאמת בדיוק לצרכים ולקצב הלמידה שלך",
       icon: BookOpen,
+      image: "/lovable-uploads/6dda7237-8549-4057-8965-278c79c1f1.png",
       details: [
         "תכנית לימודים אישית",
         "התמקדות בנושאים שחשובים לך",
@@ -40,6 +43,7 @@ const OfferSection = () => {
       title: "ייעוץ לטיול באתונה",
       description: "הכנה מושלמת לטיול ביוון, כולל טיפים מקומיים והמלצות על מקומות מיוחדים",
       icon: MapPin,
+      image: "/lovable-uploads/5dce7c4a-a42e-4c3a-bc23-f76c2f6ef3c2.png",
       details: [
         "ביטויים חיוניים לטיול",
         "המלצות על מסעדות ואטרקציות",
@@ -51,6 +55,7 @@ const OfferSection = () => {
       title: "סדנאות לימוד יוונית",
       description: "סדנאות מרוכזות לקבוצות קטנות עם התמקדות בנושאים ספציפיים",
       icon: Calendar,
+      image: "/lovable-uploads/61fe26f2-2f4e-4689-ab54-55c82964ceba.png",
       details: [
         "סדנת שבת יום שלם (8 שעות)",
         "קבוצות של עד 6 משתתפים",
@@ -63,6 +68,7 @@ const OfferSection = () => {
       title: "ספר לימוד ייחודי",
       description: "ספר לימוד מקיף שפיתחתי במיוחד עבור דוברי עברית",
       icon: BookOpen,
+      image: "/lovable-uploads/c34f5b5e-8f82-4d71-a1b6-6f802c975fb5.png",
       details: [
         "מותאם למבנה השפה העברית",
         "דוגמאות מעולם הישראלי",
@@ -86,7 +92,18 @@ const OfferSection = () => {
           {offerings.map((offering, index) => {
             const IconComponent = offering.icon;
             return (
-              <div key={index} className="greek-card text-right group hover:shadow-xl transition-all duration-300">
+              <div key={index} className="greek-card text-right group hover:shadow-xl transition-all duration-300 overflow-hidden">
+                {offering.image && (
+                  <div className="relative mb-4 -mx-6 -mt-6">
+                    <img
+                      src={offering.image}
+                      alt={offering.title}
+                      className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                )}
+                
                 <div className="flex justify-end items-center gap-3 mb-4">
                   <h3 className="text-xl font-heading text-greek-blue font-semibold">{offering.title}</h3>
                   <div className="p-2 bg-greek-gold/10 rounded-lg">

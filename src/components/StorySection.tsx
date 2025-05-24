@@ -46,16 +46,16 @@ const StorySection = () => {
               <div className="relative hover:scale-105 transition-all duration-500">
                 <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-turquoise rounded-lg"></div>
                 <img
-                  src="/lovable-uploads/e0ec374e-37ef-425c-8cef-64dcf4978cc9.png"
-                  alt="Woman in a red dress in Greece"
+                  src="/lovable-uploads/f1a318df-4d71-4278-bb22-18470931c264.png"
+                  alt="Greek island terrace view"
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
               </div>
               <div className="relative hover:scale-105 transition-all duration-500 mt-8 md:mt-16">
                 <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-gold rounded-lg"></div>
                 <img
-                  src="/lovable-uploads/97e7b8d5-ac42-4faa-9bb8-2683ff84239b.png"
-                  alt="Childhood with headphones"
+                  src="/lovable-uploads/6dda7237-8549-4057-8965-278c79c1f1.png"
+                  alt="Vintage music player"
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
               </div>
