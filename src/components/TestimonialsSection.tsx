@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -29,6 +28,12 @@ const TestimonialsSection = () => {
   }, []);
 
   const testimonials = [
+    {
+      name: "הילה וייש",
+      text: "מורה מעולה! סיוון מלמדת בצורה סופר מקצועית, חוויתית ומעניינת. המלצה רותחת לכל מי שחושב ללמוד יוונית 👌🇬🇷",
+      image: "/lovable-uploads/c6b3f18b-d19c-4d21-9223-e4ce3e372203.png",
+      rating: 5
+    },
     {
       name: "שרה כהן",
       text: "השיעורים עם דנה שינו לי את כל התפיסה על לימוד יוונית. בתוך חודשיים כבר הצלחתי לנהל שיחות בסיסיות ביוון!",
