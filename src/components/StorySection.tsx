@@ -54,8 +54,8 @@ const StorySection = () => {
               <div className="relative hover:scale-105 transition-all duration-500 mt-8 md:mt-16">
                 <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-gold rounded-lg"></div>
                 <img
-                  src="/lovable-uploads/6dda7237-8549-4057-8965-278c79c1f1.png"
-                  alt="Vintage music player"
+                  src="/lovable-uploads/778f676d-f282-4c50-bc83-15aa98877340.png"
+                  alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
               </div>
