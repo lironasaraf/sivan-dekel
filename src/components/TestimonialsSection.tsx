@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -49,7 +48,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "אלינור פרוימוביץ'",
-      text: "מעבר למורה סבלנית, מקצועית, מסורה ובאמת מחוברת לשפה היוונית…תמצאו אישה חמה, נעימה, אותנטית ועם רצון גדול שתצליחו! מי שמחליט להירשם פשוט זוכה👑",
+      text: "מעבר למורה סבלנית, מקצועית, מסורה ובאמת מחוברת לשפה היוונית...תמצאו אישה חמה, נעימה, אותנטית ועם רצון גדול שתצליחו! מי שמחליט להירשם פשוט זוכה👑",
       image: "/lovable-uploads/74bc9f63-e4c8-450d-a80c-1cf1cad51135.png",
       rating: 5
     },
@@ -67,7 +66,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "אבי פולסקי",
-      text: "סיוון היא ה…..המורה ליוונית שיש, משקיעה בתלמידים ברמות על חלל סובלנית מאוד, הלימודים מלאים בשמחת חיים צחוקים תוך רכישת הידע ביוונית וההתקדמות מהירה ומדהימה הן מבחינת הידע הנרכש והן מבחינת היכולות שהתפתחו אצלי לשפה היוונית מדהים !!! כבר אחרי 6 שיעורים רוב התלמידים בקורס קוראים יוונית בסיסית, פשוט אין מורים כאלה בעולם סיוון יחודית ואין כמוה ואין לה תחליף אם אתה/את/אתם רוצים ללמוד יוונית סיוון דקל היא המורה שאתם רוצים ואם תזכו לה כמורתכם ליוונית זכיתם.",
+      text: "סיוון היא ה…..המורה ליוונית שיש, משקיעה בתלמידים ברמות על חלל סובלנית מאוד, הלימודים מלאים בשמחת חיים צחוקים תוך רכישת הידע ביוונית וההתקדמות מהירה ומדהימה הן מבחינת הידע הנרכש והן מבחינת היכולות שהתפתחו אצלי לשפה היוונית מדהים !!! כבר אחרי 6 שיעורים רוב התלמידים בקורס קוראים יוונית בסיסית, פשוט אין מורים כאלה בעולם סיוון דקל היא המורה שאתם רוצים ואם תזכו לה כמורתכם ליוונית זכיתם.",
       image: "/lovable-uploads/438a9eb8-b41b-4092-8450-2d2cc3729093.png",
       rating: 5
     },
@@ -135,28 +134,18 @@ const TestimonialsSection = () => {
         </div>
 
         <div className={`max-w-6xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
-          <Carousel 
-            className="w-full" 
-            opts={{ 
-              align: "start", 
-              loop: true, 
-              slidesToScroll: 1,
-              duration: 30,
-              dragFree: true,
-              containScroll: "trimSnaps"
-            }}
-          >
-            <CarouselContent className="flex gap-4 transition-transform duration-500 ease-out">
+          <Carousel className="w-full" opts={{ align: "start", loop: false, slidesToScroll: 1 }}>
+            <CarouselContent className="flex gap-4">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="flex-[0_0_33.3333%] md:flex-[0_0_50%] lg:flex-[0_0_33.3333%]">
-                  <div className="greek-card text-center h-full transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <CarouselItem key={index} className="flex-[0_0_33.3333%]">
+                  <div className="greek-card text-center h-full">
                     <div className="relative mb-4">
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
-                        className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-greek-gold/20 transition-all duration-300 hover:border-greek-gold/40"
+                        className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-greek-gold/20"
                       />
-                      <Quote className="absolute -top-2 -right-2 h-6 w-6 text-greek-turquoise bg-white rounded-full p-1 transition-all duration-300 hover:scale-110" />
+                      <Quote className="absolute -top-2 -right-2 h-6 w-6 text-greek-turquoise bg-white rounded-full p-1" />
                     </div>
                     <h4 className="text-lg font-semibold text-greek-blue mb-3">{testimonial.name}</h4>
                     <div className="flex justify-center mb-3">
@@ -169,8 +158,8 @@ const TestimonialsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="transition-all duration-300 hover:scale-110" />
-            <CarouselNext className="transition-all duration-300 hover:scale-110" />
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </div>
