@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 z-10 relative">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2 mt-10 md:mt-0 text-right">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-greek-blue mb-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-hero font-bold text-greek-blue mb-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
               לימוד יוונית בדרך ישראלית
             </h1>
             <p className={`text-lg md:text-xl text-gray-700 mb-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>

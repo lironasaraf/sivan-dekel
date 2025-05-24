@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 				heading: ['Fredoka', 'Inter', 'system-ui', 'sans-serif'],
+				hero: ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
