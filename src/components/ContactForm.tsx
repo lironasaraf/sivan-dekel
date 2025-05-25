@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -16,8 +17,9 @@ const ContactForm = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [courseType, setCourseType] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Form validation
@@ -30,21 +32,46 @@ const ContactForm = () => {
       return;
     }
     
-    // Here you would typically send the form data to your backend
-    console.log({ name, email, phone, message, courseType });
+    setIsSubmitting(true);
     
-    // Show success message
-    toast({
-      title: "הטופס נשלח בהצלחה!",
-      description: "תודה על פנייתך, ניצור איתך קשר בהקדם",
-    });
-    
-    // Reset form
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
-    setCourseType("");
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name,
+          email,
+          phone,
+          courseType,
+          message
+        }
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      // Show success message
+      toast({
+        title: "הטופס נשלח בהצלחה!",
+        description: "תודה על פנייתך, ניצור איתך קשר בהקדם",
+      });
+      
+      // Reset form
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      setCourseType("");
+      
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "שגיאה בשליחת הטופס",
+        description: "אירעה שגיאה בשליחת הטופס. אנא נסה שוב מאוחר יותר",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const courseOptions = [
@@ -83,6 +110,7 @@ const ContactForm = () => {
                     onChange={(e) => setName(e.target.value)}
                     className="text-right"
                     dir="rtl"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -98,6 +126,7 @@ const ContactForm = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     className="text-right"
                     dir="rtl"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -112,6 +141,7 @@ const ContactForm = () => {
                     onChange={(e) => setPhone(e.target.value)}
                     className="text-right"
                     dir="rtl"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -125,6 +155,7 @@ const ContactForm = () => {
                     value={courseType}
                     onValueChange={setCourseType}
                     className="flex flex-col space-y-2"
+                    disabled={isSubmitting}
                   >
                     {courseOptions.map((option) => (
                       <div key={option.value} className="flex items-center justify-end space-x-2 space-x-reverse">
@@ -147,12 +178,17 @@ const ContactForm = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   className="min-h-[100px] text-right"
                   dir="rtl"
+                  disabled={isSubmitting}
                 />
               </div>
               
               <div className="text-center pt-2">
-                <Button type="submit" className="greek-button w-full md:w-auto">
-                  שליחת טופס
+                <Button 
+                  type="submit" 
+                  className="greek-button w-full md:w-auto"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "שולח..." : "שליחת טופס"}
                 </Button>
               </div>
             </form>
