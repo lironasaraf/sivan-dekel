@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -70,13 +69,7 @@ const TestimonialsSection = () => {
       text: "סיוון היא ה…..המורה ליוונית שיש, משקיעה בתלמידים ברמות על חלל סובלנית מאוד, הלימודים מלאים בשמחת חיים צחוקים תוך רכישת הידע ביוונית וההתקדמות מהירה ומדהימה הן מבחינת הידע הנרכש והן מבחינת היכולות שהתפתחו אצלי לשפה היוונית מדהים !!! כבר אחרי 6 שיעורים רוב התלמידים בקורס קוראים יוונית בסיסית, פשוט אין מורים כאלה בעולם סיוון דקל היא המורה שאתם רוצים ואם תזכו לה כמורתכם ליוונית זכיתם.",
       image: "/lovable-uploads/438a9eb8-b41b-4092-8450-2d2cc3729093.png",
       rating: 5
-    },
-    // {
-    //   name: "בני לובל",
-    //   text: "מסיים בימים אלו את הקורס (יוונית למתחילים א'). סיון המקסימה הצליחה בנועם ובמקצועיות \"להחזיר אותי אל ספסל הלימודים\" עשרות שנים אחרי ש\"נשבעתי\" שזהו, לא לומד יותר בחיים באופן מוסדר, ובטח שלא נבחן ו/או מכין שוב שיעורי בית וכו' (למרות התארים האקדמיים 🤦). סיון היא הרבה יותר ממורה טובה: היא משקיענית, מקצוענית, נעימה  ורגישה. אף שהקורס מוגדר כ-10 שיעורים, היא שם עבורנו הרבה מעבר לכך, עם מפגש שבועי נוסף באורך מלא שמוגדר כ\"חזרה\", עם התעקשות שלה לחלק את המחזור ל-2 קבוצות קטנות יותר לטובת יתר קשב ותשומת לב למשתתפים (ובכך להעמיס על עצמה כפל עבודה וזמן הוראה) – אף שבזום לכאורה אין בעיה ללמד קבוצה בכל גודל. את השיעורים סיון מעבירה בנועם רב כמעין שיחה זורמת ומענינת, מתובלת בסיפורים ושירים ביוונית, מתענינת בכל אחד מאיתנו בשיעור ולאחריו, מעודדת ומפרגנת. וזה - כשגם ב\"דרישות\" מאיתנו (שיעורי הבית...) סיון לא עושה הנחות, ויודעת בקיסמה להיות \"דורשנית\" ואסרטיבית מחד, ומאידך - בסופר נעימות והבטחה מתמשכת שלה אלינו שהדברים חשובים וכדאיים, וש\"תיכף הכל יתחבר לנו\". הקורס הוא הרבה הרבה מעבר לשיעורי שינון סתמיים (בשביל זה היינו יכולים ללמוד ב\"דואולינגו\"), כשלסיון חשוב כל כך שגם נבין, גם נלמד, וגם נהנה. מומלצת ביותר!!! 👑",
-    //   image: "/lovable-uploads/c42dd9a9-280a-4f0c-9bf0-87333c1118c1.png",
-    //   rating: 5
-    // },
+    }
   ];
 
   const renderStars = (rating: number) => {
@@ -105,33 +98,43 @@ const TestimonialsSection = () => {
         </div>
 
         <div className={`max-w-6xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
-          <Carousel className="w-full" opts={{ align: "start", loop: false, slidesToScroll: 1, direction: "rtl" }}>
-            <CarouselContent className="flex gap-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="flex-[0_0_33.3333%]">
-                  <div className="greek-card text-center h-full">
-                    <div className="relative mb-4">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-greek-gold/20"
-                      />
-                      <Quote className="absolute -top-2 -left-2 h-6 w-6 text-greek-turquoise bg-white rounded-full p-1" />
+          <div className="relative px-12 md:px-16">
+            <Carousel 
+              className="w-full" 
+              opts={{ 
+                align: "start", 
+                loop: true, 
+                slidesToScroll: 1, 
+                direction: "rtl" 
+              }}
+            >
+              <CarouselContent className="flex">
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="basis-full md:basis-1/3">
+                    <div className="greek-card text-center h-full mx-2">
+                      <div className="relative mb-4">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-greek-gold/20"
+                        />
+                        <Quote className="absolute -top-2 -left-2 h-6 w-6 text-greek-turquoise bg-white rounded-full p-1" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-greek-blue mb-3">{testimonial.name}</h4>
+                      <div className="flex justify-center mb-3">
+                        {renderStars(testimonial.rating)}
+                      </div>
+                      <p className="text-gray-700 leading-relaxed text-sm italic">
+                        "{testimonial.text}"
+                      </p>
                     </div>
-                    <h4 className="text-lg font-semibold text-greek-blue mb-3">{testimonial.name}</h4>
-                    <div className="flex justify-center mb-3">
-                      {renderStars(testimonial.rating)}
-                    </div>
-                    <p className="text-gray-700 leading-relaxed text-sm italic">
-                      "{testimonial.text}"
-                    </p>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 h-10 w-10 bg-white/90 hover:bg-white border-2 border-greek-gold/30 hover:border-greek-gold text-greek-blue hover:text-greek-gold shadow-lg" />
+              <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 h-10 w-10 bg-white/90 hover:bg-white border-2 border-greek-gold/30 hover:border-greek-gold text-greek-blue hover:text-greek-gold shadow-lg" />
+            </Carousel>
+          </div>
         </div>
       </div>
     </section>
