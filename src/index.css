@@ -82,7 +82,7 @@
 
 @layer components {
   .section-heading {
-    @apply text-3xl md:text-4xl font-heading font-bold text-greek-blue relative mb-6 inline-block;
+    @apply text-3xl md:text-4xl font-heading font-bold text-greek-blue relative mb-6 text-right;
   }
   
   .section-heading::after {
