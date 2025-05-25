@@ -1,3 +1,4 @@
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 
@@ -51,7 +52,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "יוונית לכל <onboarding@resend.dev>",
-      to: ["sivan.dek@gmail.com"],
+      to: ["lironi06@gmail.com"],
       subject: `טופס יצירת קשר חדש מ-${formData.name}`,
       html: emailContent,
     });
