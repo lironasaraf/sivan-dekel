@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -85,9 +86,9 @@ const TestimonialsSection = () => {
     <section 
       id="testimonials" 
       ref={sectionRef}
-      className="py-16 md:py-24 bg-gray-50"
+      className="py-16 md:py-24 bg-gray-50 overflow-hidden"
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-full">
         <div className="text-center mb-12">
           <h2 className={`section-heading transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             חוות דעת של תלמידים מרוצים
@@ -97,10 +98,10 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className={`max-w-6xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
-          <div className="relative px-12 md:px-16">
+        <div className={`max-w-6xl mx-auto transition-all duration-1000 ease-out overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
+          <div className="relative px-4 md:px-12 lg:px-16">
             <Carousel 
-              className="w-full" 
+              className="w-full overflow-hidden" 
               opts={{ 
                 align: "start", 
                 loop: true, 
@@ -108,10 +109,10 @@ const TestimonialsSection = () => {
                 direction: "rtl" 
               }}
             >
-              <CarouselContent className="flex">
+              <CarouselContent className="flex -ml-2 md:-ml-4">
                 {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="basis-full md:basis-1/3">
-                    <div className="greek-card text-center h-full mx-2">
+                  <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3 pl-2 md:pl-4">
+                    <div className="greek-card text-center h-full">
                       <div className="relative mb-4">
                         <img
                           src={testimonial.image}
@@ -120,19 +121,25 @@ const TestimonialsSection = () => {
                         />
                         <Quote className="absolute -top-2 -left-2 h-6 w-6 text-greek-turquoise bg-white rounded-full p-1" />
                       </div>
-                      <h4 className="text-lg font-semibold text-greek-blue mb-3">{testimonial.name}</h4>
+                      <h4 className="text-lg font-semibold text-greek-blue mb-3 break-words">{testimonial.name}</h4>
                       <div className="flex justify-center mb-3">
                         {renderStars(testimonial.rating)}
                       </div>
-                      <p className="text-gray-700 leading-relaxed text-sm italic">
+                      <p className="text-gray-700 leading-relaxed text-sm italic break-words hyphens-auto">
                         "{testimonial.text}"
                       </p>
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 h-10 w-10 bg-white/90 hover:bg-white border-2 border-greek-gold/30 hover:border-greek-gold text-greek-blue hover:text-greek-gold shadow-lg" />
-              <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 h-10 w-10 bg-white/90 hover:bg-white border-2 border-greek-gold/30 hover:border-greek-gold text-greek-blue hover:text-greek-gold shadow-lg" />
+              <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 h-10 w-10 bg-white/90 hover:bg-white border-2 border-greek-gold/30 hover:border-greek-gold text-greek-blue hover:text-greek-gold shadow-lg hidden md:flex" />
+              <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 h-10 w-10 bg-white/90 hover:bg-white border-2 border-greek-gold/30 hover:border-greek-gold text-greek-blue hover:text-greek-gold shadow-lg hidden md:flex" />
+              
+              {/* Mobile navigation buttons */}
+              <div className="flex justify-center gap-4 mt-6 md:hidden">
+                <CarouselPrevious className="relative left-auto top-auto translate-y-0 h-10 w-10 bg-white/90 hover:bg-white border-2 border-greek-gold/30 hover:border-greek-gold text-greek-blue hover:text-greek-gold shadow-lg" />
+                <CarouselNext className="relative right-auto top-auto translate-y-0 h-10 w-10 bg-white/90 hover:bg-white border-2 border-greek-gold/30 hover:border-greek-gold text-greek-blue hover:text-greek-gold shadow-lg" />
+              </div>
             </Carousel>
           </div>
         </div>
@@ -142,3 +149,4 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+
