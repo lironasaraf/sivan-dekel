@@ -1,4 +1,3 @@
-
 import { Clock, Users, Heart, Star, Coffee, Music, Calendar, CheckCircle, MapPin, CreditCard } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
@@ -104,7 +103,7 @@ const GreekLivingRoomSection = () => {
           {/* Workshop Features */}
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card h-full">
-              <div className="flex justify-end items-center gap-3 mb-6">
+              <div className="flex justify-center items-center gap-3 mb-6">
                 <h3 className="text-2xl font-heading text-greek-blue">מה כוללת הסדנה?</h3>
                 <Coffee className="h-8 w-8 text-greek-gold" />
               </div>
@@ -169,7 +168,7 @@ const GreekLivingRoomSection = () => {
           {/* Israeli Teacher Benefits */}
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.6s" }}>
             <div className="greek-card h-full">
-              <div className="flex justify-end items-center gap-3 mb-6">
+              <div className="flex justify-center items-center gap-3 mb-6">
                 <h3 className="text-xl font-heading text-greek-blue">מה היתרונות בלימוד עם מורה ישראלית?</h3>
                 <Star className="h-6 w-6 text-greek-gold" />
               </div>
@@ -188,7 +187,7 @@ const GreekLivingRoomSection = () => {
           {/* Personal Benefits */}
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.7s" }}>
             <div className="greek-card h-full">
-              <div className="flex justify-end items-center gap-3 mb-6">
+              <div className="flex justify-center items-center gap-3 mb-6">
                 <h3 className="text-xl font-heading text-greek-blue">מה היתרונות בלימוד איתי?</h3>
                 <Users className="h-6 w-6 text-greek-gold" />
               </div>

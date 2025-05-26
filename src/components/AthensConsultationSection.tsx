@@ -1,3 +1,4 @@
+
 import { Plane, CheckCircle, MapPin, Star, CreditCard } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-scroll';
@@ -68,7 +69,7 @@ const AthensConsultationSection = () => {
 
               {/* Content */}
               <div className="w-full md:w-2/3 text-right">
-                <div className="flex justify-end items-center gap-3 mb-6">
+                <div className="flex justify-center items-center gap-3 mb-6">
                   <h3 className="text-2xl font-heading text-greek-blue">חבילת ייעוץ מקצועית</h3>
                   <Plane className="h-8 w-8 text-greek-gold" />
                 </div>
