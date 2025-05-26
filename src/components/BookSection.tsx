@@ -22,7 +22,7 @@ const BookSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="w-full md:w-2/5 order-2 md:order-1">
             <div className="bg-white rounded-lg shadow-lg p-8 border border-greek-sand">
-              <div className="flex justify-end items-center gap-3 mb-6">
+              <div className="flex justify-center items-center gap-3 mb-6">
                 <h3 className="text-2xl font-serif text-greek-blue">ספר הלימוד שלי</h3>
                 <Book className="h-6 w-6 text-greek-gold" />
               </div>
