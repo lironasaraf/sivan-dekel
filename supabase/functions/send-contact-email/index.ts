@@ -52,7 +52,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "סיון דקל בצלאל - מורה פרטית ליוונית <onboarding@resend.dev>",
-      to: ["lironi06@gmail.com"], // Using your verified email for testing
+      to: ["liron@aimeverse.com"], // Using your verified email for testing
       subject: `טופס יצירת קשר חדש מ-${formData.name}`,
       html: emailContent,
     });
