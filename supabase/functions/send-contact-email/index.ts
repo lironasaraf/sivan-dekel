@@ -49,7 +49,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "סיון דקל <contact@sivandekel.com>", // כתובת העסקית שלך
-      to: ["liron@aimeverse.com"], // כתובת היעד
+      to: ["sivan.dek@gmail.com"], // כתובת היעד
       subject: `טופס יצירת קשר חדש מ-${formData.name}`,
       html: emailContent,
     });
