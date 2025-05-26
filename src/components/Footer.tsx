@@ -12,15 +12,15 @@ const Footer = () => {
             <h3 className="text-xl font-serif font-bold mb-4">יוונית לכל</h3>
             <div className="flex flex-col items-center md:items-end space-y-2">
               <div className="flex items-center gap-2">
-                <span>info@greekforall.com</span>
+                <span>sivan.dek@gmail.com</span>
                 <Mail className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2">
-                <span>050-1234567</span>
+                <span>052-2931926</span>
                 <Phone className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2">
-                <span>תל אביב, ישראל</span>
+                <span>נס ציונה, ישראל</span>
                 <MapPin className="h-4 w-4" />
               </div>
             </div>
