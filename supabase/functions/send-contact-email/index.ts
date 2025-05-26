@@ -1,8 +1,6 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 
-// Add debug logging to check if the API key is available
 console.log("RESEND_API_KEY available:", !!Deno.env.get("RESEND_API_KEY"));
 
 const resendApiKey = Deno.env.get("RESEND_API_KEY");
@@ -27,7 +25,6 @@ interface ContactFormData {
 }
 
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -51,8 +48,8 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "סיון דקל בצלאל - מורה פרטית ליוונית <onboarding@resend.dev>",
-      to: ["liron@aimeverse.com"], // Using your verified email for testing
+      from: "סיון דקל <contact@sivandekel.com>", // כתובת העסקית שלך
+      to: ["sivan.dek@gmail.com"], // כתובת היעד
       subject: `טופס יצירת קשר חדש מ-${formData.name}`,
       html: emailContent,
     });
