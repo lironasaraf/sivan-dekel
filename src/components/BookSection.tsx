@@ -36,14 +36,14 @@ const BookSection = () => {
                 </p>
               </div>
 
-              <ul className="space-y-4 text-right mb-6">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center justify-end">
-                    <span className="text-gray-700">{benefit}</span>
-                    <CheckCircle className="ml-3 h-5 w-5 text-greek-turquoise flex-shrink-0" />
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-4 text-right mb-6" dir="rtl">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex flex-row-reverse items-center justify-start">
+                      <CheckCircle className="mr-3 h-5 w-5 text-greek-turquoise flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
 
               <div className="text-center border-t border-greek-sand pt-6">
                 <div className="mb-4">
