@@ -178,7 +178,7 @@ const GreekLivingRoomSection = () => {
                 {israeliTeacherBenefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3 text-right">
                     <CheckCircle className="h-4 w-4 text-greek-turquoise flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm">{benefit}</span>
+                    <span className="text-gray-700 text-base font-arial" style={{ fontFamily: 'Arial, sans-serif' }}>{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -197,7 +197,7 @@ const GreekLivingRoomSection = () => {
                 {personalBenefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3 text-right">
                     <CheckCircle className="h-4 w-4 text-greek-turquoise flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm">{benefit}</span>
+                    <span className="text-gray-700 text-base font-arial" style={{ fontFamily: 'Arial, sans-serif' }}>{benefit}</span>
                   </div>
                 ))}
               </div>

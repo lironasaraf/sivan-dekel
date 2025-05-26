@@ -1,5 +1,4 @@
-
-import { Plane, CheckCircle, MapPin, Star } from 'lucide-react';
+import { Plane, CheckCircle, MapPin, Star, CreditCard } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-scroll';
 
@@ -74,11 +73,7 @@ const AthensConsultationSection = () => {
                   <Plane className="h-8 w-8 text-greek-gold" />
                 </div>
 
-                <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-greek-blue">250 ₪</span>
-                </div>
-
-                <div className="space-y-4">
+                <div className="space-y-4 mb-6">
                   <h4 className="text-lg font-semibold text-greek-blue mb-3">החבילה כוללת:</h4>
                   {consultationIncludes.map((item, index) => (
                     <div key={index} className="flex items-start gap-3 text-gray-700">
@@ -88,11 +83,14 @@ const AthensConsultationSection = () => {
                   ))}
                 </div>
 
-                <div className="mt-8 text-center">
+                <div className="text-center border-t border-greek-sand pt-6">
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-greek-blue">250 ₪</span>
+                  </div>
                   <Link to="contact" smooth={true} duration={500} offset={-80}>
-                    <button className="greek-button">
-                      <Star className="h-5 w-5 ml-2" />
-                      הזמן ייעוץ עכשיו
+                    <button className="greek-button w-full md:w-auto">
+                      <CreditCard className="h-5 w-5 ml-2" />
+                      שלם באמצעות ביט
                     </button>
                   </Link>
                 </div>
