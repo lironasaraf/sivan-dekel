@@ -37,7 +37,7 @@ const StorySection = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className={`section-heading ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>איך הכל התחיל</h2>
+          <h2 className={`section-heading text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>איך הכל התחיל</h2>
         </div>
         
         <div className="flex flex-col md:flex-row gap-10 items-center mb-12">

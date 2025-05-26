@@ -75,21 +75,21 @@ const ContactForm = () => {
   };
 
   const courseOptions = [
-    { value: "זום-א", label: "קורס א' זום" },
-    { value: "זום-ב", label: "קורס ב' זום" },
-    { value: "פרונטלי-א", label: "קורס א' פרונטלי" },
-    { value: "פרונטלי-ב", label: "קורס ב' פרונטלי" },
+    { value: "זום-א", label: "רמת מתחילים א' זום" },
+    { value: "זום-ב", label: "רמת מתחילים ב' זום" },
+    { value: "פרונטלי-א", label: "קבוצת למידה פרונטלית חד שבועית רמת מתחילים א'" },
+    { value: "פרונטלי-ב", label: "קבוצת למידה פרונטלית חד שבועית רמת מתחילים ב'" },
     { value: "פרטי", label: "שיעור פרטי" },
-    { value: "ייעוץ", label: "ייעוץ לטיול באתונה" },
     { value: "סדנה", label: "סדנת לימוד יוונית" },
     { value: "ספר", label: "ספר לימוד" },
+    { value: "ייעוץ", label: "ייעוץ לטיול באתונה" },
   ];
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="section-heading">צרו קשר</h2>
+          <h2 className="section-heading text-center">צרו קשר</h2>
           <p className="text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
             מעוניינים להתחיל ללמוד יוונית או לשמוע פרטים נוספים? מלאו את הטופס ואחזור אליכם בהקדם
           </p>

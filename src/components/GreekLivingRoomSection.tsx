@@ -1,9 +1,10 @@
 
-import { Clock, Users, Heart, Star, Coffee, Music, Calendar, CheckCircle } from 'lucide-react';
+import { Clock, Users, Heart, Star, Coffee, Music, Calendar, CheckCircle, MapPin, CreditCard } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
 const GreekLivingRoomSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [nextWorkshopDate, setNextWorkshopDate] = useState("לעדכון תאריך");
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -60,7 +61,7 @@ const GreekLivingRoomSection = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className={`section-heading ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+          <h2 className={`section-heading text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             יוונית בסלון – סדנת לימוד פרונטלית
           </h2>
           <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
@@ -104,7 +105,7 @@ const GreekLivingRoomSection = () => {
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card h-full">
               <div className="flex justify-end items-center gap-3 mb-6">
-                <h3 className="text-2xl font-heading text-greek-blue">מה כולל הסדנה?</h3>
+                <h3 className="text-2xl font-heading text-greek-blue">מה כוללת הסדנה?</h3>
                 <Coffee className="h-8 w-8 text-greek-gold" />
               </div>
               
@@ -117,14 +118,23 @@ const GreekLivingRoomSection = () => {
                 ))}
               </div>
 
+              {/* Next Workshop Date */}
+              <div className="bg-greek-blue/5 p-4 rounded-lg mb-4">
+                <div className="flex justify-end items-center gap-2 mb-2">
+                  <h4 className="font-semibold text-greek-blue">מתי הסדנה הבאה?</h4>
+                  <Calendar className="h-5 w-5 text-greek-gold" />
+                </div>
+                <p className="text-gray-700 text-right font-medium">{nextWorkshopDate}</p>
+              </div>
+
+              {/* Price and Payment */}
               <div className="bg-greek-sand/20 p-4 rounded-lg">
                 <div className="flex justify-end items-center gap-2 mb-2">
-                  <h4 className="font-semibold text-greek-blue">מטרת הסדנה:</h4>
-                  <Heart className="h-5 w-5 text-greek-gold" />
+                  <h4 className="font-semibold text-greek-blue">מחיר וזריון מקום</h4>
+                  <CreditCard className="h-5 w-5 text-greek-gold" />
                 </div>
                 <p className="text-gray-700 text-right">
-                  היכרויות חדשות, ניהול דיאלוגים בסביבה כייפית וחמימה, תרגול השפה בצורה שונה ומיוחדת, 
-                  אפשרות לחגוג ימי הולדת, נישואין, רווקים וכו'.
+                  <span className="font-bold text-greek-blue">₪280</span> - שריון מקום ותשלום באמצעות ביט
                 </p>
               </div>
             </div>
