@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Calendar, User, Mail, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -99,7 +100,11 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit} className="space-y-6 text-right" dir="rtl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 justify-end">
+                  <div className="flex items-center gap-2">
+                    <Label htmlFor="name" className="flex items-center gap-1 whitespace-nowrap">
+                      <User className="h-4 w-4 text-greek-blue" />
+                      <span>שם מלא *</span>
+                    </Label>
                     <Input
                       id="name"
                       value={name}
@@ -108,15 +113,15 @@ const ContactForm = () => {
                       dir="rtl"
                       disabled={isSubmitting}
                     />
-                    <Label htmlFor="name" className="flex items-center gap-1 whitespace-nowrap">
-                      <User className="h-4 w-4 text-greek-blue" />
-                      <span>שם מלא *</span>
-                    </Label>
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 justify-end">
+                  <div className="flex items-center gap-2">
+                    <Label htmlFor="email" className="flex items-center gap-1 whitespace-nowrap">
+                      <Mail className="h-4 w-4 text-greek-blue" />
+                      <span>אימייל *</span>
+                    </Label>
                     <Input
                       id="email"
                       type="email"
@@ -126,17 +131,13 @@ const ContactForm = () => {
                       dir="rtl"
                       disabled={isSubmitting}
                     />
-                    <Label htmlFor="email" className="flex items-center gap-1 whitespace-nowrap">
-                      <Mail className="h-4 w-4 text-greek-blue" />
-                      <span>אימייל *</span>
-                    </Label>
                   </div>
                 </div>
                 
                 <div className="space-y-2 md:order-3">
-                  <Label htmlFor="courseType" className="flex justify-end items-center gap-1">
-                    <span>סוג הקורס המבוקש *</span>
+                  <Label htmlFor="courseType" className="flex items-center gap-1">
                     <Calendar className="h-4 w-4 text-greek-blue" />
+                    <span>סוג הקורס המבוקש *</span>
                   </Label>
                   <RadioGroup
                     dir="rtl"
@@ -146,16 +147,20 @@ const ContactForm = () => {
                     disabled={isSubmitting}
                   >
                     {courseOptions.map((option) => (
-                      <div key={option.value} className="flex items-center justify-start space-x-2 space-x-reverse">
+                      <div key={option.value} className="flex items-center space-x-2 space-x-reverse">
+                        <Label htmlFor={option.value} className="text-right flex-1" dir="rtl">{option.label}</Label>
                         <RadioGroupItem id={option.value} value={option.value} />
-                        <Label htmlFor={option.value} className="text-right" dir="rtl">{option.label}</Label>
                       </div>
                     ))}
                   </RadioGroup>
                 </div>
                 
                 <div className="space-y-2 md:order-4">
-                  <div className="flex items-center gap-2 justify-end">
+                  <div className="flex items-center gap-2">
+                    <Label htmlFor="phone" className="flex items-center gap-1 whitespace-nowrap">
+                      <Phone className="h-4 w-4 text-greek-blue" />
+                      <span>טלפון *</span>
+                    </Label>
                     <Input
                       id="phone"
                       value={phone}
@@ -164,18 +169,14 @@ const ContactForm = () => {
                       dir="rtl"
                       disabled={isSubmitting}
                     />
-                    <Label htmlFor="phone" className="flex items-center gap-1 whitespace-nowrap">
-                      <Phone className="h-4 w-4 text-greek-blue" />
-                      <span>טלפון *</span>
-                    </Label>
                   </div>
                 </div>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="message" className="flex justify-end items-center gap-1">
-                  <span>הודעה</span>
+                <Label htmlFor="message" className="flex items-center gap-1">
                   <MessageSquare className="h-4 w-4 text-greek-blue" />
+                  <span>הודעה</span>
                 </Label>
                 <Textarea
                   id="message"
