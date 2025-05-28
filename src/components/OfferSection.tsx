@@ -48,10 +48,10 @@ const OfferSection = () => {
                 className="cursor-pointer"
               >
                 <div className="flex items-center gap-3 text-right hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                  <CheckCircle className="h-5 w-5 text-greek-turquoise flex-shrink-0" />
                   <span className="text-lg text-gray-700 hover:text-greek-blue transition-colors">
                     {offering.title}
                   </span>
-                  <CheckCircle className="h-5 w-5 text-greek-turquoise flex-shrink-0" />
                 </div>
               </Link>
             ))}
