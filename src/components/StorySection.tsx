@@ -40,23 +40,26 @@ const StorySection = () => {
           {/* Text content on the right */}
           <div className={`w-full md:w-2/3 order-2 md:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card text-right hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-              {/* Title with icon */}
-              <div className="flex justify-end items-center gap-3 mb-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading" style={{
-                  background: 'linear-gradient(135deg, #0D5EAF, #30D5C8)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
-                }}>
-                  איך הכל התחיל
-                </h2>
-                <Book className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
-              </div>
-              
-              <div className="flex-1">
-                <p className="text-lg text-gray-700 mb-4">
-                  הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.
-                </p>
+              {/* Title with icon - positioned inline with the first paragraph */}
+              <div className="mb-4">
+                <div className="flex justify-end items-start gap-3 mb-4">
+                  <div className="flex-1">
+                    <div className="flex justify-end items-center gap-3 mb-2">
+                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading" style={{
+                        background: 'linear-gradient(135deg, #0D5EAF, #30D5C8)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>
+                        איך הכל התחיל
+                      </h2>
+                      <Book className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
+                    </div>
+                    <p className="text-lg text-gray-700">
+                      הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.
+                    </p>
+                  </div>
+                </div>
                 
                 <p className="text-lg text-gray-700 mb-4">
                   כשגדלתי טיילתי ביוון, התאהבתי בפשטות, בקסם, באווירה השמחה והנעימה, ובעיקר באנשים ובשפה.
