@@ -92,9 +92,9 @@ const TeachingMethodSection = () => {
           {/* Method Description - Compact */}
           <div className={`w-2/3 order-1 lg:order-2 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '300ms' }}>
             <div className="greek-card h-full">
-              <div className="flex justify-end items-center gap-2 md:gap-3 mb-4">
-                <h3 className="text-lg md:text-xl font-heading text-greek-blue">הגישה שלי</h3>
+              <div className="flex items-center gap-2 md:gap-3 mb-4">
                 <Computer className="h-6 w-6 text-greek-gold" />
+                <h3 className="text-lg md:text-xl font-heading text-greek-blue">הגישה שלי</h3>
               </div>
               
               <div className="space-y-3 text-right">
