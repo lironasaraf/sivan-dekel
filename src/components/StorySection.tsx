@@ -1,6 +1,6 @@
+
 import { Book } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
-
 
 const StorySection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,29 +29,43 @@ const StorySection = () => {
   }, []);
 
   return (
-    <section id="story" ref={sectionRef} className={`story-section ${isVisible ? 'animate-fade-in' : ''}`}>
-      <div className="container">
-        <div className="story-content">
+    <section 
+      id="story" 
+      ref={sectionRef} 
+      className={`py-16 bg-gray-50 ${isVisible ? 'animate-fade-in' : ''}`}
+    >
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex gap-8 items-start">
           {/* תמונות משמאל */}
-          <div className="story-images">
-            <img src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png" alt="ילדה קטנה" />
-            <img src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png" alt="אישה באי יווני" />
+          <div className="flex-1 flex flex-col gap-4">
+            <img 
+              src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png" 
+              alt="ילדה קטנה"
+              className="w-full max-w-[250px] h-auto object-cover rounded-lg shadow-md"
+            />
+            <img 
+              src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png" 
+              alt="אישה באי יווני"
+              className="w-full max-w-[250px] h-auto object-cover rounded-lg shadow-md"
+            />
           </div>
 
           {/* טקסט מימין */}
-          <div className="story-text">
-            <div className="story-title-wrapper">
-              <Book className="story-icon" />
-              <h2 className="story-title">איך הכל התחיל</h2>
+          <div className="flex-[2] text-right" dir="rtl">
+            <div className="flex flex-row-reverse items-center gap-2 mb-4">
+              <Book className="w-8 h-8 text-yellow-500" />
+              <h2 className="text-3xl font-bold bg-gradient-to-br from-greek-blue to-greek-turquoise bg-clip-text text-transparent">
+                איך הכל התחיל
+              </h2>
             </div>
-            <p>הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.</p>
-            <p>כשגדלתי טיילתי ביוון, התאהבתי בפשטות, בקסם, באווירה השמחה והנעימה, ובעיקר באנשים ובשפה.</p>
-            <p>לאחר הלימודים האקדמיים החלטתי להתגורר באתונה, לספוג את האווירה מזווית נוספת, מקומית יותר.</p>
-            <p>כשהתחלתי להבין יוונית ולשוחח עימם, הקסם קרה. ידיעת השפה יצרה אינטימיות, קרבה וחיבור עם מקומיים והחוויה שלי ביוון הפכה לתוססת, קסומה ומעניינת הרבה יותר.</p>
-            <p>הבנתי שהדבר האמיתי שאני רוצה לעשות זה להעביר את התחושה הזו הלאה.</p>
-            <p>ליצור מרחב קהילתי מאחד וחם שבו אנשים ילמדו יוונית, ויתאהבו בה – דרך צחוק, אוכל, שירים ותרבות.</p>
-            <p>ואכן, הקסם קרה. אנשים הגיעו אלי מפה לאוזן, ונוצרו להן קהילות לימודיות אינטימיות המשלבות לימוד מקצועי, חברויות חדשות ובעיקר כיף אמיתי.</p>
-            <p>היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר והשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.</p>
+            <p className="mb-4 text-lg text-gray-600">הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.</p>
+            <p className="mb-4 text-lg text-gray-600">כשגדלתי טיילתי ביוון, התאהבתי בפשטות, בקסם, באווירה השמחה והנעימה, ובעיקר באנשים ובשפה.</p>
+            <p className="mb-4 text-lg text-gray-600">לאחר הלימודים האקדמיים החלטתי להתגורר באתונה, לספוג את האווירה מזווית נוספת, מקומית יותר.</p>
+            <p className="mb-4 text-lg text-gray-600">כשהתחלתי להבין יוונית ולשוחח עימם, הקסם קרה. ידיעת השפה יצרה אינטימיות, קרבה וחיבור עם מקומיים והחוויה שלי ביוון הפכה לתוססת, קסומה ומעניינת הרבה יותר.</p>
+            <p className="mb-4 text-lg text-gray-600">הבנתי שהדבר האמיתי שאני רוצה לעשות זה להעביר את התחושה הזו הלאה.</p>
+            <p className="mb-4 text-lg text-gray-600">ליצור מרחב קהילתי מאחד וחם שבו אנשים ילמדו יוונית, ויתאהבו בה – דרך צחוק, אוכל, שירים ותרבות.</p>
+            <p className="mb-4 text-lg text-gray-600">ואכן, הקסם קרה. אנשים הגיעו אלי מפה לאוזן, ונוצרו להן קהילות לימודיות אינטימיות המשלבות לימוד מקצועי, חברויות חדשות ובעיקר כיף אמיתי.</p>
+            <p className="mb-4 text-lg text-gray-600">היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר והשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.</p>
           </div>
         </div>
       </div>
