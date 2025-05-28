@@ -1,4 +1,3 @@
-
 import { Book } from 'lucide-react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useEffect, useState, useRef } from 'react';
@@ -40,7 +39,7 @@ const StorySection = () => {
           {/* Images on the left */}
           <div className={`w-full md:w-1/3 order-1 md:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
             <div className="flex flex-col gap-6 h-full">
-              <div className="relative hover:scale-105 transition-all duration-500 aspect-square">
+              <div className="relative aspect-square">
                 <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-turquoise rounded-lg"></div>
                 <img
                   src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png"
@@ -48,7 +47,7 @@ const StorySection = () => {
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
               </div>
-              <div className="relative hover:scale-105 transition-all duration-500 aspect-square">
+              <div className="relative aspect-square">
                 <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-gold rounded-lg"></div>
                 <img
                   src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png"
@@ -61,7 +60,7 @@ const StorySection = () => {
 
           {/* Text content on the right */}
           <div className={`w-full md:w-2/3 order-2 md:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
-            <div className="greek-card text-right hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+            <div className="greek-card text-right transition-all duration-300 h-full flex flex-col">
               {/* Title with icon - positioned on the right */}
               <div className="mb-4">
                 <div className="flex justify-end items-center gap-3 mb-4">
@@ -105,36 +104,33 @@ const StorySection = () => {
 
         {/* Greek atmosphere gallery - moved from Hero */}
         <div className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.6s" }}>
-          <div className="relative group">
+          <div className="relative">
             <img
               src="/lovable-uploads/98c608f6-6515-4d0c-b328-24a74bd94f92.png"
               alt="Greek island luxury view"
-              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
             />
-            <div className="absolute inset-0 bg-greek-blue/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
               <p className="text-sm font-medium text-greek-blue">הים היווני הקסום</p>
             </div>
           </div>
-          <div className="relative group">
+          <div className="relative">
             <img
               src="/lovable-uploads/b41335ae-78bf-49a1-a23f-688fdbeabb5e.png"
               alt="Greek market street"
-              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
             />
-            <div className="absolute inset-0 bg-greek-turquoise/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
               <p className="text-sm font-medium text-greek-blue">שווקים מקומיים אותנטיים</p>
             </div>
           </div>
-          <div className="relative group">
+          <div className="relative">
             <img
               src="/lovable-uploads/61fe26f2-2f4e-4689-ab54-55c82964ceba.png"
               alt="Greek traditional dance"
-              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
             />
-            <div className="absolute inset-0 bg-greek-gold/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
               <p className="text-sm font-medium text-greek-blue">מסורת הריקוד היוונית</p>
             </div>
           </div>
