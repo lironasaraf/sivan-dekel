@@ -39,9 +39,9 @@ const StorySection = () => {
         <div className="flex flex-row-reverse gap-8 items-start">
           {/* טקסט מימין */}
           <div className="flex-[2] text-right">
-            <div className="flex flex-row-reverse items-center gap-2 mb-4">
+            <div className="flex flex-row-reverse items-center gap-2 mb-4 justify-start">
               <Book className="w-8 h-8 text-yellow-500" />
-              <h2 className="text-4xl font-bold bg-gradient-to-r from-greek-blue to-greek-turquoise bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-greek-blue to-greek-turquoise bg-clip-text text-transparent inline">
                 איך הכל התחיל
               </h2>
             </div>
