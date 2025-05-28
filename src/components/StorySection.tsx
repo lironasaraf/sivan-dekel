@@ -36,30 +36,49 @@ const StorySection = () => {
       className="py-16 md:py-24 bg-gray-50"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col gap-10 items-stretch mb-12">
-          {/* Text content - full width */}
-          <div className={`w-full ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
+        <div className="flex flex-col md:flex-row gap-10 items-stretch mb-12">
+          {/* Images on the left */}
+          <div className={`w-full md:w-1/3 order-1 md:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
+            <div className="flex flex-col gap-6 h-full">
+              <div className="relative hover:scale-105 transition-all duration-500 aspect-square">
+                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-turquoise rounded-lg"></div>
+                <img
+                  src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png"
+                  alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="relative hover:scale-105 transition-all duration-500 aspect-square">
+                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-gold rounded-lg"></div>
+                <img
+                  src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png"
+                  alt="אישה באי יווני עם דקורציות כחולות"
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Text content on the right */}
+          <div className={`w-full md:w-2/3 order-2 md:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card text-right hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-              {/* Title with icon - positioned inline with the first paragraph */}
+              {/* Title with icon - positioned on the right */}
               <div className="mb-4">
-                <div className="flex justify-end items-start gap-3 mb-4">
-                  <div className="flex-1">
-                    <div className="flex justify-end items-center gap-3 mb-2">
-                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading" style={{
-                        background: 'linear-gradient(135deg, #0D5EAF, #30D5C8)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text'
-                      }}>
-                        איך הכל התחיל
-                      </h2>
-                      <Book className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
-                    </div>
-                    <p className="text-lg text-gray-700">
-                      הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.
-                    </p>
-                  </div>
+                <div className="flex justify-end items-center gap-3 mb-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading" style={{
+                    background: 'linear-gradient(135deg, #0D5EAF, #30D5C8)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}>
+                    איך הכל התחיל
+                  </h2>
+                  <Book className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
                 </div>
+                
+                <p className="text-lg text-gray-700 mb-4">
+                  הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.
+                </p>
                 
                 <p className="text-lg text-gray-700 mb-4">
                   כשגדלתי טיילתי ביוון, התאהבתי בפשטות, בקסם, באווירה השמחה והנעימה, ובעיקר באנשים ובשפה.
