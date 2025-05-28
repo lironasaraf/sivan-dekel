@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Calendar, User, Mail, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -143,9 +142,9 @@ const ContactForm = () => {
                     disabled={isSubmitting}
                   >
                     {courseOptions.map((option) => (
-                      <div key={option.value} className="flex items-center justify-end space-x-2 space-x-reverse">
-                        <Label htmlFor={option.value}>{option.label}</Label>
+                      <div key={option.value} className="flex items-center justify-start space-x-2 space-x-reverse">
                         <RadioGroupItem id={option.value} value={option.value} />
+                        <Label htmlFor={option.value} className="text-right" dir="rtl">{option.label}</Label>
                       </div>
                     ))}
                   </RadioGroup>
