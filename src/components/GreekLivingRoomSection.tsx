@@ -120,19 +120,22 @@ const GreekLivingRoomSection = () => {
 
               {/* Next Workshop Date */}
               <div className="bg-greek-blue/5 p-4 rounded-lg mb-4">
-                <div className="flex justify-end items-center gap-2 mb-2">
-                  <Calendar className="h-5 w-5 text-greek-gold" />
-                  <h4 className="font-semibold text-greek-blue">מתי הסדנה הבאה?</h4>
-                </div>
+                <div className="flex flex-row-reverse items-center gap-2 mb-2">
+  <Calendar className="h-5 w-5 text-greek-gold" />
+  <h4 className="font-semibold text-greek-blue">מתי הסדנה הבאה?</h4>
+</div>
+
+
                 <p className="text-gray-700 text-right font-medium">{nextWorkshopDate}</p>
               </div>
 
               {/* Price and Payment */}
               <div className="bg-greek-sand/20 p-4 rounded-lg">
-                <div className="flex justify-end items-center gap-2 mb-2">
-                  <CreditCard className="h-5 w-5 text-greek-gold" />
-                  <h4 className="font-semibold text-greek-blue">מחיר וזריון מקום</h4>
-                </div>
+<div className="flex flex-row-reverse items-center gap-2 mb-2">
+  <CreditCard className="h-5 w-5 text-greek-gold" />
+  <h4 className="font-semibold text-greek-blue">מחיר ושריון מקום</h4>
+</div>
+
                 <p className="text-gray-700 text-right">
                   <span className="font-bold text-greek-blue">₪280</span> - שריון מקום ותשלום באמצעות ביט
                 </p>
