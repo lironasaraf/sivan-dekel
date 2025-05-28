@@ -54,6 +54,19 @@ const StorySection = () => {
                   איך הכל התחיל
                 </h2>
               </div>
+                        <div className={`w-full md:w-1/3 ${isVisible ? 'animate-fade-in' : 'opacity-0'} flex flex-col gap-2 items-center`} style={{ animationDelay: "0.2s" }}>
+            <img
+              src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png"
+              alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
+              className="w-full md:w-60 h-auto rounded-lg shadow-lg"
+            />
+            <img
+              src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png"
+              alt="אישה באי יווני עם דקורציות כחולות"
+              className="w-full md:w-60 h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
 
               <p className="text-lg text-gray-700 mb-4">
                 הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית...
@@ -74,19 +87,7 @@ const StorySection = () => {
           </div>
 
           {/* תמונות צמודות לטקסט בצד שמאל */}
-          <div className={`w-full md:w-1/3 ${isVisible ? 'animate-fade-in' : 'opacity-0'} flex flex-col gap-2 items-center`} style={{ animationDelay: "0.2s" }}>
-            <img
-              src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png"
-              alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
-              className="w-full md:w-60 h-auto rounded-lg shadow-lg"
-            />
-            <img
-              src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png"
-              alt="אישה באי יווני עם דקורציות כחולות"
-              className="w-full md:w-60 h-auto rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
+
 
         {/* גלריה יוונית */}
         <div className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.6s" }}>
