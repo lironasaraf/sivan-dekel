@@ -1,6 +1,6 @@
 import { Book } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
-import './StorySection.css';
+
 
 const StorySection = () => {
   const [isVisible, setIsVisible] = useState(false);
