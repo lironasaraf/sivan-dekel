@@ -130,22 +130,7 @@ const ContactForm = () => {
                   />
                 </div>
                 
-                <div className="space-y-2">
-                  <Label htmlFor="phone" className="flex justify-end items-center gap-1">
-                    <span>טלפון *</span>
-                    <Phone className="h-4 w-4 text-greek-blue" />
-                  </Label>
-                  <Input
-                    id="phone"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="text-right"
-                    dir="rtl"
-                    disabled={isSubmitting}
-                  />
-                </div>
-                
-                <div className="space-y-2">
+                <div className="space-y-2 md:order-3">
                   <Label htmlFor="courseType" className="flex justify-end items-center gap-1">
                     <span>סוג הקורס המבוקש *</span>
                     <Calendar className="h-4 w-4 text-greek-blue" />
@@ -164,6 +149,21 @@ const ContactForm = () => {
                       </div>
                     ))}
                   </RadioGroup>
+                </div>
+                
+                <div className="space-y-2 md:order-4">
+                  <Label htmlFor="phone" className="flex justify-end items-center gap-1">
+                    <span>טלפון *</span>
+                    <Phone className="h-4 w-4 text-greek-blue" />
+                  </Label>
+                  <Input
+                    id="phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="text-right"
+                    dir="rtl"
+                    disabled={isSubmitting}
+                  />
                 </div>
               </div>
               
