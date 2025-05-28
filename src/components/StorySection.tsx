@@ -36,31 +36,9 @@ const StorySection = () => {
       className="py-16 md:py-24 bg-gray-50"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row gap-10 items-stretch mb-12">
-          {/* Images on the left */}
-          <div className={`w-full md:w-1/3 order-1 md:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
-            <div className="flex flex-col gap-6 h-full">
-              <div className="relative hover:scale-105 transition-all duration-500 aspect-square">
-                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-turquoise rounded-lg"></div>
-                <img
-                  src="/lovable-uploads/f1a318df-4d71-4278-bb22-18470931c264.png"
-                  alt="Greek island terrace view"
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="relative hover:scale-105 transition-all duration-500 aspect-square">
-                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-gold rounded-lg"></div>
-                <img
-                  src="/lovable-uploads/778f676d-f282-4c50-bc83-15aa98877340.png"
-                  alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Text content on the right */}
-          <div className={`w-full md:w-2/3 order-2 md:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
+        <div className="flex flex-col gap-10 items-stretch mb-12">
+          {/* Text content - full width */}
+          <div className={`w-full ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card text-right hover:shadow-xl transition-all duration-300 h-full flex flex-col">
               {/* Title with icon - positioned inline with the first paragraph */}
               <div className="mb-4">
@@ -101,28 +79,6 @@ const StorySection = () => {
                 <p className="text-lg text-gray-700">
                   היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר והשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.
                 </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Images on the left */}
-          <div className={`w-full md:w-1/3 order-1 md:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
-            <div className="flex flex-col gap-6 h-full">
-              <div className="relative hover:scale-105 transition-all duration-500 aspect-square">
-                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-turquoise rounded-lg"></div>
-                <img
-                  src="/lovable-uploads/f1a318df-4d71-4278-bb22-18470931c264.png"
-                  alt="Greek island terrace view"
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="relative hover:scale-105 transition-all duration-500 aspect-square">
-                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-gold rounded-lg"></div>
-                <img
-                  src="/lovable-uploads/778f676d-f282-4c50-bc83-15aa98877340.png"
-                  alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
               </div>
             </div>
           </div>
