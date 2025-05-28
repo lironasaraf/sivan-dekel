@@ -1,4 +1,3 @@
-
 import { Book } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
@@ -52,7 +51,7 @@ const StorySection = () => {
 
           {/* טקסט מימין */}
           <div className="flex-[2] text-right" dir="rtl">
-            <div className="flex flex-row-reverse items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-4">
               <Book className="w-8 h-8 text-yellow-500" />
               <h2 className="text-3xl font-bold bg-gradient-to-l from-greek-blue to-greek-turquoise bg-clip-text text-transparent">
                 איך הכל התחיל
