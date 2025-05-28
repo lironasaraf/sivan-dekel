@@ -1,4 +1,3 @@
-
 import { Clock, Users, Heart, Star, Coffee, Music, Calendar, CheckCircle, MapPin, CreditCard } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
@@ -105,8 +104,8 @@ const GreekLivingRoomSection = () => {
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card h-full">
               <div className="flex justify-center items-center gap-3 mb-6">
-                <Coffee className="h-8 w-8 text-greek-gold" />
                 <h3 className="text-2xl font-heading text-greek-blue">מה כוללת הסדנה?</h3>
+                <Coffee className="h-8 w-8 text-greek-gold" />
               </div>
               
               <div className="space-y-4 mb-6">
@@ -120,7 +119,7 @@ const GreekLivingRoomSection = () => {
 
               {/* Next Workshop Date */}
               <div className="bg-greek-blue/5 p-4 rounded-lg mb-4">
-                <div className="flex flex-row-reverse items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-2">
   <Calendar className="h-5 w-5 text-greek-gold" />
   <h4 className="font-semibold text-greek-blue">מתי הסדנה הבאה?</h4>
 </div>
@@ -131,7 +130,7 @@ const GreekLivingRoomSection = () => {
 
               {/* Price and Payment */}
               <div className="bg-greek-sand/20 p-4 rounded-lg">
-<div className="flex flex-row-reverse items-center gap-2 mb-2">
+<div className="flex items-center gap-2 mb-2">
   <CreditCard className="h-5 w-5 text-greek-gold" />
   <h4 className="font-semibold text-greek-blue">מחיר ושריון מקום</h4>
 </div>
@@ -148,8 +147,8 @@ const GreekLivingRoomSection = () => {
         <div className={`mb-16 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.5s" }}>
           <div className="greek-card max-w-2xl mx-auto text-center">
             <div className="flex justify-center items-center gap-3 mb-6">
-              <Clock className="h-8 w-8 text-greek-gold" />
               <h3 className="text-2xl font-heading text-greek-blue">ימים ושעות פעילות</h3>
+              <Clock className="h-8 w-8 text-greek-gold" />
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -173,8 +172,8 @@ const GreekLivingRoomSection = () => {
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.6s" }}>
             <div className="greek-card h-full">
               <div className="flex justify-center items-center gap-3 mb-6">
-                <Star className="h-6 w-6 text-greek-gold" />
                 <h3 className="text-xl font-heading text-greek-blue">מה היתרונות בלימוד עם מורה ישראלית?</h3>
+                <Star className="h-6 w-6 text-greek-gold" />
               </div>
               
               <div className="space-y-3">
@@ -192,8 +191,8 @@ const GreekLivingRoomSection = () => {
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.7s" }}>
             <div className="greek-card h-full">
               <div className="flex justify-center items-center gap-3 mb-6">
-                <Users className="h-6 w-6 text-greek-gold" />
                 <h3 className="text-xl font-heading text-greek-blue">מה היתרונות בלימוד איתי?</h3>
+                <Users className="h-6 w-6 text-greek-gold" />
               </div>
               
               <div className="space-y-3">
@@ -212,8 +211,8 @@ const GreekLivingRoomSection = () => {
         <div className={`text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.8s" }}>
           <div className="greek-card max-w-3xl mx-auto bg-gradient-to-r from-greek-blue/5 to-greek-turquoise/5">
             <div className="flex justify-center items-center gap-3 mb-4">
-              <Music className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
               <h3 className="text-2xl font-heading text-greek-blue">חוויית קהילה</h3>
+              <Music className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
               קבוצת הלימוד היא מרחב בטוח, תומך, נקי משיפוטיות ומעורר השראה. 
