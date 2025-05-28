@@ -34,41 +34,22 @@ const StorySection = () => {
       className="py-16 md:py-24 bg-gray-50"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row gap-10 items-start mb-12">
-          {/* תמונות בצד שמאל */}
-          <div className={`w-full md:w-1/3 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
-            <div className="flex flex-col gap-4 h-full">
-              <div className="w-60 h-60 relative">
-                <img
-                  src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png"
-                  alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="w-60 h-60 relative">
-                <img
-                  src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png"
-                  alt="אישה באי יווני עם דקורציות כחולות"
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* טקסט מימין עם כותרת RTL */}
+        <div className="flex flex-col md:flex-row-reverse gap-6 items-start mb-12">
+          {/* טקסט מימין */}
           <div className={`w-full md:w-2/3 text-right ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s", direction: "rtl" }}>
             <div className="greek-card transition-all duration-300 h-full flex flex-col">
-              
               {/* כותרת עם אייקון מימין */}
               <div className="mb-4">
                 <div className="flex flex-row-reverse items-center gap-3 mb-4">
                   <Book className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading" style={{
-                    background: 'linear-gradient(135deg, #0D5EAF, #30D5C8)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
-                  }}>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading"
+                      style={{
+                        background: 'linear-gradient(135deg, #0D5EAF, #30D5C8)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        display: 'inline'
+                      }}>
                     איך הכל התחיל
                   </h2>
                 </div>
@@ -91,6 +72,26 @@ const StorySection = () => {
                 <p className="text-lg text-gray-700">
                   היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר והשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* תמונות צמודות לטקסט בצד שמאל */}
+          <div className={`w-full md:w-1/3 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
+            <div className="flex flex-col gap-3 h-full">
+              <div className="w-56 h-56 relative">
+                <img
+                  src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png"
+                  alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="w-56 h-56 relative">
+                <img
+                  src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png"
+                  alt="אישה באי יווני עם דקורציות כחולות"
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
               </div>
             </div>
           </div>
