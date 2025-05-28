@@ -1,3 +1,4 @@
+
 import { Book } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
@@ -103,4 +104,27 @@ const StorySection = () => {
             <img
               src="/lovable-uploads/98c608f6-6515-4d0c-b328-24a74bd94f92.png"
               alt="Greek island luxury view"
-              clas
+              className="w-full h-64 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="relative">
+            <img
+              src="/lovable-uploads/e77a22f9-e49d-4175-ba7d-dc10e7417314.png"
+              alt="Greek architecture"
+              className="w-full h-64 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="relative">
+            <img
+              src="/lovable-uploads/794be679-1549-4b33-b3f6-b27e093397c9.png"
+              alt="Greek coastal scene"
+              className="w-full h-64 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default StorySection;
