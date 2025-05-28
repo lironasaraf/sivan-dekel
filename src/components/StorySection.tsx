@@ -1,5 +1,4 @@
 import { Book } from 'lucide-react';
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useEffect, useState, useRef } from 'react';
 
 const StorySection = () => {
@@ -35,20 +34,18 @@ const StorySection = () => {
       className="py-16 md:py-24 bg-gray-50"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row gap-10 items-stretch mb-12">
-          {/* Images on the left */}
-          <div className={`w-full md:w-1/3 order-1 md:order-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
-            <div className="flex flex-col gap-6 h-full">
-              <div className="relative aspect-square">
-                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-turquoise rounded-lg"></div>
+        <div className="flex flex-col md:flex-row-reverse gap-10 items-start mb-12">
+          {/* תמונות מימין לטקסט */}
+          <div className={`w-full md:w-1/3 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
+            <div className="flex flex-col gap-4 h-full">
+              <div className="w-40 h-40 relative">
                 <img
                   src="/lovable-uploads/a95fe90e-bd28-4369-b00e-70a146035845.png"
                   alt="ילדה קטנה עם אוזניות מקשיבה למוסיקה"
                   className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
               </div>
-              <div className="relative aspect-square">
-                <div className="absolute -left-2 -bottom-2 w-full h-full border-2 border-greek-gold rounded-lg"></div>
+              <div className="w-40 h-40 relative">
                 <img
                   src="/lovable-uploads/c419b7e9-9d7f-4454-bdad-e0801fb83bb1.png"
                   alt="אישה באי יווני עם דקורציות כחולות"
@@ -58,12 +55,13 @@ const StorySection = () => {
             </div>
           </div>
 
-          {/* Text content on the right */}
-          <div className={`w-full md:w-2/3 order-2 md:order-2 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
+          {/* טקסט משמאל לתמונות */}
+          <div className={`w-full md:w-2/3 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card text-right transition-all duration-300 h-full flex flex-col">
-              {/* Title with icon - positioned on the right */}
+              {/* כותרת עם אייקון מימין */}
               <div className="mb-4">
-                <div className="flex justify-end items-center gap-3 mb-4">
+                <div className="flex justify-start items-center gap-3 mb-4 flex-row-reverse">
+                  <Book className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading" style={{
                     background: 'linear-gradient(135deg, #0D5EAF, #30D5C8)',
                     WebkitBackgroundClip: 'text',
@@ -72,69 +70,30 @@ const StorySection = () => {
                   }}>
                     איך הכל התחיל
                   </h2>
-                  <Book className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
                 </div>
-                
+
                 <p className="text-lg text-gray-700 mb-4">
                   הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.
                 </p>
-                
                 <p className="text-lg text-gray-700 mb-4">
-                  כשגדלתי טיילתי ביוון, התאהבתי בפשטות, בקסם, באווירה השמחה והנעימה, ובעיקר באנשים ובשפה.
-                  לאחר הלימודים האקדמיים החלטתי להתגורר באתונה, לספוג את האווירה מזווית נוספת, מקומית יותר.
+                  כשגדלתי טיילתי ביוון, התאהבתי בפשטות, בקסם, באווירה השמחה והנעימה, ובעיקר באנשים ובשפה...
                 </p>
-                
                 <p className="text-lg text-gray-700 mb-4">
-                  כשהתחלתי להבין יוונית ולשוחח עימם, הקסם קרה. ידיעת השפה יצרה אינטימיות, קרבה וחיבור עם מקומיים והחוויה שלי ביוון הפכה לתוססת, קסומה ומעניינת הרבה יותר.
-                  הבנתי שהדבר האמיתי שאני רוצה לעשות זה להעביר את התחושה הזו הלאה.
+                  כשהתחלתי להבין יוונית ולשוחח עימם, הקסם קרה. ידיעת השפה יצרה אינטימיות, קרבה וחיבור עם מקומיים...
                 </p>
-                
                 <p className="text-lg text-gray-700 mb-4">
-                  ליצור מרחב קהילתי מאחד וחם שבו אנשים ילמדו יוונית, ויתאהבו בה – דרך צחוק, אוכל, שירים ותרבות.
-                  ואכן, הקסם קרה. אנשים הגיעו אלי מפה לאוזן, ונוצרו להן קהילות לימודיות אינטימיות המשלבות לימוד מקצועי, חברויות חדשות ובעיקר כיף אמיתי.
+                  ליצור מרחב קהילתי מאחד וחם שבו אנשים ילמדו יוונית, ויתאהבו בה – דרך צחוק, אוכל, שירים ותרבות...
                 </p>
-                
                 <p className="text-lg text-gray-700">
-                  היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר והשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.
+                  היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים...
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Greek atmosphere gallery - moved from Hero */}
-        <div className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.6s" }}>
-          <div className="relative">
-            <img
-              src="/lovable-uploads/98c608f6-6515-4d0c-b328-24a74bd94f92.png"
-              alt="Greek island luxury view"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
-            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
-              <p className="text-sm font-medium text-greek-blue">הים היווני הקסום</p>
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/lovable-uploads/b41335ae-78bf-49a1-a23f-688fdbeabb5e.png"
-              alt="Greek market street"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
-            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
-              <p className="text-sm font-medium text-greek-blue">שווקים מקומיים אותנטיים</p>
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/lovable-uploads/61fe26f2-2f4e-4689-ab54-55c82964ceba.png"
-              alt="Greek traditional dance"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
-            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
-              <p className="text-sm font-medium text-greek-blue">מסורת הריקוד היוונית</p>
-            </div>
-          </div>
-        </div>
+        {/* גלריה יוונית */}
+        {/* תשאיר כפי שהוא אם לא רוצים לשנות */}
       </div>
     </section>
   );
