@@ -1,4 +1,3 @@
-
 import { Book } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
@@ -36,8 +35,7 @@ const StorySection = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row gap-10 items-start mb-12">
-          
-          {/* תמונות משמאל לטקסט */}
+          {/* תמונות בצד שמאל */}
           <div className={`w-full md:w-1/3 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
             <div className="flex flex-col gap-4 h-full">
               <div className="w-60 h-60 relative">
@@ -57,13 +55,13 @@ const StorySection = () => {
             </div>
           </div>
 
-          {/* טקסט וכותרת מימין */}
+          {/* טקסט מימין עם כותרת RTL */}
           <div className={`w-full md:w-2/3 text-right ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s", direction: "rtl" }}>
             <div className="greek-card transition-all duration-300 h-full flex flex-col">
               
               {/* כותרת עם אייקון מימין */}
               <div className="mb-4">
-                <div className="flex justify-start items-center gap-3 mb-4 flex-row-reverse">
+                <div className="flex flex-row-reverse items-center gap-3 mb-4">
                   <Book className="h-8 w-8 text-greek-gold animate-bounce" style={{ animationDuration: '3s' }} />
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-heading" style={{
                     background: 'linear-gradient(135deg, #0D5EAF, #30D5C8)',
@@ -104,22 +102,31 @@ const StorySection = () => {
             <img
               src="/lovable-uploads/98c608f6-6515-4d0c-b328-24a74bd94f92.png"
               alt="Greek island luxury view"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
             />
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
+              <p className="text-sm font-medium text-greek-blue">הים היווני הקסום</p>
+            </div>
           </div>
           <div className="relative">
             <img
-              src="/lovable-uploads/e77a22f9-e49d-4175-ba7d-dc10e7417314.png"
-              alt="Greek architecture"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
+              src="/lovable-uploads/b41335ae-78bf-49a1-a23f-688fdbeabb5e.png"
+              alt="Greek market street"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
             />
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
+              <p className="text-sm font-medium text-greek-blue">שווקים מקומיים אותנטיים</p>
+            </div>
           </div>
           <div className="relative">
             <img
-              src="/lovable-uploads/794be679-1549-4b33-b3f6-b27e093397c9.png"
-              alt="Greek coastal scene"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
+              src="/lovable-uploads/61fe26f2-2f4e-4689-ab54-55c82964ceba.png"
+              alt="Greek traditional dance"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
             />
+            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-lg">
+              <p className="text-sm font-medium text-greek-blue">מסורת הריקוד היוונית</p>
+            </div>
           </div>
         </div>
       </div>
