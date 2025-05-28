@@ -96,37 +96,41 @@ const ContactForm = () => {
         
         <Card className="max-w-3xl mx-auto border-greek-sand shadow-md">
           <CardContent className="pt-6">
-            <form onSubmit={handleSubmit} className="space-y-6 text-right">
+            <form onSubmit={handleSubmit} className="space-y-6 text-right" dir="rtl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="flex justify-end items-center gap-1">
-                    <span>שם מלא *</span>
-                    <User className="h-4 w-4 text-greek-blue" />
-                  </Label>
-                  <Input
-                    id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="text-right"
-                    dir="rtl"
-                    disabled={isSubmitting}
-                  />
+                  <div className="flex items-center gap-2 justify-end">
+                    <Input
+                      id="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="text-right flex-1"
+                      dir="rtl"
+                      disabled={isSubmitting}
+                    />
+                    <Label htmlFor="name" className="flex items-center gap-1 whitespace-nowrap">
+                      <User className="h-4 w-4 text-greek-blue" />
+                      <span>שם מלא *</span>
+                    </Label>
+                  </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="flex justify-end items-center gap-1">
-                    <span>אימייל *</span>
-                    <Mail className="h-4 w-4 text-greek-blue" />
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="text-right"
-                    dir="rtl"
-                    disabled={isSubmitting}
-                  />
+                  <div className="flex items-center gap-2 justify-end">
+                    <Input
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="text-right flex-1"
+                      dir="rtl"
+                      disabled={isSubmitting}
+                    />
+                    <Label htmlFor="email" className="flex items-center gap-1 whitespace-nowrap">
+                      <Mail className="h-4 w-4 text-greek-blue" />
+                      <span>אימייל *</span>
+                    </Label>
+                  </div>
                 </div>
                 
                 <div className="space-y-2 md:order-3">
@@ -151,18 +155,20 @@ const ContactForm = () => {
                 </div>
                 
                 <div className="space-y-2 md:order-4">
-                  <Label htmlFor="phone" className="flex justify-end items-center gap-1">
-                    <span>טלפון *</span>
-                    <Phone className="h-4 w-4 text-greek-blue" />
-                  </Label>
-                  <Input
-                    id="phone"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="text-right"
-                    dir="rtl"
-                    disabled={isSubmitting}
-                  />
+                  <div className="flex items-center gap-2 justify-end">
+                    <Input
+                      id="phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="text-right flex-1"
+                      dir="rtl"
+                      disabled={isSubmitting}
+                    />
+                    <Label htmlFor="phone" className="flex items-center gap-1 whitespace-nowrap">
+                      <Phone className="h-4 w-4 text-greek-blue" />
+                      <span>טלפון *</span>
+                    </Label>
+                  </div>
                 </div>
               </div>
               
