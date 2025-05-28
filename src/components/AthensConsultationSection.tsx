@@ -70,8 +70,8 @@ const AthensConsultationSection = () => {
               {/* Content */}
               <div className="w-full md:w-2/3 text-right">
                 <div className="flex justify-center items-center gap-3 mb-6">
-                  <h3 className="text-2xl font-heading text-greek-blue">חבילת ייעוץ מקצועית</h3>
                   <Plane className="h-8 w-8 text-greek-gold" />
+                  <h3 className="text-2xl font-heading text-greek-blue">חבילת ייעוץ מקצועית</h3>
                 </div>
 
                 <div className="space-y-4 mb-6">
@@ -90,7 +90,7 @@ const AthensConsultationSection = () => {
                   </div>
                   <Link to="contact" smooth={true} duration={500} offset={-80}>
                     <button className="greek-button w-full md:w-auto">
-                      <CreditCard className="h-5 w-5 ml-2" />
+                      <CreditCard className="h-5 w-5 mr-2" />
                       שלם באמצעות ביט
                     </button>
                   </Link>

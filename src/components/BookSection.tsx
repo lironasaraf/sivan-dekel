@@ -23,8 +23,8 @@ const BookSection = () => {
           <div className="w-full md:w-2/5 order-2 md:order-1">
             <div className="bg-white rounded-lg shadow-lg p-8 border border-greek-sand">
               <div className="flex justify-center items-center gap-3 mb-6">
-                <h3 className="text-2xl font-serif text-greek-blue">ספר הלימוד שלי</h3>
                 <Book className="h-6 w-6 text-greek-gold" />
+                <h3 className="text-2xl font-serif text-greek-blue">ספר הלימוד שלי</h3>
               </div>
               
               <div className="text-center mb-6">
@@ -38,7 +38,7 @@ const BookSection = () => {
 
               <div className="space-y-4 mb-6">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3 text-gray-700">
+                  <div key={index} className="flex items-start gap-3 text-right">
                     <CheckCircle className="h-5 w-5 text-greek-turquoise flex-shrink-0 mt-0.5" />
                     <span className="flex-1">{benefit}</span>
                   </div>
@@ -54,8 +54,8 @@ const BookSection = () => {
                   onClick={handleBitPayment}
                   className="greek-button w-full"
                 >
-                  <CreditCard className="ml-2 h-4 w-4" />
                   <span>רכישה באמצעות ביט</span>
+                  <CreditCard className="mr-2 h-4 w-4" />
                 </Button>
               </div>
             </div>
