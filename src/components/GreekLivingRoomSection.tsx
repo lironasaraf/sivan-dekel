@@ -1,4 +1,3 @@
-
 import { Clock, Users, Heart, Star, Coffee, Music, Calendar, CheckCircle, MapPin, CreditCard } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
@@ -86,29 +85,26 @@ const GreekLivingRoomSection = () => {
           {/* Images Gallery */}
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.3s" }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative group">
+              <div className="relative">
                 <img
                   src="/lovable-uploads/e66f60b4-8227-45f1-b51b-575bea406093.png"
                   alt="דגלי יוון על שולחן מעוצב"
-                  className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />
-                <div className="absolute inset-0 bg-greek-blue/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="relative group">
+              <div className="relative">
                 <img
                   src="/lovable-uploads/e77a22f9-e49d-4175-ba7d-dc10e7417314.png"
                   alt="אירוע יווני מעוצב באווירה חמה"
-                  className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />
-                <div className="absolute inset-0 bg-greek-turquoise/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="relative group md:col-span-2">
+              <div className="relative md:col-span-2">
                 <img
                   src="/lovable-uploads/acfa3580-1ca8-45fa-9a05-b29b90826838.png"
                   alt="מתנות ומוצרים יווניים מסורתיים"
-                  className="w-full h-32 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-32 object-cover rounded-lg shadow-lg"
                 />
-                <div className="absolute inset-0 bg-greek-gold/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           </div>
