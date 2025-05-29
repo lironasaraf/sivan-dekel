@@ -80,7 +80,7 @@ const CourseSection = () => {
                   <div className="space-y-3">
                     {courseBContent.map((item, index) => (
                       <div key={index} className="flex items-center gap-3 text-left">
-                        <ArrowRight className="h-4 w-4 text-greek-gold flex-shrink-0" />
+                        <ArrowLeft className="h-4 w-4 text-greek-gold flex-shrink-0" />
                         <span className="text-gray-700 text-sm">{item}</span>
                       </div>
                     ))}
