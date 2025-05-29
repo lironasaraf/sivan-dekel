@@ -64,14 +64,14 @@ const StorySection = () => {
               </div>
               
               <div className="space-y-3 text-right" dir="rtl">
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">הכול התחיל מצלילי הבוזוקי והבגלמה, בגיל עשר האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.</p>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">הכול התחיל מצלילי הבוזוקי והבגלמה, מגיל קטן האזנתי למוסיקה היוונית וכתבתי מה ששמעתי בעברית, כך נולדה לה המחברת היוונית הראשונה שלי.</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">כשגדלתי טיילתי ביוון, התאהבתי בפשטות, בקסם, באווירה השמחה והנעימה, ובעיקר באנשים ובשפה.</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">לאחר הלימודים האקדמיים החלטתי להתגורר באתונה, לספוג את האווירה מזווית נוספת, מקומית יותר.</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">כשהתחלתי להבין יוונית ולשוחח עימם, הקסם קרה. ידיעת השפה יצרה אינטימיות, קרבה וחיבור עם מקומיים והחוויה שלי ביוון הפכה לתוססת, קסומה ומעניינת הרבה יותר.</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">הבנתי שהדבר האמיתי שאני רוצה לעשות זה להעביר את התחושה הזו הלאה.</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">ליצור מרחב קהילתי מאחד וחם שבו אנשים ילמדו יוונית, ויתאהבו בה – דרך צחוק, אוכל, שירים ותרבות.</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">ואכן, הקסם קרה. אנשים הגיעו אלי מפה לאוזן, ונוצרו להן קהילות לימודיות אינטימיות המשלבות לימוד מקצועי, חברויות חדשות ובעיקר כיף אמיתי.</p>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר והשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.</p>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">היום, אחרי מאות תלמידים, שיקמתי את הביטחון העצמי של רבים, הוכחתי לאנשים שהם יצליחו לדבר ושהשפה היוונית לא כל כך קשה כפי שנוטים לחשוב.</p>
               </div>
             </div>
           </div>
