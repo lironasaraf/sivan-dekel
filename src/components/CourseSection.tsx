@@ -75,8 +75,8 @@ const CourseSection = () => {
                   <div className="space-y-3">
                     {courseAContent.map((item, index) => (
                       <div key={index} className="flex items-center gap-3 text-right">
-                        <span className="text-gray-700 text-sm">{item}</span>
                         <ArrowLeft className="h-4 w-4 text-greek-gold flex-shrink-0" />
+                        <span className="text-gray-700 text-sm">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -107,7 +107,7 @@ const CourseSection = () => {
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-greek-blue text-center mb-8">יתרונות ללימוד קבוצתי בזום</h3>
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-6">
               {groupLearningAdvantages.map((advantage, index) => (
                 <div key={index} className="flex items-start gap-3 text-right">
                   <CheckCircle className="h-5 w-5 text-greek-turquoise flex-shrink-0 mt-0.5" />
@@ -125,7 +125,6 @@ const CourseSection = () => {
           <Link to="contact" smooth={true} duration={500} offset={-80}>
             <Button className="greek-button mt-2">
               <span>לפרטים נוספים</span>
-              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
         </div>
