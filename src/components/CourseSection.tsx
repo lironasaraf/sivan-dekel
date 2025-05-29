@@ -1,5 +1,5 @@
 
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-scroll';
@@ -27,6 +27,18 @@ const CourseSection = () => {
     "צורת ציווי",
     "צורות השוואה",
     "הרחבת אוצר המילים"
+  ];
+
+  const groupLearningAdvantages = [
+    "תכנית לימודים סדורה, ברורה והדרגתית שמביאה תוצאות",
+    "מפגשים קבועים שמייצרים מסגרת, התמדה ושגרה",
+    "אינטראקציה קבוצתית – תרגול שיחה עם משתתפים אחרים",
+    "טעויות של אחרים מנרמלות את הדרך – כשרואים שגם אחרים טועים, מבינים שזה חלק טבעי מהתהליך ומעיזים יותר",
+    "אנרגיה קבוצתית שמגבירה מוטיבציה והנאה מהלמידה",
+    "הקלטות מלאות לכל שיעור – אפשר לחזור על החומר בזמן שנוח",
+    "דפי הכנה לפני כל שיעור + דפי תרגול בסיום",
+    "קבוצת וואצאפ פעילה לשאלות, תרגולים, שיתוף והשראה",
+    "חיסכון כספי ביחס לשיעורים פרטיים – תמורה גבוהה במחיר משתלם"
   ];
 
   return (
@@ -63,8 +75,8 @@ const CourseSection = () => {
                   <div className="space-y-3">
                     {courseAContent.map((item, index) => (
                       <div key={index} className="flex items-center gap-3 text-right">
-                        <ArrowLeft className="h-4 w-4 text-greek-gold flex-shrink-0" />
                         <span className="text-gray-700 text-sm">{item}</span>
+                        <ArrowLeft className="h-4 w-4 text-greek-gold flex-shrink-0" />
                       </div>
                     ))}
                   </div>
@@ -90,6 +102,21 @@ const CourseSection = () => {
             </div>
           </div>
         </div>
+
+        {/* יתרונות ללימוד קבוצתי בזום */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-greek-blue text-center mb-8">יתרונות ללימוד קבוצתי בזום</h3>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-4">
+              {groupLearningAdvantages.map((advantage, index) => (
+                <div key={index} className="flex items-start gap-3 text-right">
+                  <CheckCircle className="h-5 w-5 text-greek-turquoise flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{advantage}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
         
         <div className="text-center">
           <p className="text-lg text-gray-700 mb-4">
@@ -98,7 +125,7 @@ const CourseSection = () => {
           <Link to="contact" smooth={true} duration={500} offset={-80}>
             <Button className="greek-button mt-2">
               <span>לפרטים נוספים</span>
-              <ArrowLeft className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
         </div>
