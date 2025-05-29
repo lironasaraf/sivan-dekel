@@ -87,21 +87,22 @@ const FAQSection = () => {
             {faqs.map((faq, index) => (
               <Card key={index} className="overflow-hidden">
                 <CardContent className="p-0">
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full p-6 text-right flex items-center justify-between hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center gap-3">
-                      {openFAQ === index ? (
-                        <ChevronUp className="h-5 w-5 text-greek-blue" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5 text-greek-blue" />
-                      )}
-                    </div>
-                    <h3 className="text-lg font-semibold text-greek-blue text-right">
-                      {faq.question}
-                    </h3>
-                  </button>
+                 <button
+  onClick={() => toggleFAQ(index)}
+  className="w-full p-6 text-right flex flex-row-reverse items-center justify-between hover:bg-gray-50 transition-colors"
+>
+  <h3 className="text-lg font-semibold text-greek-blue text-right">
+    {faq.question}
+  </h3>
+  <div className="flex items-center gap-3">
+    {openFAQ === index ? (
+      <ChevronUp className="h-5 w-5 text-greek-blue" />
+    ) : (
+      <ChevronDown className="h-5 w-5 text-greek-blue" />
+    )}
+  </div>
+</button>
+
                   
                   {openFAQ === index && (
                     <div className="px-6 pb-6 border-t border-gray-100">
