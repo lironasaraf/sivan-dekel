@@ -98,7 +98,7 @@ const FAQSection = () => {
                         <ChevronDown className="h-5 w-5 text-greek-blue" />
                       )}
                     </div>
-                    <h3 className="text-lg font-semibold text-greek-blue text-right">
+                    <h3 className="text-lg font-semibold text-greek-blue text-right flex-1">
                       {faq.question}
                     </h3>
                   </button>
