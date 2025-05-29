@@ -1,3 +1,4 @@
+
 import { Clock, Users, Heart, Star, Coffee, Music, Calendar, CheckCircle, MapPin, CreditCard } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
@@ -29,11 +30,14 @@ const GreekLivingRoomSection = () => {
   }, []);
 
   const workshopFeatures = [
-    "שיעור יוונית חווייתי בקונספט קהילתי",
-    "טריוויה, משחקים ותרגולים ביוונית",
-    "ארוחה יוונית תוצרת בית",
-    "אוזו, נעימות בוזוקי, וריקודים אותנטיים",
-    "מצגת ניחוח יוון: אוכל תרבות ומוסיקה יוונית"
+    "מינגלינג: הזדמנות להיחשף ולהכיר אנשים חדשים אשר רכשו דירות, בתי מלון ועסקים ביוון ובקפריסין",
+    "ארוחה יוונית ביתית: בעלי ואני מכינים לכם ארוחה יוונית אותנטית",
+    "תרבות ומוסיקה: מצגת מרתקת על התרבות היוונית והקשר לישראל",
+    "לימוד השפה: לימוד של ביטויים שימושיים ודיבור יומיומי",
+    "משחקי זיכרון, חידונים ודיאלוגים חיים",
+    "קבצי סיכום ודפי תרגול לקחת הביתה",
+    "מתנה קטנה מהלב – הפתעה יוונית מקורית לכל משתתף",
+    "אין צורך בידע מוקדם – רק אהבה לשפה ולתרבות היוונית"
   ];
 
   const israeliTeacherBenefits = [
@@ -61,10 +65,19 @@ const GreekLivingRoomSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className={`section-heading text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            יוונית בסלון – סדנת לימוד פרונטלית
+            סדנת לימוד יוונית
           </h2>
           <p className={`text-xl text-gray-700 mt-4 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.2s" }}>
-            5 שעות של חוויה שלמה באווירה אינטימית ומרגשת
+            רוצים לטעום מהשפה היוונית בצורה קלילה, חווייתית ומרתקת?
+          </p>
+          <p className={`text-lg text-gray-700 mt-2 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.3s" }}>
+            רוצים להכיר חברים חדשים מקהילת אוהבי היוונית ולומדי השפה?
+          </p>
+          <p className={`text-lg text-gray-700 mt-2 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
+            בא לכם בילוי ייחודי המשלב תרבות, מוסיקה, אוכל ולמידה?
+          </p>
+          <p className={`text-lg text-gray-700 mt-4 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.5s" }}>
+            מידי חודש מתקיימת סדנת למידה פרונטלית, המזמינה אתכם לערב יווני ביתי, אותנטי המשלב אוכל טוב, מוסיקה תרבות ושפה.
           </p>
         </div>
 
@@ -104,7 +117,7 @@ const GreekLivingRoomSection = () => {
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.4s" }}>
             <div className="greek-card h-full">
               <div className="flex justify-center items-center gap-3 mb-6">
-                <h3 className="text-2xl font-heading text-greek-blue">מה כוללת הסדנה?</h3>
+                <h3 className="text-2xl font-heading text-greek-blue">מה כוללת הסדנה</h3>
                 <Coffee className="h-8 w-8 text-greek-gold" />
               </div>
               
@@ -117,26 +130,17 @@ const GreekLivingRoomSection = () => {
                 ))}
               </div>
 
-              {/* Next Workshop Date */}
-              <div className="bg-greek-blue/5 p-4 rounded-lg mb-4">
-                <div className="flex items-center gap-2 mb-2">
-  <Calendar className="h-5 w-5 text-greek-gold" />
-  <h4 className="font-semibold text-greek-blue">מתי הסדנה הבאה?</h4>
-</div>
-
-
-                <p className="text-gray-700 text-right font-medium">{nextWorkshopDate}</p>
-              </div>
-
-              {/* Price and Payment */}
+              {/* Duration and Price */}
               <div className="bg-greek-sand/20 p-4 rounded-lg">
-<div className="flex items-center gap-2 mb-2">
-  <CreditCard className="h-5 w-5 text-greek-gold" />
-  <h4 className="font-semibold text-greek-blue">מחיר ושריון מקום</h4>
-</div>
-
+                <div className="flex items-center gap-2 mb-2">
+                  <CreditCard className="h-5 w-5 text-greek-gold" />
+                  <h4 className="font-semibold text-greek-blue">משך ומחיר</h4>
+                </div>
+                <p className="text-gray-700 text-right mb-1">
+                  <span className="font-bold text-greek-blue">🕒 משך הסדנה: 4 שעות</span>
+                </p>
                 <p className="text-gray-700 text-right">
-                  <span className="font-bold text-greek-blue">₪280</span> - שריון מקום ותשלום באמצעות ביט
+                  <span className="font-bold text-greek-blue">עלות: 200 ש"ח למשתתף</span>
                 </p>
               </div>
             </div>
