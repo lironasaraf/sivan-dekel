@@ -11,9 +11,9 @@ const BookSection = () => {
     "הרכבת משפטים ועוד",
   ];
 
-  const handleBitPayment = () => {
-    // This would typically redirect to a Bit payment page
-    window.open('https://bit.ly/payment-link', '_blank');
+  const handleWhatsAppPayment = () => {
+    const message = encodeURIComponent("שלום, אני מעוניין/ת לרכוש את הספר 'לומדים יוונית צעד אחר צעד'");
+    window.open(`https://wa.me/972522931926?text=${message}`, '_blank');
   };
 
   return (
@@ -51,10 +51,10 @@ const BookSection = () => {
                   <span className="text-gray-600 mr-2">כולל משלוח</span>
                 </div>
                 <Button 
-                  onClick={handleBitPayment}
+                  onClick={handleWhatsAppPayment}
                   className="greek-button w-full"
                 >
-                  <span>רכישה באמצעות ביט</span>
+                  <span>רכישה דרך וואטסאפ</span>
                   <CreditCard className="mr-2 h-4 w-4" />
                 </Button>
               </div>
