@@ -95,7 +95,7 @@ const TeachingMethodSection = () => {
             </div>
           </div>
 
-          {/* Method Description - Compact */}
+          {/* Method Description - Expanded */}
           <div className={`w-2/3 order-1 lg:order-2 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '300ms' }}>
             <div className="greek-card h-full">
               <div className="flex items-center gap-2 md:gap-3 mb-3">
@@ -107,7 +107,7 @@ const TeachingMethodSection = () => {
                 מודל לימוד ייחודי ומותאם במיוחד לישראלים
               </p>
               
-              <div className="space-y-3 text-right">
+              <div className="space-y-4 text-right">
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   השיטה שלי הדרגתית מאוד, מתבססת על סדר, דיוק והנחיה מובנית.
                 </p>
@@ -115,59 +115,51 @@ const TeachingMethodSection = () => {
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   אני מאמינה בלמידה שמתבצעת צעד אחר צעד – <span className="font-semibold text-greek-blue">σιγά σιγά</span> – לאט ובביטחון, עם הנאה לכל אורך הדרך.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Learning Method Details */}
-        <div className={`mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '350ms' }}>
-          <div className="max-w-4xl mx-auto">
-            <div className="greek-card">
-              <div className="flex items-center gap-3 mb-4 justify-center">
-                <GraduationCap className="h-6 w-6 text-greek-gold" />
-                <h3 className="text-lg font-heading text-greek-blue">הלימוד הינו מתודי והוא משלב בין</h3>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* רצף לימודי */}
-                <div className="space-y-3">
-                  <h4 className="text-base font-semibold text-greek-blue mb-3">רצף לימודי ברור ומובנה</h4>
-                  <div className="space-y-2 text-sm text-gray-700">
-                    <p>לפני כל שיעור תקבלו דפי הכנה שיעזרו לכם להגיע מוכנים ולהרגיש בטוחים.</p>
-                    <p>כל נושא נבנה על הקודם – בצורה הדרגתית, פשוטה וחווייתית.</p>
-                  </div>
-                </div>
                 
-                {/* חוויית למידה */}
-                <div className="space-y-3">
-                  <h4 className="text-base font-semibold text-greek-blue mb-3">חוויית למידה חיה ותוססת</h4>
-                  <div className="text-sm text-gray-700">
-                    <p>בכל שיעור יהיו משחקים קצרים, תחרויות משעשעות, דיאלוגים מצחיקים, סימולציות מחיי היום־יום ושירים יווניים מתורגמים.</p>
+                {/* הלימוד הינו מתודי */}
+                <div className="border-t border-greek-blue/20 pt-4">
+                  <div className="flex items-center gap-3 mb-3">
+                    <GraduationCap className="h-5 w-5 text-greek-gold" />
+                    <h4 className="text-base font-semibold text-greek-blue">הלימוד הינו מתודי והוא משלב בין</h4>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    {/* רצף לימודי */}
+                    <div className="space-y-2">
+                      <h5 className="text-sm font-semibold text-greek-blue">רצף לימודי ברור ומובנה</h5>
+                      <div className="space-y-1 text-xs text-gray-700">
+                        <p>לפני כל שיעור תקבלו דפי הכנה שיעזרו לכם להגיע מוכנים ולהרגיש בטוחים.</p>
+                        <p>כל נושא נבנה על הקודם – בצורה הדרגתית, פשוטה וחווייתית.</p>
+                      </div>
+                    </div>
+                    
+                    {/* חוויית למידה */}
+                    <div className="space-y-2">
+                      <h5 className="text-sm font-semibold text-greek-blue">חוויית למידה חיה ותוססת</h5>
+                      <div className="text-xs text-gray-700">
+                        <p>בכל שיעור יהיו משחקים קצרים, תחרויות משעשעות, דיאלוגים מצחיקים, סימולציות מחיי היום־יום ושירים יווניים מתורגמים.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        {/* Learning Progression */}
-        <div className={`mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '400ms' }}>
-          <div className="max-w-4xl mx-auto">
-            <div className="greek-card">
-              <h4 className="text-lg font-semibold text-greek-blue text-center mb-4">
-                הלמידה מתחילה מהבסיס ומטפסת באופן טבעי
-              </h4>
-              <p className="text-center text-gray-700 mb-4">
-                האלפבית, הברות פשוטות, מילים שימושיות ← ומטפסת באופן טבעי אל:
-              </p>
-              <div className="grid md:grid-cols-2 gap-3">
-                {learningProgression.map((step, index) => (
-                  <div key={index} className="flex items-center gap-3 text-right">
-                    <div className="w-2 h-2 bg-greek-turquoise rounded-full flex-shrink-0"></div>
-                    <span className="text-sm text-gray-700">{step}</span>
+                {/* הלמידה מתחילה מהבסיס */}
+                <div className="border-t border-greek-blue/20 pt-4">
+                  <h5 className="text-sm font-semibold text-greek-blue mb-3">
+                    הלמידה מתחילה מהבסיס ומטפסת באופן טבעי
+                  </h5>
+                  <p className="text-xs text-gray-700 mb-3">
+                    האלפבית, הברות פשוטות, מילים שימושיות ← ומטפסת באופן טבעי אל:
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-2">
+                    {learningProgression.map((step, index) => (
+                      <div key={index} className="flex items-center gap-2 text-right">
+                        <div className="w-1.5 h-1.5 bg-greek-turquoise rounded-full flex-shrink-0"></div>
+                        <span className="text-xs text-gray-700">{step}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
