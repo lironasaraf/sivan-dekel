@@ -1,5 +1,4 @@
-
-import { ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-scroll';
@@ -115,6 +114,59 @@ const CourseSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        
+        {/* המלצה מהמורה */}
+        <div className="mb-12">
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-gradient-to-br from-greek-gold/10 to-greek-turquoise/10 border-greek-gold/20">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-3 mb-6 justify-center">
+                  <Star className="h-6 w-6 text-greek-gold fill-current" />
+                  <h3 className="text-2xl font-bold text-greek-blue">המלצה מהמורה</h3>
+                  <Star className="h-6 w-6 text-greek-gold fill-current" />
+                </div>
+                
+                <h4 className="text-xl font-semibold text-greek-blue text-center mb-6">
+                  קורס הדגל שלי – יוונית למתחילים א'
+                </h4>
+                
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    "יוונית למתחילים א'" הוא קורס הדגל שלי, והוא נבנה בקפידה על בסיס שיטה שמביאה תוצאות אמיתיות: שיטה הדרגתית, מדויקת, ובעיקר – אנושית וחווייתית.
+                  </p>
+                  
+                  <p>
+                    בקורס הזה נתחיל ממש מהבסיס: האלפבית, הברות, מילים ראשונות, ונתקדם יחד בקצב נעים ובטוח להבנה של משפטים, דיאלוגים ושיחות פשוטות. כל שיעור יעניק לכם תחושת הצלחה, גם אם אף פעם לא למדתם שפה.
+                  </p>
+                  
+                  <p>
+                    הקורס כולל הסברים בעברית ברורה, קבצי תרגול, דפי הכנה לפני כל שיעור, גישה להקלטות, שיעור חזרה, וקבוצת וואצאפ תומכת.
+                  </p>
+                  
+                  <p>
+                    הייחוד של הקורס הוא השילוב בין לימוד מובנה לבין חוויה חברתית מהנה – תמצאו בו משחקים, תרגולים חיים, חידונים, וסימולציות מהחיים האמיתיים.
+                  </p>
+                  
+                  <p>
+                    אני ממליצה על הקורס הזה במיוחד לכל מי שרוצה להתחיל מ-א' ביוונית, לבנות בסיס חזק ולהרגיש בטוח לדבר.
+                  </p>
+                  
+                  <p>
+                    הוא מתאים גם למי שכבר מכיר מילים, אבל לא מצליח להרכיב משפטים או לנהל שיחה.
+                  </p>
+                  
+                  <p>
+                    הקורס מתאים לקהל הישראלי – עם דוגמאות, הומור, הסברים תרבותיים, וקצב שמאפשר הפנמה אמיתית.
+                  </p>
+                  
+                  <p className="font-medium text-greek-blue">
+                    אני מזמינה אתכם להצטרף למסע מרגש, שבו תלמדו לא רק שפה – אלא תפתחו דלת לעולם חדש של תרבות, מוזיקה, חום אנושי ואהבה ליוון
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
         
