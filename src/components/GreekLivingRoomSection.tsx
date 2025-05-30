@@ -79,6 +79,12 @@ const GreekLivingRoomSection = () => {
           <p className={`text-lg text-gray-700 mt-4 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.5s" }}>
             מידי חודש מתקיימת סדנת למידה פרונטלית, המזמינה אתכם לערב יווני ביתי, אותנטי המשלב אוכל טוב, מוסיקה תרבות ושפה.
           </p>
+           <p className={`text-lg text-gray-700 mt-4 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.5s" }}>
+            יוון זה כאן.
+          </p>
+           <p className={`text-lg text-gray-700 mt-4 max-w-3xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: "0.5s" }}>
+            סדנת לימוד ייחודית המשלבת תרבות מוסיקה אוכל ולמידה
+          </p>
         </div>
 
         {/* Workshop Overview */}
