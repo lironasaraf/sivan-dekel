@@ -17,12 +17,12 @@ const OfferSection = () => {
       target: "greek-living-room"
     },
     {
-      title: "חבילת ייעוץ לאתונה",
-      target: "athens-consultation"
-    },
-    {
       title: "ספר לימוד ייחודי",
       target: "book"
+    },
+    {
+      title: "חבילת ייעוץ",
+      target: "athens-consultation"
     }
   ];
 
