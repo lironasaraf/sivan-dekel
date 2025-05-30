@@ -4,6 +4,7 @@ import { Star, Quote } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [expandedTestimonials, setExpandedTestimonials] = useState<Set<number>>(new Set());
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -26,6 +27,16 @@ const TestimonialsSection = () => {
       }
     };
   }, []);
+
+  const toggleExpanded = (index: number) => {
+    const newExpanded = new Set(expandedTestimonials);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedTestimonials(newExpanded);
+  };
 
   const testimonials = [
     {
@@ -120,9 +131,11 @@ const TestimonialsSection = () => {
     },
     {
       name: "לירון אורלב",
-      text: "מצטרפת לכל מילה ומוסיפה… שנתיים וחצי שאני גרה ביוון, עובדת עם יוונים וגם מנסה ללמוד את השפה. הייתי בשיעורים קבוצתיים עם מורה יוונית ואחר כך עם שני מורים יווניים באופן פרטני. התסכול והייאוש מהשפה היוונית היו גדולים כל כך עד שכבר רציתי לוותר. עד ששמעתי מחברה על סיון והקורסים שלה. כבר בשיעור הראשון התמוססו להן הרגשות הקשות ואל הלב חלחלה תקווה זעירה… בשיעור השני כבר הרגשתי ״בבית״ ואחרי השיעור החמישי כבר מצאתי את עצמי מדברת עם יוונים בסופר ובעבודה(: השיעורים איתך היו משב רוח נהדר של איכות, של שיקום ביטחון עצמי הרוס, של הנאה צרופה וחדוות למידה. תודה על הקורס המוקפד, על הרגישות לכל פרט, על החיוך וההקשבה. ניפגש בקורס ההמשך בקרוב❤️",
+      text: "מצטרפת לכל מילה ומוסיפה… שנתיים וחצי שאני גרה ביוון, עובדת עם יוונים וגם מנסה ללמוד את השפה. הייתי בשיעורים קבוצתיים עם מורה יוונית ואחר כך עם שני מורים יווניים באופן פרטני. התסכול והייאוש מהשפה היוונית היו גדולים כל כך עד שכבר רציתי לוותר.",
+      shortText: "מצטרפת לכל מילה ומוסיפה… שנתיים וחצי שאני גרה ביוון, הייתי בשיעורים קבוצתיים וגם פרטניים עד שרציתי לוותר.",
       image: "/lovable-uploads/eed3dd74-6bcb-461b-b889-168d7b2471a2.png",
-      rating: 5
+      rating: 5,
+      expandable: true
     }
   ];
 
@@ -133,6 +146,33 @@ const TestimonialsSection = () => {
         className={`h-4 w-4 ${index < rating ? 'text-greek-gold fill-current' : 'text-gray-300'}`}
       />
     ));
+  };
+
+  const renderTestimonialText = (testimonial: any, index: number) => {
+    const isExpanded = expandedTestimonials.has(index);
+    const hasShortText = testimonial.shortText;
+    
+    if (!hasShortText) {
+      return (
+        <p className="text-gray-700 leading-relaxed text-sm italic break-words hyphens-auto">
+          "{testimonial.text}"
+        </p>
+      );
+    }
+
+    return (
+      <div className="text-gray-700 leading-relaxed text-sm italic break-words hyphens-auto">
+        <p>
+          "{isExpanded ? testimonial.text : testimonial.shortText}"
+        </p>
+        <button
+          onClick={() => toggleExpanded(index)}
+          className="text-greek-blue hover:text-greek-gold text-xs mt-2 underline focus:outline-none"
+        >
+          {isExpanded ? 'קרא פחות' : 'קרא עוד...'}
+        </button>
+      </div>
+    );
   };
 
   return (
@@ -178,9 +218,7 @@ const TestimonialsSection = () => {
                       <div className="flex justify-center mb-3">
                         {renderStars(testimonial.rating)}
                       </div>
-                      <p className="text-gray-700 leading-relaxed text-sm italic break-words hyphens-auto">
-                        "{testimonial.text}"
-                      </p>
+                      {renderTestimonialText(testimonial, index)}
                     </div>
                   </CarouselItem>
                 ))}
