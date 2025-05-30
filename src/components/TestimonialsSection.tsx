@@ -75,6 +75,18 @@ const TestimonialsSection = () => {
       text: "מאוד ממליצה על סיוון מנסיון אישי. כמה סבלנות, רצינות ורצון שכל אחד ידבר יוונית תוך זמן קצר. מעבר לשיעורים עצמם, סיוון דואגת שיעמוד לרשות התלמיד המון חומר עזר, ומקיימת שיעורי הכנה לשיעורים השבועים. בנוסף לכל אלה היא סימפטית ומלמדת ברוגע ובחן, כך שאם החלטת ללמוד יוונית, זו המורה שלך 🙏",
       image: "/lovable-uploads/10a2415d-ce35-40bd-b319-db09da4d6d53.png",
       rating: 5
+    },
+    {
+      name: "מירב טל-מעון",
+      text: "בדיוק סיימתי את הקורס למתחילים ואני יכולה להגיד שסיוון היא מורה מעולה! למדנו המון ובצורה מעניינת וחוויתית. סיוון משלבת מגוון דרכי למידה- שיעורים בזום, סרטונים, אפליקציה ללמוד מילים ועוד. מומלץ ביותר!",
+      image: "/lovable-uploads/ce84e45e-9b8d-407c-8ea3-faacfd6b4813.png",
+      rating: 5
+    },
+    {
+      name: "חמוטל קרוגליק",
+      text: "סיוון מורה מעולה. סבלנית, מקצועית ומשקיעה זמן רב מעבר לשעות הקורס על מנת לוודא שכולם יבינו ויתקדמו. משרה אווירה נעימה וחיובית בשיעורים והכי חשוב - בזכותה לומדים יוונית!",
+      image: "/lovable-uploads/ce84e45e-9b8d-407c-8ea3-faacfd6b4813.png",
+      rating: 5
     }
   ];
 
