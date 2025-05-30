@@ -136,6 +136,12 @@ const TestimonialsSection = () => {
       image: "/lovable-uploads/eed3dd74-6bcb-461b-b889-168d7b2471a2.png",
       rating: 5,
       expandable: true
+    },
+    {
+      name: "מזל צדיק ברקו",
+      text: "Η δασκάλα μου είναι καλή המורה שלי טובה. איך למדתי לכתוב ולקרוא ב10 שיעורים?? סיוון דקל!!! נתראה בקורס למתקדמים. Ευχαριστώ πολύ!",
+      image: "/lovable-uploads/57566856-7d2f-4b24-a384-129fb0427d7d.png",
+      rating: 5
     }
   ];
 
