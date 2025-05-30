@@ -46,6 +46,18 @@ const TestimonialsSection = () => {
       rating: 5
     },
     {
+      name: "הדס תמיר",
+      text: "ממליצה בכל ה❤️ ומפיצה בכל האי (כרתים) את שיבחה של סיוון מורה מעולה . מעבירה בצורה נפלאה את הבסיס של השפה הלא פשוטה הזאת .",
+      image: "/lovable-uploads/29de74cf-69bd-4646-9d91-6cd409c78dd3.png",
+      rating: 5
+    },
+    {
+      name: "איתן סובל",
+      text: "מורה מעולה,כיפית,מעבירה את השיעורים באופן מיוחד וחווייתי,בעלת ידע נרחב.מיצרת חומרי עזר מושקעים,מסודרים,אסטטיים וכאלו שעושים סדר ומקלים על הלמידה.היענות מלאה לבקשות ושאלות.תמורה מלאה ומהנה.ממליץ בחום רב.",
+      image: "/lovable-uploads/bbb4dcd3-b436-412f-9b9d-0dc008b4258a.png",
+      rating: 5
+    },
+    {
       name: "הילה וייש",
       text: "מורה מעולה! סיוון מלמדת בצורה סופר מקצועית, חוויתית ומעניינת. המלצה רותחת לכל מי שחושב ללמוד יוונית 👌🇬🇷",
       image: "/lovable-uploads/c6b3f18b-d19c-4d21-9223-e4ce3e372203.png",
