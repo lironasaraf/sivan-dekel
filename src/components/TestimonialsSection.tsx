@@ -40,6 +40,12 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
+      name: "רוניוס כרמי",
+      text: "אחרי שנים של עולם יווני סביבי ואוצר שירים מטורף שאני מנגן החלטתי ובחרתי במורה הטובה ביותר,והכי יצירתית שיש. אני מברך על כך את בעלת דרך,מחשבה,והמון סובלנות מחוייכת עלי והצליחי....",
+      image: "/lovable-uploads/1288b582-88db-4839-96f6-cfa7a6e80351.png",
+      rating: 5
+    },
+    {
       name: "הילה וייש",
       text: "מורה מעולה! סיוון מלמדת בצורה סופר מקצועית, חוויתית ומעניינת. המלצה רותחת לכל מי שחושב ללמוד יוונית 👌🇬🇷",
       image: "/lovable-uploads/c6b3f18b-d19c-4d21-9223-e4ce3e372203.png",
