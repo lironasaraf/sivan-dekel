@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-scroll';
 import { useEffect, useState, useRef } from 'react';
@@ -65,7 +66,7 @@ const Hero = () => {
             <div className="relative group">
               <div className="absolute -left-4 -top-4 w-full h-full border-4 border-greek-gold rounded-lg animate-pulse-slow group-hover:scale-105 transition-transform duration-500"></div>
               <img
-                src="/lovable-uploads/19cb92b5-51f8-4369-bedf-303197adffd8.png"
+                src="/lovable-uploads/0b206f49-fcbf-4642-8cb5-cfa3bc82eee1.png"
                 alt="סיון בצלאל בסביבה יוונית מסורתית"
                 className="w-full max-w-md rounded-lg shadow-2xl object-cover group-hover:scale-105 transition-transform duration-500"
               />
