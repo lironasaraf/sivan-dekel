@@ -21,7 +21,7 @@ const OfferSection = () => {
       target: "book"
     },
     {
-      title: "חבילת ייעוץ",
+      title: "חבילת ייעוץ לטיול המושלם באתונה",
       target: "athens-consultation"
     }
   ];
