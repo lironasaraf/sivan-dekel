@@ -25,10 +25,10 @@ const Index = () => {
       <OfferSection />
       <CourseSection />
       <GreekLivingRoomSection />
-      <TestimonialsSection />
       <BookSection />
       <AthensConsultationSection />
       <FAQSection />
+      <TestimonialsSection />
       <ContactForm />
       <Footer />
     </div>
