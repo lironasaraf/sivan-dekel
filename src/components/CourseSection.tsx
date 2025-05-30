@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -108,7 +109,7 @@ const CourseSection = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6">
               {groupLearningAdvantages.map((advantage, index) => (
-                <div key={index} className="flex items-start gap-3 text-right">
+                <div key={index} className="flex items-start gap-3 text-right mb-4">
                   <CheckCircle className="h-5 w-5 text-greek-turquoise flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700">{advantage}</span>
                 </div>
