@@ -105,6 +105,18 @@ const TestimonialsSection = () => {
       text: "בתור דוברי עברית, יש יתרון גדול שהמורה שלך גם דוברת עברית, סיוון מנגישה את השפה היוונית בצורה כיפית ,לא מוותרת על הדקדוק, ותמיד תמצא את הדרך שלך קל ללמוד ממנה את השפה(דיאלוגים טקסטים, שירים ,או טריוויה). מומלצת ביותר",
       image: "/placeholder.svg",
       rating: 5
+    },
+    {
+      name: "אריק פרטוק",
+      text: "סיון יקרה איזה כייף שפגשתי אותך , זכיתי בגדול, התחלתי ללמוד יוונית אצלך לפני שלושה חודשים, למדתי המון המון מילים ומשפטים, למדנו דקדוק היכן שצריך, ידעת לנווט אותי על פי ההתקדמות, עשינו חזרות והכל תוך הנאה , צחוקים, ודבקות במטרה. תודה שאת זמינה לשאלות , תודה על שיעורי הבית החשובים שאת דואגת לתת לי . תודה שבזכותך הנסיעה ליוון תהיה מהנה יותר 😘😘😘",
+      image: "/placeholder.svg",
+      rating: 5
+    },
+    {
+      name: "מירב כהן קולקר",
+      text: "אליפות! המורה הכי טובה שיש! סבלנית ויסודית, מלמדת במקצועיות, יודעת לענות על כל שאלה ותהיה יודעת לפרגן ולחזק את הביטחון! אני נהנית מכל רגע🥰",
+      image: "/lovable-uploads/a42c4a50-a476-4719-9f87-3ddbbab71550.png",
+      rating: 5
     }
   ];
 
