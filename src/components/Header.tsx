@@ -39,6 +39,7 @@ const Header = () => {
     { name: 'תכני הקורס', link: 'course' },
     { name: 'יוונית בסלון', link: 'greek-living-room' },
     { name: 'הספר שלי', link: 'book' },
+    { name: 'המלצות וחוות דעת', link: 'testimonials' },
     { name: 'יצירת קשר', link: 'contact' },
   ];
 
