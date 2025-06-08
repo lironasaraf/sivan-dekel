@@ -143,7 +143,7 @@ const GreekLivingRoomSection = () => {
                   <span className="font-bold text-greek-blue">🕒 משך הסדנה: 4 שעות</span>
                 </p>
                 <p className="text-gray-700 text-right">
-                  <span className="font-bold text-greek-blue">עלות: 200 ש"ח למשתתף</span>
+                  <span className="font-bold text-greek-blue">עלות: 250 ש"ח למשתתף</span>
                 </p>
               </div>
             </div>
