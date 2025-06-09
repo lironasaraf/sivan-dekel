@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -176,6 +177,12 @@ const TestimonialsSection = () => {
       image: "/lovable-uploads/0f8f645b-c2ba-485a-a044-391eb07c129b.png",
       rating: 5,
       expandable: true
+    },
+    {
+      name: "דגית",
+      text: "תודה רבה סיון על ערב מקסים, מושקע וטעים! היה כיף לפגוש מחוץ לזום את מי שהגיע ואני כבר מחכה להמשך 🥰",
+      image: "/lovable-uploads/3151c128-78e4-4ae9-8a24-83a0e8c7ad03.png",
+      rating: 5
     }
   ];
 
