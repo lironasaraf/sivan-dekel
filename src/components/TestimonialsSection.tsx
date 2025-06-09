@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -182,6 +181,12 @@ const TestimonialsSection = () => {
       name: "דגית",
       text: "תודה רבה סיון על ערב מקסים, מושקע וטעים! היה כיף לפגוש מחוץ לזום את מי שהגיע ואני כבר מחכה להמשך 🥰",
       image: "/lovable-uploads/3151c128-78e4-4ae9-8a24-83a0e8c7ad03.png",
+      rating: 5
+    },
+    {
+      name: "אלפרד",
+      text: "סיוון היקרה רציתי להגיד תודה ענקית לך ולבעלך היקר על כל החום, הלב הרחב, והאירוח המדהים היום. בזכותך אני מצליח לקרוא ולדבר יוונית – משהו שחלמתי עליו, ואת הפכת אותו למציאות. את מורה נהדרת, סבלנית, חכמה ומלאת שמחה. אני מרגיש ממש בר מזל שהכרתי אתכם. וגם לכם תלמידות ,תלמידים וחברים יקרים הפכתם את הלימוד לחוויה היה לי מוי כיף לראות אותכם פיזית להרגיש אותכם ומקווה שנישאר בקשר. באהבה אלפרדו",
+      image: "/lovable-uploads/ee02bd0b-e897-4c1c-b3b0-3717afcbd215.png",
       rating: 5
     }
   ];
