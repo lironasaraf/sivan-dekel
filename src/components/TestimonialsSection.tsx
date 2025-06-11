@@ -190,6 +190,7 @@ const TestimonialsSection = () => {
               dragFree: true,
               slidesToScroll: 1,
               containScroll: "trimSnaps",
+              skipSnaps: false,
             }}
             className="w-full"
             setApi={setApi}
