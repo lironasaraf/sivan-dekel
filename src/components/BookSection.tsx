@@ -11,10 +11,10 @@ const BookSection = () => {
     "הרכבת משפטים ועוד",
   ];
 
-  const handleWhatsAppPayment = () => {
-    const message = encodeURIComponent("שלום, אני מעוניין/ת לרכוש את הספר 'לומדים יוונית צעד אחר צעד'");
-    window.open(`https://wa.me/972522931926?text=${message}`, '_blank');
-  };
+const handlePurchaseClick = () => {
+  window.open("https://app.upay.co.il/API6/s.php?m=VHhwL29oNW10UUR5Ky84YVRBdW43QT09", "_blank");
+};
+
 
   return (
     <section id="book" className="py-16 md:py-24 bg-gray-50">
@@ -51,12 +51,13 @@ const BookSection = () => {
                   <span className="text-gray-600 mr-2">כולל משלוח</span>
                 </div>
                 <Button 
-                  onClick={handleWhatsAppPayment}
+                  onClick={handlePurchaseClick}
                   className="greek-button w-full"
                 >
-                  <span>רכישה דרך וואטסאפ</span>
+                  <span>לרכישה מאובטחת</span>
                   <CreditCard className="mr-2 h-4 w-4" />
                 </Button>
+
               </div>
             </div>
           </div>
