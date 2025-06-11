@@ -29,6 +29,11 @@ const GreekLivingRoomSection = () => {
     };
   }, []);
 
+  const handleWorkshopPurchase = () => {
+  window.open("https://app.upay.co.il/API6/s.php?m=SDcyLzFoSU9xSWZwbTluNnVjclpoUT09", "_blank");
+};
+
+
   const workshopFeatures = [
     "מינגלינג: הזדמנות להיחשף ולהכיר אנשים חדשים אשר רכשו דירות, בתי מלון ועסקים ביוון ובקפריסין",
     "ארוחה יוונית ביתית: בעלי ואני מכינים לכם ארוחה יוונית אותנטית",
@@ -145,6 +150,14 @@ const GreekLivingRoomSection = () => {
                 <p className="text-gray-700 text-right">
                   <span className="font-bold text-greek-blue">עלות: 250 ש"ח למשתתף</span>
                 </p>
+                  <div className="mt-4 text-left">
+                  <button
+                    onClick={handleWorkshopPurchase}
+                    className="greek-button px-6 py-2 bg-greek-blue text-white rounded-lg hover:bg-greek-turquoise transition"
+                  >
+                    לרכישה מאובטחת
+                  </button>
+                </div>
               </div>
             </div>
           </div>
