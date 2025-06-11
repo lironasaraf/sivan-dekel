@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -212,6 +211,18 @@ const TestimonialsSection = () => {
       name: "יהלי זהבי",
       text: "אין עליך מורה בחסד!!! השעה הכי טובה בשבוע שלי. אני כל כך נהנית מכל רגע בשיעורים ומהתמיכה והנכונות לעזור גם מעבר לשעות הלימוד. ❤️❤️❤️❤️❤️❤️❤️❤️",
       image: "/placeholder.svg",
+      rating: 5
+    },
+    {
+      name: "Shoshi Aizenberg Zimmerman",
+      text: "ממליצה מאד על סיוון. שיטת הלימוד מובנת ויסודית. סיוון סובלנית , זמינה וקשובה לכל שאלה ובקשה.❣️",
+      image: "/lovable-uploads/3e39d528-9df8-4751-a347-92f8c64a71e1.png",
+      rating: 5
+    },
+    {
+      name: "Sara Botnaro",
+      text: "מורה נפלאה ,סבלנית,קשובה לתלמיד,רהוטה בהסבריה ותורמת הרבה מזמנה וממרצה ללימוד השפה היוונית.ממליצה בחום.",
+      image: "/lovable-uploads/827b3968-8208-4596-a732-5dc3c190aaa1.png",
       rating: 5
     }
   ];
