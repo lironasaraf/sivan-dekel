@@ -5,6 +5,8 @@ import { Star, Quote } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [api, setApi] = useState(null);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -28,6 +30,18 @@ const TestimonialsSection = () => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrentSlide(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrentSlide(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   const testimonials = [
     {
@@ -125,7 +139,16 @@ const TestimonialsSection = () => {
     );
   };
 
+  const slidesToShow = {
+    mobile: 1,
+    tablet: 2,
+    desktop: 3
+  };
+
+  const totalSlides = Math.ceil(testimonials.length / slidesToShow.desktop);
+
   console.log('Total testimonials:', testimonials.length);
+  console.log('Current slide:', currentSlide + 1, 'of', totalSlides);
 
   return (
     <section 
@@ -143,20 +166,22 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className={`relative max-w-6xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+        <div className={`relative max-w-7xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
           <Carousel
             opts={{
               align: "start",
               loop: true,
+              slidesToScroll: 1,
             }}
             className="w-full"
+            setApi={setApi}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => {
                 console.log(`Rendering testimonial ${index + 1}:`, testimonial.name);
                 return (
-                  <CarouselItem key={`testimonial-${index}`} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="greek-card h-full flex flex-col">
+                  <CarouselItem key={`testimonial-${index}`} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                    <div className="greek-card h-full flex flex-col min-h-[400px]">
                       <div className="text-center mb-4">
                         <div className="relative w-16 h-16 mx-auto mb-4">
                           <img
@@ -186,9 +211,43 @@ const TestimonialsSection = () => {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious className="text-greek-blue hover:bg-greek-turquoise/10 -left-12" />
-            <CarouselNext className="text-greek-blue hover:bg-greek-turquoise/10 -right-12" />
+            <CarouselPrevious className="text-greek-blue hover:bg-greek-turquoise/10 -left-12 hidden md:flex" />
+            <CarouselNext className="text-greek-blue hover:bg-greek-turquoise/10 -right-12 hidden md:flex" />
           </Carousel>
+          
+          {/* Slide indicators */}
+          <div className="flex justify-center gap-2 mt-6">
+            {Array.from({ length: totalSlides }).map((_, index) => (
+              <button
+                key={index}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  Math.floor(currentSlide / slidesToShow.desktop) === index
+                    ? 'bg-greek-turquoise'
+                    : 'bg-gray-300'
+                }`}
+                onClick={() => api?.scrollTo(index * slidesToShow.desktop)}
+              />
+            ))}
+          </div>
+          
+          {/* Mobile navigation buttons */}
+          <div className="flex justify-center gap-4 mt-4 md:hidden">
+            <button
+              onClick={() => api?.scrollPrev()}
+              className="px-4 py-2 bg-greek-turquoise text-white rounded-lg hover:bg-greek-turquoise/80 transition-colors"
+            >
+              ← קודם
+            </button>
+            <span className="px-4 py-2 text-gray-600">
+              {currentSlide + 1} מתוך {testimonials.length}
+            </span>
+            <button
+              onClick={() => api?.scrollNext()}
+              className="px-4 py-2 bg-greek-turquoise text-white rounded-lg hover:bg-greek-turquoise/80 transition-colors"
+            >
+              הבא →
+            </button>
+          </div>
         </div>
       </div>
     </section>
