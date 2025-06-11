@@ -87,12 +87,16 @@ const AthensConsultationSection = () => {
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-greek-blue">250 ₪</span>
                   </div>
-                  <Link to="contact" smooth={true} duration={500} offset={-80}>
-                    <button className="greek-button w-full md:w-auto">
-                      <CreditCard className="h-5 w-5 mr-2" />
-                      שלם באמצעות ביט
-                    </button>
-                  </Link>
+                  <button
+                    onClick={() =>
+                      window.open("https://app.upay.co.il/API6/s.php?m=SDcyLzFoSU9xSWZwbTluNnVjclpoUT09", "_blank")
+                    }
+                    className="greek-button w-full md:w-auto"
+                  >
+                    <CreditCard className="h-5 w-5 mr-2" />
+                    לרכישה מאובטחת
+                  </button>
+
                 </div>
               </div>
             </div>
