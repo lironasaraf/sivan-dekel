@@ -201,7 +201,8 @@ const TestimonialsSection = () => {
               {testimonials.map((testimonial, index) => {
                 console.log(`Rendering testimonial ${index + 1}:`, testimonial.name);
                 return (
-                  <CarouselItem key={`testimonial-${index}`} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className="pl-2 md:pl-4 shrink-0 grow-0 basis-full sm:basis-1/2 lg:basis-1/3" />
+
                     <div className="greek-card h-full flex flex-col min-h-[400px]">
                       <div className="text-center mb-4">
                         <div className="relative w-16 h-16 mx-auto mb-4">
