@@ -1,17 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [api, setApi] = useState(null);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -35,18 +26,6 @@ const TestimonialsSection = () => {
       }
     };
   }, []);
-
-  useEffect(() => {
-    if (!api) return;
-
-    const onSelect = () => setCurrentSlide(api.selectedScrollSnap());
-    setCurrentSlide(api.selectedScrollSnap());
-    api.on("select", onSelect);
-
-    return () => {
-      api.off("select", onSelect);
-    };
-  }, [api]);
 
   const testimonials = [
     {
@@ -102,7 +81,7 @@ const TestimonialsSection = () => {
     <section
       id="testimonials"
       ref={sectionRef}
-      className="py-16 md:py-24 bg-gradient-to-br from-greek-turquoise/5 to-white"
+      className="py-16 md:py-24 bg-gradient-to-br from-greek-turquoise/5 to-white overflow-x-auto"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
@@ -112,74 +91,36 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className={`relative max-w-7xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: false,
-              dragFree: true,
-              slidesToScroll: 1,
-              containScroll: false,
-              skipSnaps: false,
-              watchDrag: true
-            }}
-            className="w-full"
-            setApi={setApi}
-          >
-            <CarouselContent className="-ml-2 md:-ml-4 scroll-smooth">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem
-                  key={index}
-                  className="pl-2 md:pl-4 shrink-0 grow-0 basis-full sm:basis-1/2 lg:basis-1/3"
-                >
-                  <div className="greek-card h-full flex flex-col min-h-[400px]">
-                    <div className="text-center mb-4">
-                      <div className="relative w-16 h-16 mx-auto mb-4">
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-full h-full rounded-full object-cover shadow-md"
-                          onError={(e) => {
-                            e.currentTarget.src = "/placeholder.svg";
-                          }}
-                        />
-                        <div className="absolute -top-1 -right-1 w-6 h-6 bg-greek-turquoise rounded-full flex items-center justify-center">
-                          <Quote className="h-3 w-3 text-white" />
-                        </div>
-                      </div>
-                      <h3 className="font-semibold text-greek-blue mb-2">{testimonial.name}</h3>
-                      {renderStars(testimonial.rating)}
-                    </div>
-                    <div className="flex-1 flex items-center">
-                      <p className="text-gray-700 text-center leading-relaxed text-sm">
-                        "{testimonial.text}"
-                      </p>
-                    </div>
+        <div className={`flex gap-4 overflow-x-auto pb-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="greek-card w-80 flex-shrink-0 flex flex-col min-h-[400px] bg-white p-4 rounded-lg shadow-md"
+            >
+              <div className="text-center mb-4">
+                <div className="relative w-16 h-16 mx-auto mb-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full rounded-full object-cover shadow-md"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg";
+                    }}
+                  />
+                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-greek-turquoise rounded-full flex items-center justify-center">
+                    <Quote className="h-3 w-3 text-white" />
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="text-greek-blue hover:bg-greek-turquoise/10 -left-12 hidden md:flex" />
-            <CarouselNext className="text-greek-blue hover:bg-greek-turquoise/10 -right-12 hidden md:flex" />
-          </Carousel>
-
-          <div className="flex justify-center gap-4 mt-6 md:hidden">
-            <button
-              onClick={() => api?.scrollPrev()}
-              className="px-4 py-2 bg-greek-turquoise text-white rounded-lg hover:bg-greek-turquoise/80 transition-colors"
-            >
-              ← קודם
-            </button>
-            <span className="px-4 py-2 text-gray-600 bg-white rounded-lg border">
-              {currentSlide + 1} מתוך {testimonials.length}
-            </span>
-            <button
-              onClick={() => api?.scrollNext()}
-              className="px-4 py-2 bg-greek-turquoise text-white rounded-lg hover:bg-greek-turquoise/80 transition-colors"
-            >
-              הבא →
-            </button>
-          </div>
+                </div>
+                <h3 className="font-semibold text-greek-blue mb-2">{testimonial.name}</h3>
+                {renderStars(testimonial.rating)}
+              </div>
+              <div className="flex-1 flex items-center">
+                <p className="text-gray-700 text-center leading-relaxed text-sm">
+                  "{testimonial.text}"
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
