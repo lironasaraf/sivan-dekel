@@ -39,46 +39,53 @@ const TestimonialsSection = () => {
   useEffect(() => {
     if (!api) return;
 
+    const onSelect = () => setCurrentSlide(api.selectedScrollSnap());
     setCurrentSlide(api.selectedScrollSnap());
-    api.on("select", () => setCurrentSlide(api.selectedScrollSnap()));
+    api.on("select", onSelect);
 
     return () => {
-      api.off("select", () => setCurrentSlide(api.selectedScrollSnap()));
-    }
+      api.off("select", onSelect);
+    };
   }, [api]);
 
   const testimonials = [
-  {
-    name: "דביר קריספל",
-    text: "סיוון זה הייתה התשובה לבקשתי ללמוד יוונית! אני בן 60 ולא תפסתי שפות בקלות, אבל בקורס של סיוון הכל הלך חלק, כיף וברור. היא מורה מעולה! יש לה יכולת להתאים את עצמה לכל אחד לפי הצרכים שלו.",
-    image: "/lovable-uploads/247cdad4-00f6-436c-ba6b-a88d2bf534ea.png",
-    rating: 5
-  },
-  {
-    name: "מיכל ליברמן",
-    text: "המורה הכי טובה שהייתה לי!! אדיבה, מקצועית, סובלנית ויש לה שיטה מדהימה. ברגע שהתחלתי איתה, השפה הפכה לנוחה וכיפית. מעבר לזה שהיא מורה יוצאת מן הכלל, היא בן אדם עם לב זהב. ממליצה מכל הלב!",
-    image: "/lovable-uploads/30381914-ca43-4f72-b190-7a8aaa2fbacc.png",
-    rating: 5
-  },
-  {
-    name: "איריס פנטון",
-    text: "סיוון דקל מורה מקסימה, מקצועית ונעימה לזוז איתה לכיוון היוונית, שעדיין נראית קשה אבל יש לה טיפים ודרכים יצירתיות להגיע ללימוד טוב יותר ובהנאה. ממליצה לכל מי שחולם ללמוד יוונית!",
-    image: "/lovable-uploads/19cb92b5-51f8-4369-bedf-303197adffd8.png",
-    rating: 5
-  },
-  {
-    name: "נועם כץ",
-    text: "הקלטתי הרבה מידע במהלך הסדנה, נתנה הרבה כלים איך ללמוד את השפה, הרגשתי שהיא מאוד מתכוונת שהאנשים יצליחו וילמדו, לא מעבירה זמן. ממליצה מאוד!",
-    image: "/lovable-uploads/10a2415d-ce35-40bd-b319-db09da4d6d53.png",
-    rating: 5
-  },
-  {
-    name: "נירה אביטן לויט",
-    text: "השיעורים של סיוון הם פנינה! באה מלאת פחד מהשפה הקשה הזו, יותר סקרנות מרצון ללמוד. יצאתי עם יסודות מוצקים. סיוון מורה מדהימה! מקצועית, מותאמת, מקסימה, חמה, משעשעת. הרגשתי בטוחה. לא פחדתי לטעות.",
-    image: "/lovable-uploads/eed3dd74-6bcb-461b-b889-168d7b2471a2.png",
-    rating: 5
-  },
-];
+    {
+      name: "דביר קריספל",
+      text: "סיוון זה הייתה התשובה לבקשתי ללמוד יוונית! אני בן 60 ולא תפסתי שפות בקלות, אבל בקורס של סיוון הכל הלך חלק, כיף וברור. היא מורה מעולה! יש לה יכולת להתאים את עצמה לכל אחד לפי הצרכים שלו.",
+      image: "/lovable-uploads/247cdad4-00f6-436c-ba6b-a88d2bf534ea.png",
+      rating: 5
+    },
+    {
+      name: "מיכל ליברמן",
+      text: "המורה הכי טובה שהייתה לי!! אדיבה, מקצועית, סובלנית ויש לה שיטה מדהימה. ברגע שהתחלתי איתה, השפה הפכה לנוחה וכיפית. מעבר לזה שהיא מורה יוצאת מן הכלל, היא בן אדם עם לב זהב. ממליצה מכל הלב!",
+      image: "/lovable-uploads/30381914-ca43-4f72-b190-7a8aaa2fbacc.png",
+      rating: 5
+    },
+    {
+      name: "איריס פנטון",
+      text: "סיוון דקל מורה מקסימה, מקצועית ונעימה לזוז איתה לכיוון היוונית, שעדיין נראית קשה אבל יש לה טיפים ודרכים יצירתיות להגיע ללימוד טוב יותר ובהנאה. ממליצה לכל מי שחולם ללמוד יוונית!",
+      image: "/lovable-uploads/19cb92b5-51f8-4369-bedf-303197adffd8.png",
+      rating: 5
+    },
+    {
+      name: "ערן קפלן",
+      text: "גם אני עדיין לומד יוונית עם סיוון המדהימה שמעבירה את הקורס במקצועיות ועם השקעה יוצאת מגדר הרגיל כולל שיעורי תגבור וחזרה על החומר, סיוון שנותנת את כל כולה וזמינה לכל עיצה, הבהרה או בקשה. כל זאת אינו מובן מאליו ואני מנצל הזדמנות זו להודות לך מכל ליבי ולאחל לך חג חנוכה שמח",
+      image: "/lovable-uploads/eran-kaplan.png",
+      rating: 5
+    },
+    {
+      name: "סתיו עמק",
+      text: "מקצועית ביותר, סבלנית ומשקיעה בכל שיעור. כזאת מורה לא תמצאו🥇",
+      image: "/lovable-uploads/stav-emek.png",
+      rating: 5
+    },
+    {
+      name: "הילה ויש",
+      text: "מורה מעולה! סיוון מלמדת בצורה סופר מקצועית, חוויתית ומעניינת. המלצה רותחת לכל מי שחושב ללמוד יוונית 👌🇬🇷",
+      image: "/lovable-uploads/hila-vaish.png",
+      rating: 5
+    }
+  ];
 
   const renderStars = (rating) => (
     <div className="flex justify-center gap-1 mb-4">
@@ -170,16 +177,6 @@ const TestimonialsSection = () => {
             >
               הבא →
             </button>
-          </div>
-
-          <div className="hidden md:flex justify-center gap-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-full transition-colors ${currentSlide === index ? 'bg-greek-turquoise' : 'bg-gray-300'}`}
-                onClick={() => api?.scrollTo(index)}
-              />
-            ))}
           </div>
         </div>
       </div>
