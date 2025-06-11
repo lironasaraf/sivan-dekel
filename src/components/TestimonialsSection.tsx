@@ -139,16 +139,8 @@ const TestimonialsSection = () => {
     );
   };
 
-  const slidesToShow = {
-    mobile: 1,
-    tablet: 2,
-    desktop: 3
-  };
-
-  const totalSlides = Math.ceil(testimonials.length / slidesToShow.desktop);
-
   console.log('Total testimonials:', testimonials.length);
-  console.log('Current slide:', currentSlide + 1, 'of', totalSlides);
+  console.log('Current slide:', currentSlide + 1, 'of', testimonials.length);
 
   return (
     <section 
@@ -170,8 +162,9 @@ const TestimonialsSection = () => {
           <Carousel
             opts={{
               align: "start",
-              loop: true,
+              loop: false,
               slidesToScroll: 1,
+              containScroll: "trimSnaps",
             }}
             className="w-full"
             setApi={setApi}
@@ -215,30 +208,15 @@ const TestimonialsSection = () => {
             <CarouselNext className="text-greek-blue hover:bg-greek-turquoise/10 -right-12 hidden md:flex" />
           </Carousel>
           
-          {/* Slide indicators */}
-          <div className="flex justify-center gap-2 mt-6">
-            {Array.from({ length: totalSlides }).map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  Math.floor(currentSlide / slidesToShow.desktop) === index
-                    ? 'bg-greek-turquoise'
-                    : 'bg-gray-300'
-                }`}
-                onClick={() => api?.scrollTo(index * slidesToShow.desktop)}
-              />
-            ))}
-          </div>
-          
           {/* Mobile navigation buttons */}
-          <div className="flex justify-center gap-4 mt-4 md:hidden">
+          <div className="flex justify-center gap-4 mt-6 md:hidden">
             <button
               onClick={() => api?.scrollPrev()}
               className="px-4 py-2 bg-greek-turquoise text-white rounded-lg hover:bg-greek-turquoise/80 transition-colors"
             >
               ← קודם
             </button>
-            <span className="px-4 py-2 text-gray-600">
+            <span className="px-4 py-2 text-gray-600 bg-white rounded-lg border">
               {currentSlide + 1} מתוך {testimonials.length}
             </span>
             <button
@@ -247,6 +225,21 @@ const TestimonialsSection = () => {
             >
               הבא →
             </button>
+          </div>
+
+          {/* Desktop dot indicators */}
+          <div className="hidden md:flex justify-center gap-2 mt-6">
+            {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, index) => (
+              <button
+                key={index}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  Math.floor(currentSlide / 3) === index
+                    ? 'bg-greek-turquoise'
+                    : 'bg-gray-300'
+                }`}
+                onClick={() => api?.scrollTo(index * 3)}
+              />
+            ))}
           </div>
         </div>
       </div>
