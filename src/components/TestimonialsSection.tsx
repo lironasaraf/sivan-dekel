@@ -50,9 +50,9 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      name: "דביר קריספל",
-      text: "סיוון זה הייתה התשובה לבקשתי ללמוד יוונית! אני בן 60 ולא תפסתי שפות בקלות, אבל בקורס של סיוון הכל הלך חלק, כיף וברור. היא מורה מעולה! יש לה יכולת להתאים את עצמה לכל אחד לפי הצרכים שלו.",
-      image: "/lovable-uploads/247cdad4-00f6-436c-ba6b-a88d2bf534ea.png",
+      name: "איריס פנטון",
+      text: "סיוון דקל מורה מקסימה, מקצועית ונעימה לזוז איתה לכיוון היוונית, שעדיין נראית קשה אבל יש לה טיפים ודרכים יצירתיות להגיע ללימוד טוב יותר ובהנאה. ממליצה לכל מי שחולם ללמוד יוונית!",
+      image: "/lovable-uploads/19cb92b5-51f8-4369-bedf-303197adffd8.png",
       rating: 5
     },
     {
@@ -62,9 +62,9 @@ const TestimonialsSection = () => {
       rating: 5
     },
     {
-      name: "איריס פנטון",
-      text: "סיוון דקל מורה מקסימה, מקצועית ונעימה לזוז איתה לכיוון היוונית, שעדיין נראית קשה אבל יש לה טיפים ודרכים יצירתיות להגיע ללימוד טוב יותר ובהנאה. ממליצה לכל מי שחולם ללמוד יוונית!",
-      image: "/lovable-uploads/19cb92b5-51f8-4369-bedf-303197adffd8.png",
+      name: "דביר קריספל",
+      text: "סיוון זה הייתה התשובה לבקשתי ללמוד יוונית! אני בן 60 ולא תפסתי שפות בקלות, אבל בקורס של סיוון הכל הלך חלק, כיף וברור. היא מורה מעולה! יש לה יכולת להתאים את עצמה לכל אחד לפי הצרכים שלו.",
+      image: "/lovable-uploads/247cdad4-00f6-436c-ba6b-a88d2bf534ea.png",
       rating: 5
     },
     {
@@ -117,9 +117,11 @@ const TestimonialsSection = () => {
             opts={{
               align: "start",
               loop: false,
-              dragFree: false,
+              dragFree: true,
               slidesToScroll: 1,
-              containScroll: "trimSnaps",
+              containScroll: false,
+              skipSnaps: false,
+              watchDrag: true
             }}
             className="w-full"
             setApi={setApi}
