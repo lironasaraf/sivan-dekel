@@ -122,7 +122,7 @@ const TestimonialsSection = () => {
       image: "/lovable-uploads/f1a87727-a635-4d2a-8b6f-c2adf771f53c.png",
       rating: 5
     },
-        {
+    {
       name: "סתיו עמק",
       text: "מקצועית ביותר, סבלנית ומשקיעה בכל שיעור. כזאת מורה לא תמצאו🥇",
       image: "/lovable-uploads/stav-emek.png",
@@ -134,7 +134,7 @@ const TestimonialsSection = () => {
       image: "/lovable-uploads/elinor-froimovich.png",
       rating: 5
     },
-      {
+    {
       name: "הילה ויש",
       text: "מורה מעולה! סיוון מלמדת בצורה סופר מקצועית, חוויתית ומעניינת. המלצה רותחת לכל מי שחושב ללמוד יוונית 👌🇬🇷",
       image: "/lovable-uploads/hila-vaish.png",
@@ -145,9 +145,7 @@ const TestimonialsSection = () => {
       text: "גם אני עדיין לומד יוונית עם סיוון המדהימה שמעבירה את הקורס במקצועיות ועם השקעה יוצאת מגדר הרגיל כולל שיעורי תגבור וחזרה על החומר, סיוון שנותנת את כל כולה וזמינה לכל עיצה, הבהרה או בקשה. כל זאת אינו מובן מאליו ואני מנצל הזדמנות זו להודות לך מכל ליבי ולאחל לך חג חנוכה שמח",
       image: "/lovable-uploads/eran-kaplan.png",
       rating: 5
-    },
-
-
+    }
   ];
 
   const renderStars = (rating: number) => {
@@ -185,23 +183,21 @@ const TestimonialsSection = () => {
         </div>
 
         <div className={`relative max-w-7xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-            dragFree: true, // ✅ תוספת קריטית
-            slidesToScroll: 1,
-          }}
-
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+              slidesToScroll: 1,
+            }}
             className="w-full"
             setApi={setApi}
           >
             <CarouselContent className="-ml-2 md:-ml-4 scroll-smooth">
-
               {testimonials.map((testimonial, index) => {
                 console.log(`Rendering testimonial ${index + 1}:`, testimonial.name);
                 return (
-                  <CarouselItem className="pl-2 md:pl-4 shrink-0 grow-0 basis-full sm:basis-1/2 lg:basis-1/3" />
+                  <CarouselItem key={index} className="pl-2 md:pl-4 shrink-0 grow-0 basis-full sm:basis-1/2 lg:basis-1/3">
                     <div className="greek-card h-full flex flex-col min-h-[400px]">
                       <div className="text-center mb-4">
                         <div className="relative w-16 h-16 mx-auto mb-4">
@@ -257,7 +253,7 @@ const TestimonialsSection = () => {
 
           {/* Desktop dot indicators */}
           <div className="hidden md:flex justify-center gap-2 mt-6">
-            {Array.from({ length: Math.ceil(testimonials.length / (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1)) }).map((_, index) => (
+            {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, index) => (
               <button
                 key={index}
                 className={`w-3 h-3 rounded-full transition-colors ${
