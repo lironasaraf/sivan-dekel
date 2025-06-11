@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from 'lucide-react';
@@ -73,7 +74,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "יהלי זהבי",
-      text: "אין עליך מורה בחסד!!! השעה הכי טובה בשבוע שלי. אני כל כך נהנית מכל רגע בשיעורים ומהתמיכה והנכונות לעזור גם מעבר לשעות הלימוד. ❤️❤️❤️❤️❤️❤️❤️❤️",
+      text: "אין עליך מורה בחסד!!! השעה הכי טובה בשבוע שלי. אני כל כך נהנת מכל רגע בשיעורים ומהתמיכה והנכונות לעזור גם מעבר לשעות הלימוד. ❤️❤️❤️❤️❤️❤️❤️❤️",
       image: "/placeholder.svg",
       rating: 5
     },
@@ -97,7 +98,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "Carmela Kirmaeir",
-      text: "סיוון הינה מורה ליוונית בכל רמ\"ח אבריה, מקסימה עם הרבה סבלנות לנתינה מדהימה, בזכותה יש סיכוי שאלמד יוונית, תודה לך סיוון, אהובת אותך❤️",
+      text: "סיוון הינה מורה ליוונית בכל רמח אבריה, מקסימה עם הרבה סבלנות לנתינה מדהימה, בזכותה יש סיכוי שאלמד יוונית, תודה לך סיוון, אהובת אותך❤️",
       image: "/lovable-uploads/7cd94760-965d-42be-a85c-862a3da1692f.png",
       rating: 5
     },
@@ -124,6 +125,8 @@ const TestimonialsSection = () => {
     );
   };
 
+  console.log('Total testimonials:', testimonials.length);
+
   return (
     <section 
       id="testimonials" 
@@ -136,7 +139,7 @@ const TestimonialsSection = () => {
             המלצות וחוות דעת
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
-            מה התלמידים שלי אומרים על חוויית הלימוד
+            מה התלמידים שלי אומרים על חוויית הלימוד ({testimonials.length} המלצות)
           </p>
         </div>
 
@@ -149,35 +152,42 @@ const TestimonialsSection = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="greek-card h-full flex flex-col">
-                    <div className="text-center mb-4">
-                      <div className="relative w-16 h-16 mx-auto mb-4">
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-full h-full rounded-full object-cover shadow-md"
-                        />
-                        <div className="absolute -top-1 -right-1 w-6 h-6 bg-greek-turquoise rounded-full flex items-center justify-center">
-                          <Quote className="h-3 w-3 text-white" />
+              {testimonials.map((testimonial, index) => {
+                console.log(`Rendering testimonial ${index + 1}:`, testimonial.name);
+                return (
+                  <CarouselItem key={`testimonial-${index}`} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="greek-card h-full flex flex-col">
+                      <div className="text-center mb-4">
+                        <div className="relative w-16 h-16 mx-auto mb-4">
+                          <img
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            className="w-full h-full rounded-full object-cover shadow-md"
+                            onError={(e) => {
+                              console.log(`Image error for ${testimonial.name}:`, testimonial.image);
+                              e.currentTarget.src = "/placeholder.svg";
+                            }}
+                          />
+                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-greek-turquoise rounded-full flex items-center justify-center">
+                            <Quote className="h-3 w-3 text-white" />
+                          </div>
                         </div>
+                        <h3 className="font-semibold text-greek-blue mb-2">{testimonial.name}</h3>
+                        {renderStars(testimonial.rating)}
                       </div>
-                      <h3 className="font-semibold text-greek-blue mb-2">{testimonial.name}</h3>
-                      {renderStars(testimonial.rating)}
+                      
+                      <div className="flex-1 flex items-center">
+                        <p className="text-gray-700 text-center leading-relaxed text-sm">
+                          "{testimonial.text}"
+                        </p>
+                      </div>
                     </div>
-                    
-                    <div className="flex-1 flex items-center">
-                      <p className="text-gray-700 text-center leading-relaxed text-sm">
-                        "{testimonial.text}"
-                      </p>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
+                  </CarouselItem>
+                );
+              })}
             </CarouselContent>
-            <CarouselPrevious className="text-greek-blue hover:bg-greek-turquoise/10" />
-            <CarouselNext className="text-greek-blue hover:bg-greek-turquoise/10" />
+            <CarouselPrevious className="text-greek-blue hover:bg-greek-turquoise/10 -left-12" />
+            <CarouselNext className="text-greek-blue hover:bg-greek-turquoise/10 -right-12" />
           </Carousel>
         </div>
       </div>
