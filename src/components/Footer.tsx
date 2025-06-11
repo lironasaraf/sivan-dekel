@@ -20,7 +20,7 @@ const Footer = () => {
                 <Phone className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2">
-                <span>נ, ישראל</span>
+                <span>נס ציונה, ישראל</span>
                 <MapPin className="h-4 w-4" />
               </div>
             </div>
