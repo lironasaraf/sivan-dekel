@@ -185,17 +185,19 @@ const TestimonialsSection = () => {
         </div>
 
         <div className={`relative max-w-7xl mx-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: false,
-              slidesToScroll: 1,
-              containScroll: "trimSnaps",
-            }}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+            dragFree: true, // ✅ תוספת קריטית
+            slidesToScroll: 1,
+          }}
+
             className="w-full"
             setApi={setApi}
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-2 md:-ml-4 scroll-smooth">
+
               {testimonials.map((testimonial, index) => {
                 console.log(`Rendering testimonial ${index + 1}:`, testimonial.name);
                 return (
@@ -255,7 +257,7 @@ const TestimonialsSection = () => {
 
           {/* Desktop dot indicators */}
           <div className="hidden md:flex justify-center gap-2 mt-6">
-            {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, index) => (
+            {Array.from({ length: Math.ceil(testimonials.length / (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1)) }).map((_, index) => (
               <button
                 key={index}
                 className={`w-3 h-3 rounded-full transition-colors ${
