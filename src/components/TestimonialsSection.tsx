@@ -11,6 +11,7 @@ import {
 
 const TestimonialsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [expandedTestimonials, setExpandedTestimonials] = useState<{ [key: number]: boolean }>({});
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -35,6 +36,18 @@ const TestimonialsSection = () => {
     };
   }, []);
 
+  const toggleExpanded = (index: number) => {
+    setExpandedTestimonials(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const truncateText = (text: string, maxLength: number = 150) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + "...";
+  };
+
   const testimonials = [
     {
       name: "הילה ויש",
@@ -53,7 +66,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "אלינור פרוימוביץ'",
-      text: "מע���ר למורה סבלנית, מקצועית, מסורה ובאמת מחוברת לשפה היוונית…תמצאו אישה חמה, נעימה, אותנטית ועם רצון גדול שתצליחו! מי שמחליט להירשם פשוט זוכה👑",
+      text: "מעבר למורה סבלנית, מקצועית, מסורה ובאמת מחוברת לשפה היוונית…תמצאו אישה חמה, נעימה, אותנטית ועם רצון גדול שתצליחו! מי שמחליט להירשם פשוט זוכה👑",
       image: "/lovable-uploads/elinor-froimovich.png"
     },
     {
@@ -184,6 +197,18 @@ const TestimonialsSection = () => {
       text: "סיוון היא ה…..המורה ליוונית שיש, משקיעה בתלמידים ברמות על חלל סובלנית מאוד, הלימודים מלאים בשמחת חיים צחוקים תוך רכישת הידע ביוונית וההתקדמות מהירה ומדהימה הן מבחינת הידע הנרכש והן מבחינת היכולות שהתפתחו אצלי לשפה היוונית מדהים !!! כבר אחרי 6 שיעורים רוב התלמידים בקורס קוראים יוונית בסיסית, פשוט אין מורים כאלה בעולם סיוון יחודית ואין כמוה ואין לה תחליף אם אתה/את/אתם רוצים ללמוד יוונית סיוון דקל היא המורה שאתם רוצים ואם תזכו לה כמורתכם ליוונית זכיתם.",
       image: "/lovable-uploads/47ae979e-4b8a-4fee-b411-b44455a89a45.png",
       rating: 5
+    },
+    {
+      name: "בני לובל",
+      text: "מסיים בימים אלו את הקורס (יוונית למתחילים א'). סיון המקסימה הצליחה בנועם ובמקצועיות \"להחזיר אותי אל ספסל הלימודים\" עשרות שנים אחרי ש\"נשבעתי\" שזהו, לא לומד יותר בחיים באופן מוסדר, ובטח שלא נבחן ו/או מכין שוב שיעורי בית וכו' (למרות התארים האקדמיים 🤦). סיון היא הרבה יותר ממורה טובה: היא משקיענית, מקצוענית, נעימה ורגישה. אף שהקורס מוגדר כ-10 שיעורים, היא שם עבורנו הרבה מעבר לכך, עם מפגש שבועי נוסף באורך מלא שמוגדר כ\"חזרה\", עם התעקשות שלה לחלק את המחזור ל-2 קבוצות קטנות יותר לטובת יתר קשב ותשומת לב למשתתפים (ובכך להעמיס על עצמה כפל עבודה וזמן הוראה) – אף שבזום לכאורה אין בעיה ללמד קבוצה בכל גודל. את השיעורים סיון מעבירה בנועם רב כמעין שיחה זורמת ומענינת, מתובלת בסיפורים ושירים ביוונית, מתענינת בכל אחד מאיתנו בשיעור ולאחריו, מעודדת ומפרגנת. וזה - כשגם ב\"דרישות\" מאיתנו (שיעורי הבית...) סיון לא עושה הנחות, ויודעת בקיסמה להיות \"דורשנית\" ואסרטיבית מחד, ומאידך - בסופר נעימות והבטחה מתמשכת שלה אלינו שהדברים חשובים וכדאיים, וש\"תיכף הכל יתחבר לנו\". הקורס הוא הרבה הרבה מעבר לשיעורי שינון סתמיים (בשביל זה היינו יכולים ללמוד ב\"דואולינגו\"), כשלסיון חשוב כל כך שגם נבין, גם נלמד, וגם נהנה. מומלצת ביותר!!! 👑",
+      image: "/lovable-uploads/8e65f743-cdc9-4905-8b22-6b0c73a2e940.png",
+      rating: 5
+    },
+    {
+      name: "raquel benasayag pivan",
+      text: "מאוד ממליצה על סיוון מנסיון אישי. כמה סבלנות, רצינות ורצון שכל אחד ידבר יוונית תוך זמן קצר. מעבר לשיעורים עצמם, סיוון דואגת שיעמוד לרשות התלמיד המון חומר עזר, ומקיימת שיעורי הכנה לשיעורים השבועים. בנוסף לכל אלה היא סימפטית ומלמדת ברוגע ובחן, כך שאם החלטת ללמוד יוונית, זו המורה שלך 🙏",
+      image: "/lovable-uploads/d6d48503-d4f6-4406-bbe3-cbdee850b929.png",
+      rating: 5
     }
   ];
 
@@ -216,32 +241,51 @@ const TestimonialsSection = () => {
               loop: false,
               containScroll: "trimSnaps",
               slidesToScroll: 1,
+              direction: "rtl",
             }}
             className="w-full max-w-7xl mx-auto"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <div className="greek-card bg-white shadow-lg rounded-lg p-6 h-full">
-                    <div className="text-center">
-                      <div className="relative w-16 h-16 mx-auto mb-3">
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-full h-full rounded-full object-cover shadow-md"
-                          onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
-                        />
-                        <div className="absolute -top-1 -right-1 w-6 h-6 bg-greek-turquoise rounded-full flex items-center justify-center">
-                          <Quote className="h-3 w-3 text-white" />
+              {testimonials.map((testimonial, index) => {
+                const isLong = testimonial.text.length > 150;
+                const isExpanded = expandedTestimonials[index];
+                const displayText = isLong && !isExpanded 
+                  ? truncateText(testimonial.text) 
+                  : testimonial.text;
+
+                return (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                    <div className="greek-card bg-white shadow-lg rounded-lg p-6 h-full flex flex-col">
+                      <div className="text-center flex-grow">
+                        <div className="relative w-16 h-16 mx-auto mb-3">
+                          <img
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            className="w-full h-full rounded-full object-cover shadow-md"
+                            onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
+                          />
+                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-greek-turquoise rounded-full flex items-center justify-center">
+                            <Quote className="h-3 w-3 text-white" />
+                          </div>
+                        </div>
+                        <h3 className="font-semibold text-greek-blue mb-1">{testimonial.name}</h3>
+                        {renderStars()}
+                        <div className="text-gray-700 text-sm leading-relaxed mt-2">
+                          <p>"{displayText}"</p>
+                          {isLong && (
+                            <button
+                              onClick={() => toggleExpanded(index)}
+                              className="text-greek-turquoise hover:text-greek-blue text-xs mt-2 underline"
+                            >
+                              {isExpanded ? "פחות" : "עוד..."}
+                            </button>
+                          )}
                         </div>
                       </div>
-                      <h3 className="font-semibold text-greek-blue mb-1">{testimonial.name}</h3>
-                      {renderStars()}
-                      <p className="text-gray-700 text-sm leading-relaxed mt-2">"{testimonial.text}"</p>
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
+                  </CarouselItem>
+                );
+              })}
             </CarouselContent>
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
