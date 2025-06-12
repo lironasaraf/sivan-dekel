@@ -41,6 +41,24 @@ const TestimonialsSection = () => {
   };
 
   const testimonials = [
+        {
+      name: "Nof Amir",
+      text: "מורה מדהימה🌺 מקצועית, מלאת סבלנות ,מתאימה את עצמה לקצב ההתקדמות האישי שזה מאד חשוב ונותן הרגשת ביטחון 💪 תודה לך סיוון 🙏 ευχαριστώ πολύ",
+      image: "/lovable-uploads/76ac0c5f-8282-4f9f-aa98-535320633c95.png",
+      rating: 5
+    },
+    {
+      name: "ערן קפלן",
+      text: "גם אני עדיין לומד יוונית עם סיוון המדהימה שמעבירה את הקורס במקצועיות ועם השקעה יוצאת מגדר הרגיל כולל שיעורי תגבור וחזרה על החומר, סיוון שנותנת את כל כולה וזמינה לכל עיצה, הבהרה או בקשה. כל זאת אינו מובן מאליו ואני מנצל הזדמנות זו להודות לך מכל ליבי ולאחל לך חג חנוכה שמח",
+      image: "/lovable-uploads/aaf772f5-9cef-40cf-a6e2-571930c1273d.png",
+      rating: 5
+    },
+    {
+      name: "Hila Vaish",
+      text: "מורה מעולה! סיוון מלמדת בצורה סופר מקצועית, חוויתית ומעניינת. המלצה רותחת לכל מי שחושב ללמוד יוונית 👌🇬🇷",
+      image: "/lovable-uploads/85ad5b54-cba6-43bc-a7e4-1f4989fc3c78.png",
+      rating: 5
+    },
 
     {
       name: "סתיו עמק",
@@ -218,24 +236,7 @@ const TestimonialsSection = () => {
       image: "/lovable-uploads/d561860a-4142-4502-a5a0-de2b6579208c.png",
       rating: 5
     },
-    {
-      name: "Nof Amir",
-      text: "מורה מדהימה🌺 מקצועית, מלאת סבלנות ,מתאימה את עצמה לקצב ההתקדמות האישי שזה מאד חשוב ונותן הרגשת ביטחון 💪 תודה לך סיוון 🙏 ευχαριστώ πολύ",
-      image: "/lovable-uploads/76ac0c5f-8282-4f9f-aa98-535320633c95.png",
-      rating: 5
-    },
-    {
-      name: "ערן קפלן",
-      text: "גם אני עדיין לומד יוונית עם סיוון המדהימה שמעבירה את הקורס במקצועיות ועם השקעה יוצאת מגדר הרגיל כולל שיעורי תגבור וחזרה על החומר, סיוון שנותנת את כל כולה וזמינה לכל עיצה, הבהרה או בקשה. כל זאת אינו מובן מאליו ואני מנצל הזדמנות זו להודות לך מכל ליבי ולאחל לך חג חנוכה שמח",
-      image: "/lovable-uploads/aaf772f5-9cef-40cf-a6e2-571930c1273d.png",
-      rating: 5
-    },
-    {
-      name: "Hila Vaish",
-      text: "מורה מעולה! סיוון מלמדת בצורה סופר מקצועית, חוויתית ומעניינת. המלצה רותחת לכל מי שחושב ללמוד יוונית 👌🇬🇷",
-      image: "/lovable-uploads/85ad5b54-cba6-43bc-a7e4-1f4989fc3c78.png",
-      rating: 5
-    },
+
     {
       name: "Shirley Magiday",
       text: "הבן שלי (13) ואני לומדים עם סיוון כבר חודשיים, נהדרת, משקיעה, נותנת שיעורי בית😅 ממש חווית לימודים נעימה",
