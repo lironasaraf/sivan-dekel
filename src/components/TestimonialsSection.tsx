@@ -1,13 +1,5 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { Star, Quote } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 const TestimonialsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -228,68 +220,58 @@ const TestimonialsSection = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className={`section-heading ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>המלצות וחוות דעת</h2>
+          <h2 className={`section-heading ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+            המלצות וחוות דעת
+          </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
             מה התלמידים שלי אומרים על חוויית הלימוד ({testimonials.length} המלצות)
           </p>
         </div>
 
-        <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: false,
-              containScroll: "trimSnaps",
-              slidesToScroll: 1,
-              direction: "rtl",
-            }}
-            className="w-full max-w-7xl mx-auto"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {testimonials.map((testimonial, index) => {
-                const isLong = testimonial.text.length > 150;
-                const isExpanded = expandedTestimonials[index];
-                const displayText = isLong && !isExpanded 
-                  ? truncateText(testimonial.text) 
-                  : testimonial.text;
+        <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'} overflow-x-auto`}>
+          <div className="flex gap-4 pr-2">
+            {testimonials.map((testimonial, index) => {
+              const isLong = testimonial.text.length > 150;
+              const isExpanded = expandedTestimonials[index];
+              const displayText = isLong && !isExpanded
+                ? truncateText(testimonial.text)
+                : testimonial.text;
 
-                return (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                    <div className="greek-card bg-white shadow-lg rounded-lg p-6 h-full flex flex-col">
-                      <div className="text-center flex-grow">
-                        <div className="relative w-16 h-16 mx-auto mb-3">
-                          <img
-                            src={testimonial.image}
-                            alt={testimonial.name}
-                            className="w-full h-full rounded-full object-cover shadow-md"
-                            onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
-                          />
-                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-greek-turquoise rounded-full flex items-center justify-center">
-                            <Quote className="h-3 w-3 text-white" />
-                          </div>
-                        </div>
-                        <h3 className="font-semibold text-greek-blue mb-1">{testimonial.name}</h3>
-                        {renderStars()}
-                        <div className="text-gray-700 text-sm leading-relaxed mt-2">
-                          <p>"{displayText}"</p>
-                          {isLong && (
-                            <button
-                              onClick={() => toggleExpanded(index)}
-                              className="text-greek-turquoise hover:text-greek-blue text-xs mt-2 underline"
-                            >
-                              {isExpanded ? "פחות" : "עוד..."}
-                            </button>
-                          )}
-                        </div>
+              return (
+                <div
+                  key={index}
+                  className="min-w-[300px] max-w-[300px] shrink-0 bg-white shadow-lg rounded-lg p-6 flex flex-col"
+                >
+                  <div className="text-center flex-grow">
+                    <div className="relative w-16 h-16 mx-auto mb-3">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-full h-full rounded-full object-cover shadow-md"
+                        onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
+                      />
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-greek-turquoise rounded-full flex items-center justify-center">
+                        <Quote className="h-3 w-3 text-white" />
                       </div>
                     </div>
-                  </CarouselItem>
-                );
-              })}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+                    <h3 className="font-semibold text-greek-blue mb-1">{testimonial.name}</h3>
+                    {renderStars()}
+                    <div className="text-gray-700 text-sm leading-relaxed mt-2">
+                      <p>"{displayText}"</p>
+                      {isLong && (
+                        <button
+                          onClick={() => toggleExpanded(index)}
+                          className="text-greek-turquoise hover:text-greek-blue text-xs mt-2 underline"
+                        >
+                          {isExpanded ? "פחות" : "עוד..."}
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
