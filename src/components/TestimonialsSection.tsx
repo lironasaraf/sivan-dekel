@@ -237,6 +237,48 @@ const TestimonialsSection = () => {
       text: "אליפות! המורה הכי טובה שיש! סבלנית ויסודית, מלמדת במקצועיות, יודעת לענות על כל שאלה ותהיה יודעת לפרגן ולחזק את הביטחון! אני נהנית מכל רגע🥰",
       image: "/placeholder.svg",
       rating: 5
+    },
+    {
+      name: "Nurit Karp",
+      text: "סיוון מורה מעולה היא פשוט מלמדת מהלב הרחב שלה וזאת הסיבה שכל כך הרבה תלמידים מתחברים ואוהבים אותה.... כל מילה שנכתבה עליה - בול!!!! תודה סיוון על הסבלנות העידוד וההשקעה כיף גדול ללמוד איתך",
+      image: "/lovable-uploads/288ea120-1351-492a-a294-fbc5a3525569.png",
+      rating: 5
+    },
+    {
+      name: "איתן סובל",
+      text: "מורה מעולה,כיפית,מעבירה את השיעורים באופן מיוחד וחווייתי,בעלת ידע נרחב.מיצרת חומרי עזר מושקעים,מסודרים,אסטטיים וכאלו שעושים סדר ומקלים על הלמידה.היענות מלאה לבקשות ושאלות.תמורה מלאה ומהנה.ממליץ בחום רב.",
+      image: "/lovable-uploads/d561860a-4142-4502-a5a0-de2b6579208c.png",
+      rating: 5
+    },
+    {
+      name: "Nof Amir",
+      text: "מורה מדהימה🌺 מקצועית, מלאת סבלנות ,מתאימה את עצמה לקצב ההתקדמות האישי שזה מאד חשוב ונותן הרגשת ביטחון 💪 תודה לך סיוון 🙏 ευχαριστώ πολύ",
+      image: "/lovable-uploads/76ac0c5f-8282-4f9f-aa98-535320633c95.png",
+      rating: 5
+    },
+    {
+      name: "ערן קפלן",
+      text: "גם אני עדיין לומד יוונית עם סיוון המדהימה שמעבירה את הקורס במקצועיות ועם השקעה יוצאת מגדר הרגיל כולל שיעורי תגבור וחזרה על החומר, סיוון שנותנת את כל כולה וזמינה לכל עיצה, הבהרה או בקשה. כל זאת אינו מובן מאליו ואני מנצל הזדמנות זו להודות לך מכל ליבי ולאחל לך חג חנוכה שמח",
+      image: "/lovable-uploads/aaf772f5-9cef-40cf-a6e2-571930c1273d.png",
+      rating: 5
+    },
+    {
+      name: "Hila Vaish",
+      text: "מורה מעולה! סיוון מלמדת בצורה סופר מקצועית, חוויתית ומעניינת. המלצה רותחת לכל מי שחושב ללמוד יוונית 👌🇬🇷",
+      image: "/lovable-uploads/85ad5b54-cba6-43bc-a7e4-1f4989fc3c78.png",
+      rating: 5
+    },
+    {
+      name: "Shirley Magiday",
+      text: "הבן שלי (13) ואני לומדים עם סיוון כבר חודשיים, נהדרת, משקיעה, נותנת שיעורי בית😅 ממש חווית לימודים נעימה",
+      image: "/lovable-uploads/690f3d16-7748-4721-a1dd-4db2ae020a92.png",
+      rating: 5
+    },
+    {
+      name: "רוני שפירא",
+      text: "סיון היקרה האהבה העמוקה לשפה ולתרבות היוונית מורגשים בכל קקה מהשיעורים שלך. כמה שאהבתי את יוון לפני, היום בזכותך, אפילו יותר. מורה סבלנית, נעימה ואכפתית. רוצה בהצלחה של כל תלמיד. מורה נהדרת ❤️",
+      image: "/lovable-uploads/690f3d16-7748-4721-a1dd-4db2ae020a92.png",
+      rating: 5
     }
   ];
 
