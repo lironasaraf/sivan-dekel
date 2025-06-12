@@ -201,6 +201,42 @@ const TestimonialsSection = () => {
       text: "מאוד ממליצה על סיוון מנסיון אישי. כמה סבלנות, רצינות ורצון שכל אחד ידבר יוונית תוך זמן קצר. מעבר לשיעורים עצמם, סיוון דואגת שיעמוד לרשות התלמיד המון חומר עזר, ומקיימת שיעורי הכנה לשיעורים השבועים. בנוסף לכל אלה היא סימפטית ומלמדת ברוגע ובחן, כך שאם החלטת ללמוד יוונית, זו המורה שלך 🙏",
       image: "/lovable-uploads/d6d48503-d4f6-4406-bbe3-cbdee850b929.png",
       rating: 5
+    },
+    {
+      name: "קסם שער",
+      text: "מומלצת ביותר ! מקצועית סבלנית תמיד פנויה לעזור למי שלא מבין או למי שפספס תשיעור ממש לא מובן מאליו האכפתיות שלה גם בשעות לא שעות תמיד נותנת את עצמה , אני ממליצה עליה לכל מי שרוצה ללמוד את השפה בצורה הטובה ביותר סיוון את פשוט תותחית תודה על הכל . 🇬🇷🙏🏽❤️",
+      image: "/lovable-uploads/62941192-d608-4b59-8108-0be3918b5303.png",
+      rating: 5
+    },
+    {
+      name: "Maor Tal-maon",
+      text: "בדיוק סיימתי את הקורס למתחילים ואני יכולה להגיד שסיוון היא מורה מעולה! למדנו המון ובצורה מעניינת וחוויתית. סיוון משלבת מגוון דרכי למידה- שיעורים בזום, סרטונים, אפליקציה ללמוד מילים ועוד. מומלץ ביותר!",
+      image: "/lovable-uploads/23c9013b-ada8-407b-baf8-c1b28cc4c059.png",
+      rating: 5
+    },
+    {
+      name: "Ron Shatz",
+      text: "סיוון מורה מעולה. אנחנו לומדים אצלה מספר חודשים: התקדמנו מאוד והלימוד הינו מעמיק ומהנה. סיון משקיעה המון עבודה בהכנת חומרים המתאימים לרמת הקבוצה וכן בהכנת עזרים מהנים. בקיצור, כיף ללמוד יווניות עם סיוון.",
+      image: "/lovable-uploads/99a3433b-550e-40fb-94bf-002f92029eaf.png",
+      rating: 5
+    },
+    {
+      name: "Shugon Cohen",
+      text: "בתור דוברי עברית, יש יתרון גדול שהמורה שלך גם דוברת עברית, סיוון מנגישה את השפה היוונית בצורה כיפית ,לא מוותרת על הדקדוק, ותמיד תמצא את הדרך שלך קל ללמוד ממנה את השפה(דיאלוגים טקסטים, שירים ,או טריוויה). מומלצת ביותר",
+      image: "/lovable-uploads/001727fd-9c75-4599-8792-2233ee19e2fd.png",
+      rating: 5
+    },
+    {
+      name: "Arik Fartuk",
+      text: "סיון יקרה איזה כייף שפגשתי אותך , זכיתי בגדול, התחלתי ללמוד יוונית אצלך לפני שלושה חודשים, למדתי המון המון מילים ומשפטים, למדנו דקדוק היכן שצריך, ידעת לנווט אותי על פי ההתקדמות, עשינו חזרות והכל תוך הנאה , צחוקים, ודבקות במטרה. תודה שאת זמינה לשאלות , תודה על שיעורי הבית החשובים שאת דואגת לתת לי . תודה שבזכותך הנסיעה ליוון תהיה מהנה יותר 😘😘😘",
+      image: "/lovable-uploads/b780b7bd-8581-4f5c-8b8c-0cdcfa017187.png",
+      rating: 5
+    },
+    {
+      name: "Merav Cohen Kolker",
+      text: "אליפות! המורה הכי טובה שיש! סבלנית ויסודית, מלמדת במקצועיות, יודעת לענות על כל שאלה ותהיה יודעת לפרגן ולחזק את הביטחון! אני נהנית מכל רגע🥰",
+      image: "/placeholder.svg",
+      rating: 5
     }
   ];
 
