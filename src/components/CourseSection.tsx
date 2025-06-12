@@ -70,9 +70,10 @@ const CourseSection = () => {
             {/* קורס מתחילים א' - צד ימין */}
             <div className="w-full md:w-1/2">
               <Card className="h-full">
-                <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col h-full justify-between">
+                <div>
                   <h3 className="text-xl font-bold text-greek-blue mb-4 text-center">קורס מתחילים א'</h3>
-                  <div className="space-y-3">
+                  <div className="space-y-3 mb-6">
                     {courseAContent.map((item, index) => (
                       <div key={index} className="flex items-center gap-3 text-right">
                         <ArrowLeft className="h-4 w-4 text-greek-gold flex-shrink-0" />
@@ -80,24 +81,49 @@ const CourseSection = () => {
                       </div>
                     ))}
                   </div>
-                </CardContent>
+                </div>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe3UBstRlW58GweiPSUcJDof-fGFOFhjgx6mZqN9gYSDEOh9A/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full mt-4"
+                >
+                  <Button className="greek-button w-full">
+                    רישום לקורס למתחילים א׳
+                  </Button>
+                </a>
+              </CardContent>
+
               </Card>
             </div>
 
             {/* קורס מתחילים ב' - צד שמאל */}
             <div className="w-full md:w-1/2">
               <Card className="h-full">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-greek-blue mb-4 text-center">קורס מתחילים ב'</h3>
-                  <div className="space-y-3">
-                    {courseBContent.map((item, index) => (
-                      <div key={index} className="flex items-center gap-3 text-left">
-                        <ArrowLeft className="h-4 w-4 text-greek-gold flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{item}</span>
-                      </div>
-                    ))}
+                <CardContent className="p-6 flex flex-col h-full justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-greek-blue mb-4 text-center">קורס מתחילים ב'</h3>
+                    <div className="space-y-3 mb-6">
+                      {courseBContent.map((item, index) => (
+                        <div key={index} className="flex items-center gap-3 text-left">
+                          <ArrowLeft className="h-4 w-4 text-greek-gold flex-shrink-0" />
+                          <span className="text-gray-700 text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdVLWahqKRa8fZ0zdLt6B7p9OX2pcfLZHOtKdwrVA2Rh5x1mg/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full mt-4"
+                  >
+                    <Button className="greek-button w-full">
+                      רישום לקורס מתחילים ב׳
+                    </Button>
+                  </a>
                 </CardContent>
+
               </Card>
             </div>
           </div>
