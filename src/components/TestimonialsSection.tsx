@@ -87,12 +87,12 @@ const TestimonialsSection = () => {
     {
       name: "סתיו עמק",
       text: "מקצועית ביותר, סבלנית ומשקיעה בכל שיעור. כזאת מורה לא תמצאו🥇",
-      image: "/lovable-uploads/stav-emek.png"
+      image: "/lovable-uploads/830fbc63-4809-4f4d-b49e-7d58ae9745bb.png"
     },
     {
       name: "אלינור פרוימוביץ'",
       text: "מעבר למורה סבלנית, מקצועית, מסורה ובאמת מחוברת לשפה היוונית…תמצאו אישה חמה, נעימה, אותנטית ועם רצון גדול שתצליחו! מי שמחליט להירשם פשוט זוכה👑",
-      image: "/lovable-uploads/elinor-froimovich.png"
+      image: "/lovable-uploads/4195eb97-c012-4d38-a6d7-8701b89c1a97.png"
     },
 
 
