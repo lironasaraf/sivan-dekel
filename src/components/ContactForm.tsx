@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { addCustomer } from "@/firebase/config";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -34,19 +35,23 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
+      try {
+        // שמירת הלקוח ב־Firestore
+        await addCustomer({
           name,
-          email,
+          email, 
           phone,
-          courseType,
-          message
-        }
-      });
-
-      if (error) {
-        throw error;
+          address: message, // או תפרידי שדה אם צריך
+          typeMap: courseType
+        });
+      
+        // אופציונלי: קריאה לשירות Supabase
+        // const { error } = await supabase.functions.invoke(...);
+      
+      } catch (error) {
+        console.error('Error saving customer:', error);
       }
+
 
       // Show success message
       toast({
