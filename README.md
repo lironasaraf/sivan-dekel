@@ -2,7 +2,7 @@
 
 ## Project Info
 
-**Live Site**: [https://sivan-dekel.com](https://sivan-dekel.com)
+**Live Site**: [https://sivan-dekel.com](https://sivandekel.com)
 
 ## How can I edit this code?
 
@@ -59,4 +59,17 @@ firebase init
 
 # Deploy the site
 firebase deploy
+
+Technologies Used
+Vite
+
+TypeScript
+
+React
+
+shadcn/ui
+
+Tailwind CSS
+
+Firebase Hosting
 
