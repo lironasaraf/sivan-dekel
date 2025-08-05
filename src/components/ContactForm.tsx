@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/components/ui/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import { addCustomer } from "@/firebase/config";
 
 const ContactForm = () => {
@@ -21,8 +20,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Form validation
+
     if (!name || !email || !phone || !courseType) {
       toast({
         title: "שגיאה בטופס",
@@ -31,46 +29,55 @@ const ContactForm = () => {
       });
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     try {
-      try {
-        // שמירת הלקוח ב־Firestore
-        await addCustomer({
-          name,
-          email, 
-          phone,
-          address: message, // או תפרידי שדה אם צריך
-          typeMap: courseType
-        });
-      
-        // אופציונלי: קריאה לשירות Supabase
-        // const { error } = await supabase.functions.invoke(...);
-      
-      } catch (error) {
-        console.error('Error saving customer:', error);
+      // שמירת הלקוח ב-Firestore
+      await addCustomer({
+        name,
+        email,
+        phone,
+        address: message,
+        typeMap: courseType,
+      });
+
+      // שליחת אימייל דרך פונקציית Firebase
+      const response = await fetch(
+        "https://us-central1-sivan-dekel.cloudfunctions.net/sendContactEmail",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            message,
+            courseType,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Email send failed");
       }
 
-
-      // Show success message
       toast({
         title: "הטופס נשלח בהצלחה!",
         description: "תודה על פנייתך, ניצור איתך קשר בהקדם",
       });
-      
-      // Reset form
+
+      // ניקוי הטופס
       setName("");
       setEmail("");
       setPhone("");
       setMessage("");
       setCourseType("");
-      
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error("Error submitting contact form:", error);
       toast({
         title: "שגיאה בשליחת הטופס",
-        description: "אירעה שגיאה בשליחת הטופס. אנא נסה שוב מאוחר יותר",
+        description: "נא נסה שוב בעוד רגע",
         variant: "destructive",
       });
     } finally {
@@ -98,46 +105,42 @@ const ContactForm = () => {
             מעוניינים להתחיל ללמוד יוונית או לשמוע פרטים נוספים? מלאו את הטופס ואחזור אליכם בהקדם
           </p>
         </div>
-        
+
         <Card className="max-w-3xl mx-auto border-greek-sand shadow-md">
           <CardContent className="pt-6">
             <form onSubmit={handleSubmit} className="space-y-6 text-right" dir="rtl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Label htmlFor="name" className="flex items-center gap-1 whitespace-nowrap">
-                      <User className="h-4 w-4 text-greek-blue" />
-                      <span>שם מלא *</span>
-                    </Label>
-                    <Input
-                      id="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      className="text-right flex-1"
-                      dir="rtl"
-                      disabled={isSubmitting}
-                    />
-                  </div>
+                  <Label htmlFor="name" className="flex items-center gap-1 whitespace-nowrap">
+                    <User className="h-4 w-4 text-greek-blue" />
+                    <span>שם מלא *</span>
+                  </Label>
+                  <Input
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="text-right"
+                    dir="rtl"
+                    disabled={isSubmitting}
+                  />
                 </div>
-                
+
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <Label htmlFor="email" className="flex items-center gap-1 whitespace-nowrap">
-                      <Mail className="h-4 w-4 text-greek-blue" />
-                      <span>אימייל *</span>
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="text-right flex-1"
-                      dir="rtl"
-                      disabled={isSubmitting}
-                    />
-                  </div>
+                  <Label htmlFor="email" className="flex items-center gap-1 whitespace-nowrap">
+                    <Mail className="h-4 w-4 text-greek-blue" />
+                    <span>אימייל *</span>
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="text-right"
+                    dir="rtl"
+                    disabled={isSubmitting}
+                  />
                 </div>
-                
+
                 <div className="space-y-2 md:order-3">
                   <Label htmlFor="courseType" className="flex items-center gap-1">
                     <Calendar className="h-4 w-4 text-greek-blue" />
@@ -153,30 +156,28 @@ const ContactForm = () => {
                     {courseOptions.map((option) => (
                       <div key={option.value} className="flex items-center gap-2">
                         <RadioGroupItem id={option.value} value={option.value} />
-                        <Label htmlFor={option.value} className="text-right flex-1" dir="rtl">{option.label}</Label>
+                        <Label htmlFor={option.value} className="text-right flex-1">{option.label}</Label>
                       </div>
                     ))}
                   </RadioGroup>
                 </div>
-                
+
                 <div className="space-y-2 md:order-4">
-                  <div className="flex items-center gap-2">
-                    <Label htmlFor="phone" className="flex items-center gap-1 whitespace-nowrap">
-                      <Phone className="h-4 w-4 text-greek-blue" />
-                      <span>טלפון *</span>
-                    </Label>
-                    <Input
-                      id="phone"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      className="text-right flex-1"
-                      dir="rtl"
-                      disabled={isSubmitting}
-                    />
-                  </div>
+                  <Label htmlFor="phone" className="flex items-center gap-1 whitespace-nowrap">
+                    <Phone className="h-4 w-4 text-greek-blue" />
+                    <span>טלפון *</span>
+                  </Label>
+                  <Input
+                    id="phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="text-right"
+                    dir="rtl"
+                    disabled={isSubmitting}
+                  />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="message" className="flex items-center gap-1">
                   <MessageSquare className="h-4 w-4 text-greek-blue" />
@@ -191,7 +192,7 @@ const ContactForm = () => {
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <div className="text-center pt-2">
                 <Button 
                   type="submit" 

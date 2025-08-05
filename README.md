@@ -1,18 +1,17 @@
-# Welcome to your Project
+# Welcome to Your Project
 
-## Project Info
+## 🌐 Live Site
+**URL**: [https://sivandekel.com](https://sivandekel.com)
 
-**Live Site**: [https://sivan-dekel.com](https://sivandekel.com)
+---
 
-## How can I edit this code?
+## 🛠 How to Edit the Code
 
-There are several ways to work with your application:
+### 1. Edit Locally with Your IDE
 
-### 1. **Edit Locally with Your IDE**
+To work locally:
 
-To edit locally, clone the repo and run the development server.
-
-```sh
+```bash
 # Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
@@ -24,52 +23,88 @@ npm install
 
 # Step 4: Start the development server
 npm run dev
+```
 
-### Prerequisites
-
-> Make sure you have **Node.js** and **npm** installed.  
-> You can install them easily with **nvm**:  
-> [Install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+✅ Make sure you have **Node.js** and **npm** installed.  
+We recommend using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) to manage Node versions.
 
 ---
 
-### 2. **Edit in GitHub**
+### 2. Edit Directly in GitHub
 
-You can also edit the project directly in GitHub:
-
-1. Navigate to the file you want to change  
-2. Click the pencil icon ("Edit")  
-3. Make your edits  
-4. Commit the changes
+- Navigate to the file you want to change.
+- Click the pencil icon ("Edit").
+- Make your changes and commit.
 
 ---
 
-## Deployment Info
+## 🚀 Deployment Instructions (Firebase Hosting)
 
-This project is deployed on **Firebase Hosting**.
+This project is deployed using **Firebase Hosting**.
 
-To deploy manually, run the following commands:
+To deploy manually:
 
-```sh
+```bash
 # Login to Firebase
 firebase login
 
-# Initialize the project (only needed the first time)
+# Initialize the project (if not already)
 firebase init
 
 # Deploy the site
 firebase deploy
+```
 
-Technologies Used
-Vite
+Make sure the Firebase project ID is correct in both `firebase.json` and `.firebaserc`.
 
-TypeScript
+---
 
-React
+## ✉️ Email Setup (Resend)
 
-shadcn/ui
+This project uses **[Resend](https://resend.com)** for sending emails.
 
-Tailwind CSS
+### Setup Instructions:
 
-Firebase Hosting
+1. Create a free account at [resend.com](https://resend.com).
+2. Create a new **API key** from the dashboard.
+3. Add the key to your `.env` file in the project root:
 
+```env
+RESEND_API_KEY=your_resend_api_key
+```
+
+4. Update the sender email in `src/lib/email.ts` or your email function logic as needed.
+
+> Note: Emails will not send without a valid API key.
+
+---
+
+## ⚙️ Technologies Used
+
+- Vite
+- TypeScript
+- React
+- shadcn/ui
+- Tailwind CSS
+- Firebase Hosting
+- Resend (email service)
+
+---
+
+## 🌍 Custom Domain
+
+This site is connected to a custom domain:  
+[https://sivandekel.com](https://sivandekel.com)
+
+To manage the domain:
+- Go to **Firebase Console** → **Hosting** → **Custom Domain**
+- Ensure DNS settings are correctly configured with your domain provider.
+
+---
+
+## 🙋‍♀️ Need Help?
+
+If something isn't working, check:
+- That Firebase is correctly configured (`firebase.json`, `.firebaserc`)
+- That your `.env` file includes the necessary environment variables
+- That your DNS is correctly pointing to Firebase Hosting IPs
